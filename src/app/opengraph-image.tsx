@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "CxOPack — Hire five executives. Pay €299.";
+export const alt = "CxOPack — Hire five executives. €149/yr.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -133,7 +133,7 @@ export default async function Image() {
               executives.
             </span>
           </div>
-          <div style={{ display: "flex", color: IVORY, marginTop: 4 }}>Pay €299.</div>
+          <div style={{ display: "flex", color: IVORY, marginTop: 4 }}>€149/yr.</div>
         </div>
 
         {/* Subtitle */}

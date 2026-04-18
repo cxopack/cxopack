@@ -7,6 +7,7 @@ import { Kits } from "@/components/kits";
 import { BoardSection } from "@/components/board-section";
 import { WeekInLife } from "@/components/week-in-life";
 import { Pricing } from "@/components/pricing";
+import { WaitlistSection } from "@/components/waitlist";
 import { HowItWorks } from "@/components/how";
 import { Faq } from "@/components/faq";
 import { FinalCta } from "@/components/final-cta";
@@ -31,6 +32,7 @@ export default async function HomePage({
         <BoardSection />
         <WeekInLife />
         <Pricing />
+        <WaitlistSection />
         <HowItWorks />
         <Faq />
         <FinalCta />

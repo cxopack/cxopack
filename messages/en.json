@@ -187,10 +187,10 @@
     "eyebrow": "How it works",
     "title": "From purchase to first workflow in 2 minutes.",
     "steps": [
-      { "title": "Pick your pack", "desc": "One kit, the full 5, or the Founder's Club. Pay with Stripe." },
-      { "title": "Get an instant email", "desc": "You'll get a GitHub invite to the private repos and a setup guide." },
-      { "title": "Install in your AI tool", "desc": "30 seconds for Claude, ChatGPT, Cursor, or Windsurf. Instructions included." },
-      { "title": "Run your first workflow", "desc": "Draft your first investor update, board review, or outbound campaign right away." }
+      { "title": "Pick your plan", "desc": "Solo Kit (€49 lifetime), All-Access Pass (€149/yr), or Launch 100 (€99/yr forever). Pay with Stripe." },
+      { "title": "Get an instant email", "desc": "GitHub invite to the private repos + a setup guide. Lands in 30 seconds." },
+      { "title": "Install in your AI tool", "desc": "30 seconds for Claude, ChatGPT, Cursor, or Windsurf. Instructions per platform." },
+      { "title": "Run your first workflow", "desc": "Draft an investor update, board review, or outbound campaign — or type /founder to let Sam route it." }
     ]
   },
   "faq": {
@@ -210,20 +210,24 @@
         "a": "Yes — the kits are battle-tested by the founder of CxOPack running their own product with exactly these workflows. Dogfooded, not theoretical."
       },
       {
-        "q": "What happens if I only buy one kit and want more later?",
-        "a": "Any single-kit purchase credits in full toward a Full Pack upgrade. Just email us."
+        "q": "What happens if I buy a Solo Kit and want more later?",
+        "a": "Any Solo Kit purchase (€49) credits in full toward an All-Access Pass upgrade. Email hello@cxopack.com — we adjust your subscription billing."
+      },
+      {
+        "q": "What's the difference between All-Access Pass and Launch 100?",
+        "a": "Same product, two prices. All-Access is €149/year. Launch 100 is €99/year locked for life — but only the first 100 subscribers get it. Once we hit 100, it's gone forever."
       },
       {
         "q": "Do you offer a refund?",
-        "a": "Yes. 14 days, no questions, full refund."
+        "a": "Yes. 14 days, no questions, full refund. Subscription? Cancel anytime through your account; you keep access until the end of your billing period."
       },
       {
-        "q": "What's the Founding 100 offer?",
-        "a": "The first 100 Full Pack buyers get €50 off in exchange for a short public testimonial after 30 days of use. Once 100 spots are gone, they're gone."
+        "q": "What's Autopilot?",
+        "a": "Coming Q4 2026. Your agents stop being assistants and become operators with real budgets and MCP connections — they run outbound, deploy code, write content autonomously, with weekly audits to you. Join the waitlist on the landing page."
       },
       {
         "q": "Can my team use a single license?",
-        "a": "Single-seat license per buyer. Team licenses (3+ seats) coming with the Founder's Club tier — email us if you need this today."
+        "a": "Single-seat per buyer. Team seats (3+) coming with All-Access — email hello@cxopack.com if you need them today."
       }
     ]
   },
@@ -240,7 +244,7 @@
     "links": {
       "kits": "Kits",
       "pricing": "Pricing",
-      "club": "Founder's Club",
+      "club": "All-Access Pass",
       "how": "How it works",
       "about": "About",
       "contact": "Contact",

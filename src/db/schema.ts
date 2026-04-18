@@ -6,6 +6,8 @@ export const planEnum = pgEnum("plan", [
   "founding-100",
   "club-monthly",
   "club-yearly",
+  "all-access",
+  "launch-100",
 ]);
 
 export const kitSlugEnum = pgEnum("kit_slug", ["ceo", "cto", "cfo", "sales", "cmo"]);
@@ -62,6 +64,15 @@ export const foundingCounter = pgTable("founding_counter", {
   limit: integer("limit").default(100).notNull(),
 });
 
+export const autopilotWaitlist = pgTable("autopilot_waitlist", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  email: text("email").notNull().unique(),
+  source: text("source").default("landing"),
+  metadata: jsonb("metadata"),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+});
+
 export type User = typeof users.$inferSelect;
 export type Order = typeof orders.$inferSelect;
 export type Entitlement = typeof entitlements.$inferSelect;
+export type WaitlistEntry = typeof autopilotWaitlist.$inferSelect;
