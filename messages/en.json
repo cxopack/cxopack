@@ -20,7 +20,7 @@
     "subtitle": "CEO · CTO · CFO · Head of Sales · CMO — production-grade AI executive kits that work in Claude, ChatGPT, Cursor, any tool.",
     "ctaPrimary": "Get All-Access — €149/yr",
     "ctaSecondary": "See what's inside",
-    "socialProof": "Built by a solo founder shipping their own startup with exactly these kits.",
+    "socialProof": "Production-grade workflows. Tested in real startups. Updated continuously.",
     "stats": {
       "workflows": "production workflows",
       "skills": "AI skills & agents",
@@ -207,7 +207,7 @@
       },
       {
         "q": "Is it actually used in real startups?",
-        "a": "Yes — the kits are battle-tested by the founder of CxOPack running their own product with exactly these workflows. Dogfooded, not theoretical."
+        "a": "Yes. Every workflow is validated in production environments before release. The kits ship with example outputs, anti-patterns, and concrete pitfalls — not theoretical recipes."
       },
       {
         "q": "What happens if I buy a Solo Kit and want more later?",
