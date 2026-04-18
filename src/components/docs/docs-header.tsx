@@ -8,7 +8,12 @@ import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const TABS = [
-  { label: "Getting started", href: "/docs" as const, match: (p: string) => p === "/docs" || p === "/docs/quickstart" },
+  {
+    label: "Getting started",
+    href: "/docs" as const,
+    match: (p: string) =>
+      p === "/docs" || p === "/docs/quickstart" || p === "/docs/installation",
+  },
   { label: "Kits", href: "/docs/kits/ceo" as const, match: (p: string) => p.startsWith("/docs/kits") },
   { label: "Changelog", href: "/docs/changelog" as const, match: (p: string) => p === "/docs/changelog" },
   { label: "Support", href: "/docs/support" as const, match: (p: string) => p === "/docs/support" },

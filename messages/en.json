@@ -44,6 +44,16 @@
       "agnostic": { "title": "Anywhere else", "desc": "Plain-markdown prompts. Paste into any LLM, any tool." }
     }
   },
+  "board": {
+    "eyebrow": "The Board",
+    "title": "Five kits isn't the product. A team is.",
+    "subtitle": "CxOPack ships with a Chief of Staff that routes any request to the right executive, synthesizes one answer, and manages structured handoffs between them. Your 5 agents don't just coexist — they talk.",
+    "points": [
+      { "title": "/founder routes anything", "desc": "Describe what's on your mind. Chief of Staff picks the executives that should weigh in, calls them in the right order, hands you one brief." },
+      { "title": "Weekly board meeting", "desc": "Monday ritual: all 5 personas give a read, Chief of Staff synthesizes, 3 priorities locked, handoffs queued, one provocative question." },
+      { "title": "Shared memory", "desc": "Every agent reads + writes to a single founder-log/ workspace — priorities, metrics, decisions, handoffs. Context lives in one place." }
+    ]
+  },
   "kits": {
     "eyebrow": "The 5 kits",
     "title": "Five executive roles. Five agents. One pack.",
@@ -138,10 +148,10 @@
       "cta": "Get the Full Pack",
       "features": [
         "All 5 kits — CEO, CTO, CFO, Sales, CMO",
-        "Weekly Board Meeting workflow (bonus)",
-        "Founder Mode slash command (bonus)",
-        "Lifetime updates for all kits",
-        "Priority support"
+        "The Board — Chief of Staff + 5 persona agents (orchestration layer)",
+        "/founder + /board:weekly + /board:decision + /board:handoff commands",
+        "Shared founder-log/ memory across all agents",
+        "Lifetime updates for all kits + the Board"
       ]
     },
     "founding": {

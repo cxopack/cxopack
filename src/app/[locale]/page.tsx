@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero";
 import { Problem } from "@/components/problem";
 import { Multiplatform } from "@/components/multiplatform";
 import { Kits } from "@/components/kits";
+import { BoardSection } from "@/components/board-section";
 import { Pricing } from "@/components/pricing";
 import { HowItWorks } from "@/components/how";
 import { Faq } from "@/components/faq";
@@ -26,6 +27,7 @@ export default async function HomePage({
         <Problem />
         <Multiplatform />
         <Kits />
+        <BoardSection />
         <Pricing />
         <HowItWorks />
         <Faq />
