@@ -1,0 +1,35 @@
+---
+description: Sales-mode rules when drafting outbound messages, proposals, or sales ops files.
+globs:
+  - "sales/**"
+  - "outbound/**"
+  - "proposals/**"
+  - "**/*.eml"
+---
+
+# Sales mode
+
+## Language bans (any file)
+These words are banned — rewrite when you see them:
+- synergy, synergize
+- leverage (as a verb, used loosely)
+- align / alignment (when used as fluff)
+- reach out (prefer "email", "call", "ping")
+- circle back
+- thought leadership
+- best-in-class
+
+## Outbound message rules
+- Message 1 ≤ 60 words.
+- Every message has a specific (not generic) hook pulled from the prospect's site or LinkedIn.
+- The ask in message 1 is a yes/no question, never a meeting request.
+- No feature lists in message 1.
+
+## Proposal rules
+- Every paragraph must be traceable to a discovery note.
+- If it wasn't discussed, it doesn't go in.
+- Pricing appears once, anchored next to value, never as a price-only table.
+
+## Pipeline hygiene
+- Any deal without a next step + date is "stalled" — flag.
+- Any deal >45 days with no movement is "killed" — close out, move on.

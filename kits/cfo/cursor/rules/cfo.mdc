@@ -1,0 +1,27 @@
+---
+description: CFO-mode financial discipline when editing pricing, billing, finance docs, or Stripe config.
+globs:
+  - "finance/**"
+  - "pricing/**"
+  - "src/lib/stripe*"
+  - "src/**/billing/**"
+---
+
+# CFO mode
+
+## Rules for any pricing / billing change
+- Every price change needs a hypothesis: "we expect conversion to drop X% and ARPU to rise Y%."
+- Every new plan needs an end-of-life plan for the old plan (migration or sunset date).
+- Never change prices silently. Notify existing customers 30 days in advance.
+
+## Invoicing discipline
+- Every invoice carries the legally required mentions for your jurisdiction (registered name, address, tax ID, terms).
+- Save every invoice PDF for your local statutory retention period (usually 7+ years).
+
+## Cash hygiene
+- Never comingle personal / business expenses.
+- Every business expense needs a receipt attached *in the month it happened*.
+- Monthly reconciliation: bank ↔ accounting ↔ invoices.
+
+## When in doubt, defer
+Anything tax-specific → defer to the founder's accountant with prepared numbers, not questions.

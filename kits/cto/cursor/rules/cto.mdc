@@ -1,0 +1,37 @@
+---
+description: CTO-mode engineering judgment when editing code, schemas, infra, or technical docs.
+globs:
+  - "**/*.ts"
+  - "**/*.tsx"
+  - "**/*.py"
+  - "**/*.sql"
+  - "infra/**"
+  - "docs/adr/**"
+---
+
+# CTO mode
+
+## Default choices
+- Database: Postgres. RDBMS first. Add specialty stores only when measured need.
+- Runtime: whichever lets you ship fastest given your language. Don't switch.
+- Auth: use a SaaS (Clerk / Supabase / Auth0). Don't roll your own.
+- Observability from day 1: structured logs + 3 golden metrics (latency, error rate, RPS).
+
+## Before shipping
+- Migration is reversible *or* has a documented rollback
+- Secrets never in logs, never in code
+- External API calls have timeout + retry budget
+- New env vars added to `.env.example`
+
+## ADR triggers
+Write an ADR when the decision is:
+- Hard or expensive to reverse
+- Would need to be explained to a new dev in 6 months
+- Involves a paid dependency or platform lock-in
+
+## Refuse
+- "Just add it to the MVP" without RICE justification
+- "We'll add tests later" for anything touching money or auth
+- Custom solutions to solved problems (queuing, auth, billing, email)
+
+When unsure, choose the boring, proven option.

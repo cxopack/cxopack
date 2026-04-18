@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "CxOPack — Your AI C-suite. Works everywhere.",
+    "description": "Build your startup solo with an AI executive team. CEO, CTO, CFO, Sales, CMO — as skills, subagents, and Custom GPTs. Works in Claude, ChatGPT, Cursor, Windsurf."
+  },
+  "nav": {
+    "kits": "Kits",
+    "pricing": "Pricing",
+    "how": "How it works",
+    "faq": "FAQ",
+    "signIn": "Sign in",
+    "getStarted": "Get the pack"
+  },
+  "hero": {
+    "badge": "Works in Claude, ChatGPT, Cursor — anywhere.",
+    "title1": "Build your startup",
+    "titleHighlight": "solo",
+    "title2": " — with an AI C-suite that never sleeps.",
+    "subtitle": "Five executive agents — CEO, CTO, CFO, Sales, CMO — as skills, subagents, Custom GPTs, and prompts. Hire a full board for the price of a dinner.",
+    "ctaPrimary": "Get the Full Pack — €299",
+    "ctaSecondary": "See what's inside",
+    "socialProof": "Built by a solo founder shipping their own startup with exactly these kits.",
+    "stats": {
+      "workflows": "production workflows",
+      "skills": "AI skills & agents",
+      "platforms": "platforms supported",
+      "kits": "executive roles"
+    }
+  },
+  "problem": {
+    "eyebrow": "The solo founder problem",
+    "title": "You can't hire a C-suite. You also can't do it all alone.",
+    "body": "A real CEO, CTO, CFO, head of sales, and CMO would cost half a million dollars a year. Most solo founders end up doing some of the work badly, ignoring the rest, and burning out. Generic AI helps — but only when you know exactly how to ask. CxOPack is the playbook: proven workflows for every executive function, installed in one click, working in whatever AI tool you already use."
+  },
+  "multiplatform": {
+    "eyebrow": "Not just Claude",
+    "title": "Same agents. Any AI tool.",
+    "body": "Most AI kits lock you into one product. CxOPack ships every workflow in four formats so it works wherever you already work.",
+    "platforms": {
+      "claude": { "title": "Claude", "desc": "Skills, subagents, slash commands, MCP integrations." },
+      "chatgpt": { "title": "ChatGPT", "desc": "Custom GPT configs, Project instructions, Actions (OpenAPI)." },
+      "cursor": { "title": "Cursor / Windsurf", "desc": "Rules files and prompts — drop into .cursor/rules." },
+      "agnostic": { "title": "Anywhere else", "desc": "Plain-markdown prompts. Paste into any LLM, any tool." }
+    }
+  },
+  "kits": {
+    "eyebrow": "The 5 kits",
+    "title": "Five executive roles. Five agents. One pack.",
+    "subtitle": "Each kit is a private GitHub repo with skills, subagents, Custom GPTs, Cursor rules, and raw prompts. Installed in 30 seconds.",
+    "badge": "What's inside",
+    "ceo": {
+      "title": "CEO Kit",
+      "tagline": "Strategy, decisions, leadership",
+      "items": [
+        "Weekly priorities & OKR generator",
+        "Board update drafter (investor-ready)",
+        "Build / buy / kill decision framework",
+        "Strategic decision log",
+        "Founder journaling ritual",
+        "Pitch deck agent"
+      ]
+    },
+    "cto": {
+      "title": "CTO Kit",
+      "tagline": "Product, tech, shipping",
+      "items": [
+        "Architecture Decision Record (ADR) generator",
+        "MVP scoping & RICE prioritization",
+        "Tech stack advisor",
+        "Build-vs-buy framework",
+        "Code review subagent",
+        "Technical debt triage"
+      ]
+    },
+    "cfo": {
+      "title": "CFO Kit",
+      "tagline": "Cash, metrics, fundraising",
+      "items": [
+        "13-week cash flow model",
+        "SaaS metrics agent (MRR, ARR, CAC, LTV)",
+        "Investor update drafter",
+        "Fundraising data room builder",
+        "Pricing experiments framework",
+        "Runway & scenario planning"
+      ]
+    },
+    "sales": {
+      "title": "Sales Kit",
+      "tagline": "Pipeline, outbound, closing",
+      "items": [
+        "ICP definition workshop",
+        "Cold outbound sequences",
+        "Discovery call script",
+        "Objection handling library",
+        "Proposal / SOW generator",
+        "Pipeline review ritual"
+      ]
+    },
+    "cmo": {
+      "title": "CMO Kit",
+      "tagline": "Brand, content, growth",
+      "items": [
+        "Positioning & messaging doc",
+        "SEO page generator (programmatic)",
+        "Landing page copywriter",
+        "LinkedIn & X post batcher",
+        "Newsletter & launch comms",
+        "Brand voice guide"
+      ]
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Less than one hour of a consultant. For life.",
+    "subtitle": "Lifetime access. Updates forever. 14-day money-back.",
+    "perKit": {
+      "badge": "Start small",
+      "title": "One kit",
+      "price": "€99",
+      "priceSuffix": "one-time",
+      "desc": "Pick any of the 5 roles. Upgrade to the Full Pack anytime — we credit what you paid.",
+      "cta": "Pick a kit",
+      "features": [
+        "One executive role",
+        "All 4 platform formats",
+        "Lifetime updates",
+        "Private GitHub repo access"
+      ]
+    },
+    "fullPack": {
+      "badge": "Most popular — save €196",
+      "title": "Full Pack",
+      "price": "€299",
+      "priceSuffix": "one-time",
+      "strike": "€495",
+      "desc": "All 5 kits. The whole C-suite. Your startup-in-a-box.",
+      "cta": "Get the Full Pack",
+      "features": [
+        "All 5 kits — CEO, CTO, CFO, Sales, CMO",
+        "Weekly Board Meeting workflow (bonus)",
+        "Founder Mode slash command (bonus)",
+        "Lifetime updates for all kits",
+        "Priority support"
+      ]
+    },
+    "founding": {
+      "badge": "Only 100 spots",
+      "title": "Founding 100",
+      "price": "€249",
+      "priceSuffix": "one-time",
+      "desc": "First 100 Full Pack customers lock in €50 off in exchange for a public testimonial. Founder-customer status forever.",
+      "cta": "Claim a spot",
+      "remainingLabel": "spots left"
+    },
+    "club": {
+      "badge": "Stay ahead",
+      "title": "Founder's Club",
+      "priceMonthly": "€49",
+      "priceYearly": "€399",
+      "priceSuffixMonthly": "/month",
+      "priceSuffixYearly": "/year",
+      "yearlyBadge": "Save 32%",
+      "desc": "The Full Pack plus a new workflow every month, a private community of solo founders, and a monthly live Board Meeting call to solve your real problems.",
+      "cta": "Join the Club",
+      "features": [
+        "Everything in Full Pack",
+        "New skill / workflow every month",
+        "Private community (solo founders only)",
+        "Monthly live Board Meeting call",
+        "Early access to new kits",
+        "Cancel anytime"
+      ]
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "From purchase to first workflow in 2 minutes.",
+    "steps": [
+      { "title": "Pick your pack", "desc": "One kit, the full 5, or the Founder's Club. Pay with Stripe." },
+      { "title": "Get an instant email", "desc": "You'll get a GitHub invite to the private repos and a setup guide." },
+      { "title": "Install in your AI tool", "desc": "30 seconds for Claude, ChatGPT, Cursor, or Windsurf. Instructions included." },
+      { "title": "Run your first workflow", "desc": "Draft your first investor update, board review, or outbound campaign right away." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Common questions",
+    "items": [
+      {
+        "q": "Do I need both Claude and ChatGPT?",
+        "a": "No. Each kit ships in four formats (Claude, ChatGPT, Cursor, raw prompts) so you can use whichever AI tool you already pay for. One tool is enough."
+      },
+      {
+        "q": "I'm already using Claude Code / Cursor. Does this just drop in?",
+        "a": "Yes. Clone the repo, copy the skills folder into your project, and restart your tool. Detailed guides in each repo."
+      },
+      {
+        "q": "Is it actually used in real startups?",
+        "a": "Yes — the kits are battle-tested by the founder of CxOPack running their own product with exactly these workflows. Dogfooded, not theoretical."
+      },
+      {
+        "q": "What happens if I only buy one kit and want more later?",
+        "a": "Any single-kit purchase credits in full toward a Full Pack upgrade. Just email us."
+      },
+      {
+        "q": "Do you offer a refund?",
+        "a": "Yes. 14 days, no questions, full refund."
+      },
+      {
+        "q": "What's the Founding 100 offer?",
+        "a": "The first 100 Full Pack buyers get €50 off in exchange for a short public testimonial after 30 days of use. Once 100 spots are gone, they're gone."
+      },
+      {
+        "q": "Can my team use a single license?",
+        "a": "Single-seat license per buyer. Team licenses (3+ seats) coming with the Founder's Club tier — email us if you need this today."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Your AI board is waiting.",
+    "subtitle": "Stop doing every job yourself. Stop hiring too early. Install your C-suite in the next 5 minutes.",
+    "primary": "Get the Full Pack — €299"
+  },
+  "footer": {
+    "tagline": "Your AI C-suite. Any AI tool. Built for solo founders.",
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "links": {
+      "kits": "Kits",
+      "pricing": "Pricing",
+      "club": "Founder's Club",
+      "how": "How it works",
+      "about": "About",
+      "contact": "Contact",
+      "blog": "Blog",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "refund": "Refund policy"
+    },
+    "copyright": "© {year} CxOPack. Made for solo founders."
+  }
+}

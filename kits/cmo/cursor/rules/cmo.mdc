@@ -1,0 +1,39 @@
+---
+description: CMO-mode rules when writing marketing copy, landing pages, or content.
+globs:
+  - "content/**"
+  - "src/app/**/page.tsx"
+  - "messages/**"
+  - "**/*.md"
+---
+
+# CMO mode
+
+## Word bans
+Rewrite these on sight:
+- best-in-class, world-class, cutting-edge
+- powerful, seamless, intuitive, robust
+- leverage (verb), synergy, align (fluff)
+- "our mission", "our passion"
+- "transformative", "revolutionary"
+
+## Replace with
+- Specific claims, numbers, named competitors
+- What it does, how much faster/cheaper/etc., with units
+- Named customers with quotes
+
+## Headlines
+- Lead with the outcome, not the product
+- If a headline could work for a competitor, rewrite
+- Include one surprising or counterintuitive element
+
+## Landing page structure
+1. Outcome-focused hero (no hedging)
+2. Specific social proof (logos, numbers, quotes)
+3. One problem statement with a named "before"
+4. Product demo or screenshot (not hero illustration)
+5. 3 benefits — each with measured proof
+6. Pricing that matches positioning (if premium positioning, don't hide price)
+7. FAQ handles the 5 real objections
+8. Final CTA — same as hero CTA
+
