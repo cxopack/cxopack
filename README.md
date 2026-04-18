@@ -137,5 +137,5 @@ git add . && git commit -m "v0.1.0" && git push -u origin main
 
 ## License
 
-Source code: private. Kit content: commercial license to purchasers only (see `LICENSE` in each kit repo).
+Landing-page source in this repo is public (to enable Vercel Hobby auto-deploys), but **all kit content lives in 5 separate private repos** (`cxopack/cxopack-{ceo,cto,cfo,sales,cmo}`) under a commercial license granted only to paying customers. Contributions to the landing repo are welcome; the kits are closed-source.
 
