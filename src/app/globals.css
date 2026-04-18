@@ -1,22 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jb-mono), ui-monospace, "JetBrains Mono", monospace;
 
-  --color-bg: #0a0a0b;
-  --color-bg-elevated: #111114;
-  --color-fg: #f5f5f7;
+  /* Brand kit palette — Edition I */
+  --color-ink-900: #0a0a0b;
+  --color-ink-800: #101114;
+  --color-ink-700: #17181c;
+  --color-gold-500: #c9a961;
+  --color-gold-300: #e6cf91;
+  --color-gold-700: #8f7638;
+  --color-ivory: #ede6d3;
+  --color-paper: #f4f0e6;
+
+  /* Semantic aliases used across components */
+  --color-bg: var(--color-ink-900);
+  --color-bg-elevated: var(--color-ink-800);
+  --color-bg-raised: var(--color-ink-700);
+  --color-fg: var(--color-ivory);
   --color-fg-muted: #a1a1aa;
   --color-fg-dim: #71717a;
   --color-border: #1f1f24;
   --color-border-strong: #2a2a30;
 
-  --color-brand: #d4af37;
-  --color-brand-soft: rgba(212, 175, 55, 0.12);
-  --color-brand-hover: #e5c158;
-
-  --color-accent: #5b8cff;
+  --color-brand: var(--color-gold-500);
+  --color-brand-soft: rgba(201, 169, 97, 0.12);
+  --color-brand-hover: var(--color-gold-300);
+  --color-brand-dark: var(--color-gold-700);
 }
 
 @layer base {
@@ -34,8 +45,8 @@
 
   body {
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212, 175, 55, 0.08), transparent),
-      radial-gradient(ellipse 50% 30% at 80% 40%, rgba(91, 140, 255, 0.06), transparent);
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 169, 97, 0.09), transparent),
+      radial-gradient(ellipse 60% 35% at 85% 30%, rgba(201, 169, 97, 0.05), transparent);
     background-attachment: fixed;
   }
 
@@ -44,8 +55,8 @@
   }
 
   ::selection {
-    background: var(--color-brand);
-    color: #000;
+    background: var(--color-gold-500);
+    color: var(--color-ink-900);
   }
 }
 
@@ -66,6 +77,16 @@
   .grid-fade {
     mask-image: radial-gradient(ellipse at center, black, transparent 70%);
   }
+
+  .mono {
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+  }
+  .mono-tight {
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+  }
+
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -75,12 +96,16 @@
     border-radius: 0.625rem;
     font-weight: 600;
     font-size: 0.9375rem;
-    background: var(--color-brand);
-    color: #0a0a0b;
+    background: var(--color-gold-500);
+    color: var(--color-ink-900);
     transition: background 120ms, transform 80ms;
   }
-  .btn-primary:hover { background: var(--color-brand-hover); }
-  .btn-primary:active { transform: translateY(1px); }
+  .btn-primary:hover {
+    background: var(--color-gold-300);
+  }
+  .btn-primary:active {
+    transform: translateY(1px);
+  }
 
   .btn-ghost {
     display: inline-flex;
@@ -116,26 +141,43 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.375rem 0.75rem;
-    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
     font-weight: 500;
-    color: var(--color-brand);
+    color: var(--color-gold-500);
     background: var(--color-brand-soft);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(201, 169, 97, 0.2);
     border-radius: 9999px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .eyebrow-plain {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--color-gold-500);
+    letter-spacing: 0.12em;
     text-transform: uppercase;
   }
 
   .headline {
-    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
     font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
   }
   .headline-2 {
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.015em;
+  }
+
+  .radial-gold {
+    background: radial-gradient(
+      ellipse 60% 50% at 70% 50%,
+      rgba(201, 169, 97, 0.18),
+      transparent 70%
+    );
   }
 }

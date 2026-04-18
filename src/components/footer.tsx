@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Logo } from "@/components/brand/logo";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -38,19 +39,15 @@ export function Footer() {
       <div className="container-narrow">
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2 font-semibold">
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-brand)] text-[#0a0a0b] text-sm font-bold">
-                C
-              </span>
-              <span>CxOPack</span>
-            </div>
-            <p className="mt-3 max-w-xs text-sm text-[var(--color-fg-muted)]">
+            <Logo size="md" />
+            <p className="mt-4 max-w-xs text-sm text-[var(--color-fg-muted)]">
               {t("tagline")}
             </p>
+            <div className="mono mt-4 text-[10px] text-[var(--color-fg-dim)]">EDITION · I</div>
           </div>
           {cols.map((col) => (
             <div key={col.heading}>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-fg-dim)]">
+              <h4 className="mono text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-fg-dim)]">
                 {col.heading}
               </h4>
               <ul className="mt-4 space-y-2">
@@ -68,8 +65,9 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-12 border-t border-[var(--color-border)] pt-6 text-xs text-[var(--color-fg-dim)]">
-          {t("copyright", { year })}
+        <div className="mono mt-12 flex items-center justify-between border-t border-[var(--color-border)] pt-6 text-[10px] uppercase tracking-[0.14em] text-[var(--color-fg-dim)]">
+          <span>{t("copyright", { year })}</span>
+          <span>CXOPACK · EDITION I</span>
         </div>
       </div>
     </footer>

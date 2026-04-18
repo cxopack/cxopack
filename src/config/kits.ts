@@ -2,7 +2,7 @@ export type KitSlug = "ceo" | "cto" | "cfo" | "sales" | "cmo";
 
 export type Kit = {
   slug: KitSlug;
-  emoji: string;
+  code: string;
   repoEnvKey:
     | "GITHUB_REPO_CEO"
     | "GITHUB_REPO_CTO"
@@ -18,11 +18,11 @@ export type Kit = {
 };
 
 export const KITS: Kit[] = [
-  { slug: "ceo", emoji: "♛", repoEnvKey: "GITHUB_REPO_CEO", stripeEnvKey: "STRIPE_PRICE_KIT_CEO" },
-  { slug: "cto", emoji: "⚙︎", repoEnvKey: "GITHUB_REPO_CTO", stripeEnvKey: "STRIPE_PRICE_KIT_CTO" },
-  { slug: "cfo", emoji: "€", repoEnvKey: "GITHUB_REPO_CFO", stripeEnvKey: "STRIPE_PRICE_KIT_CFO" },
-  { slug: "sales", emoji: "↗", repoEnvKey: "GITHUB_REPO_SALES", stripeEnvKey: "STRIPE_PRICE_KIT_SALES" },
-  { slug: "cmo", emoji: "✦", repoEnvKey: "GITHUB_REPO_CMO", stripeEnvKey: "STRIPE_PRICE_KIT_CMO" },
+  { slug: "ceo", code: "CEO·01", repoEnvKey: "GITHUB_REPO_CEO", stripeEnvKey: "STRIPE_PRICE_KIT_CEO" },
+  { slug: "cto", code: "CTO·02", repoEnvKey: "GITHUB_REPO_CTO", stripeEnvKey: "STRIPE_PRICE_KIT_CTO" },
+  { slug: "cfo", code: "CFO·03", repoEnvKey: "GITHUB_REPO_CFO", stripeEnvKey: "STRIPE_PRICE_KIT_CFO" },
+  { slug: "sales", code: "SLS·04", repoEnvKey: "GITHUB_REPO_SALES", stripeEnvKey: "STRIPE_PRICE_KIT_SALES" },
+  { slug: "cmo", code: "CMO·05", repoEnvKey: "GITHUB_REPO_CMO", stripeEnvKey: "STRIPE_PRICE_KIT_CMO" },
 ];
 
 export const ALL_KIT_SLUGS: KitSlug[] = KITS.map((k) => k.slug);

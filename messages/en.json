@@ -12,11 +12,12 @@
     "getStarted": "Get the pack"
   },
   "hero": {
-    "badge": "Works in Claude, ChatGPT, Cursor — anywhere.",
-    "title1": "Build your startup",
-    "titleHighlight": "solo",
-    "title2": " — with an AI C-suite that never sleeps.",
-    "subtitle": "Five executive agents — CEO, CTO, CFO, Sales, CMO — as skills, subagents, Custom GPTs, and prompts. Hire a full board for the price of a dinner.",
+    "badge": "AN AI C-SUITE · IN A PACK",
+    "edition": "EDITION · I",
+    "title1": "Hire five",
+    "titleHighlight": "executives",
+    "title2": ". Pay €299.",
+    "subtitle": "CEO · CTO · CFO · Head of Sales · CMO — production-grade AI executive kits that work in Claude, ChatGPT, Cursor, any tool.",
     "ctaPrimary": "Get the Full Pack — €299",
     "ctaSecondary": "See what's inside",
     "socialProof": "Built by a solo founder shipping their own startup with exactly these kits.",
