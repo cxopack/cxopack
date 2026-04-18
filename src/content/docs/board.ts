@@ -9,10 +9,10 @@ export const boardDoc = {
   title: "The Board",
   tagline: "Your 5 kits stop being 5 kits. They become a team.",
   heroSentence:
-    "The Board is the orchestration layer that ships with the Full Pack. A Chief of Staff subagent routes any request to the right executive persona; a /board:weekly ritual runs all 5 in sequence; a shared founder-log/ workspace gives them collective memory. Without the Board, you have 5 kits. With it, you have an AI executive team that remembers, handoffs, and disagrees — like a real one.",
+    "The Board is the orchestration layer included with the All-Access Pass. A Chief of Staff subagent (Sam) routes any request to the right executive persona; a /board:weekly ritual runs all 5 in sequence; a shared founder-log/ workspace gives them collective memory. Without the Board, you have 5 kits. With it, you have an AI executive team that remembers, hands off, and disagrees — like a real one.",
   review: {
     intro:
-      "The Board is free inside the Full Pack — but it only works if the kits beneath it are installed first. Before you install Board, install at least one kit and run it once end-to-end. The routing is only as smart as the personas it routes to.",
+      "The Board is included with the All-Access Pass — but it only works if the kits beneath it are installed first. Before you install Board, install at least one kit and run it once end-to-end. The routing is only as smart as the personas it routes to.",
     questions: [
       "Do you have at least 2 of the 5 kits installed and have you run one skill from each?",
       "Do you have a `founder-log/` folder yet? (If not, the Board's first job is to initialize it.)",
