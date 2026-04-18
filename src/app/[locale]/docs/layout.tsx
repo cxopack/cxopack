@@ -1,7 +1,8 @@
 import { setRequestLocale } from "next-intl/server";
-import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { DocsHeader } from "@/components/docs/docs-header";
 import { DocsSidebar } from "@/components/docs/sidebar";
+import { DocsToc } from "@/components/docs/toc";
 
 export default async function DocsLayout({
   children,
@@ -15,10 +16,11 @@ export default async function DocsLayout({
 
   return (
     <>
-      <Nav />
-      <div className="container-narrow flex gap-10 py-4">
+      <DocsHeader />
+      <div className="container-narrow flex gap-8 py-4">
         <DocsSidebar />
         <main className="min-w-0 flex-1 py-8">{children}</main>
+        <DocsToc />
       </div>
       <Footer />
     </>

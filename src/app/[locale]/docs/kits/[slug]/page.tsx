@@ -3,9 +3,12 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { KIT_DOCS, KIT_DOCS_LIST } from "@/content/docs";
 import type { KitDoc } from "@/content/docs";
-import { H1, H2, H3, Lead, P, Ul, Ol, Pre, Code, Callout } from "@/components/docs/prose";
-import { Link } from "@/i18n/routing";
-import { ArrowRight, ExternalLink, Circle, Dot } from "lucide-react";
+import { H1, H2, H3, Lead, P, Ul, Ol, Pre, Callout } from "@/components/docs/prose";
+import { Breadcrumbs } from "@/components/docs/breadcrumbs";
+import { Pager } from "@/components/docs/pager";
+import { EditOnGitHub } from "@/components/docs/edit-on-github";
+import { KitIcon } from "@/components/brand/kit-icon";
+import { ExternalLink, Dot } from "lucide-react";
 
 export async function generateStaticParams() {
   return KIT_DOCS_LIST.map((k) => ({ slug: k.slug }));
@@ -36,11 +39,23 @@ export default async function KitDocPage({
   const kit = KIT_DOCS[slug];
   if (!kit) notFound();
 
+  const kitIndex = KIT_DOCS_LIST.findIndex((k) => k.slug === kit.slug) + 1;
+
   return (
     <div className="max-w-3xl">
-      <div className="eyebrow mb-4">{kit.title} walkthrough</div>
-      <H1>{kit.title}</H1>
-      <div className="mt-2 text-lg text-[var(--color-fg-muted)]">{kit.tagline}</div>
+      <Breadcrumbs />
+      <div className="mb-6 flex items-center gap-4">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)]">
+          <KitIcon slug={kit.slug} className="h-8 w-8" />
+        </div>
+        <div>
+          <div className="mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-fg-dim)]">
+            KIT · 0{kitIndex} / 05
+          </div>
+          <H1>{kit.title}</H1>
+        </div>
+      </div>
+      <div className="text-[17px] text-[var(--color-fg-muted)]">{kit.tagline}</div>
       <Lead>{kit.heroSentence}</Lead>
 
       <ReviewSection kit={kit} />
@@ -52,18 +67,11 @@ export default async function KitDocPage({
         {kit.firstWin}
       </Callout>
 
-      <div className="mt-16 flex flex-wrap gap-3">
-        {KIT_DOCS_LIST.filter((k) => k.slug !== kit.slug).map((other) => (
-          <Link
-            key={other.slug}
-            href={`/docs/kits/${other.slug}`}
-            className="card flex items-center gap-2 px-4 py-3 text-sm transition hover:border-[var(--color-brand)]"
-          >
-            <span className="text-[var(--color-fg-muted)]">Next: {other.title}</span>
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        ))}
+      <div className="mt-12 flex justify-end">
+        <EditOnGitHub />
       </div>
+
+      <Pager />
     </div>
   );
 }

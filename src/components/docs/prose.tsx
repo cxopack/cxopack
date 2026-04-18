@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { Info, AlertTriangle, CheckCircle2, Lightbulb } from "lucide-react";
 
 export function DocsProse({ children, className }: { children: ReactNode; className?: string }) {
   return <div className={cn("docs-prose", className)}>{children}</div>;
@@ -7,7 +8,7 @@ export function DocsProse({ children, className }: { children: ReactNode; classN
 
 export function H1({ children }: { children: ReactNode }) {
   return (
-    <h1 className="text-4xl font-bold tracking-tight text-[var(--color-fg)] md:text-5xl">
+    <h1 className="text-4xl font-bold tracking-tight text-[var(--color-fg)] md:text-[42px]">
       {children}
     </h1>
   );
@@ -17,8 +18,17 @@ export function H2({ children, id }: { children: ReactNode; id?: string }) {
   return (
     <h2
       id={id}
-      className="mt-16 scroll-mt-20 border-b border-[var(--color-border)] pb-3 text-2xl font-semibold tracking-tight text-[var(--color-fg)]"
+      className="group relative mt-16 scroll-mt-20 border-b border-[var(--color-border)] pb-3 text-[26px] font-semibold tracking-tight text-[var(--color-fg)]"
     >
+      {id && (
+        <a
+          href={`#${id}`}
+          aria-label={`Link to ${id}`}
+          className="absolute -left-5 top-[18px] opacity-0 transition group-hover:opacity-100 text-[var(--color-fg-dim)] hover:text-[var(--color-brand)]"
+        >
+          #
+        </a>
+      )}
       {children}
     </h2>
   );
@@ -26,7 +36,10 @@ export function H2({ children, id }: { children: ReactNode; id?: string }) {
 
 export function H3({ children, id }: { children: ReactNode; id?: string }) {
   return (
-    <h3 id={id} className="mt-10 scroll-mt-20 text-lg font-semibold text-[var(--color-fg)]">
+    <h3
+      id={id}
+      className="group relative mt-10 scroll-mt-20 text-lg font-semibold text-[var(--color-fg)]"
+    >
       {children}
     </h3>
   );
@@ -38,7 +51,7 @@ export function P({ children }: { children: ReactNode }) {
 
 export function Lead({ children }: { children: ReactNode }) {
   return (
-    <p className="mt-4 text-lg leading-relaxed text-[var(--color-fg-muted)]">{children}</p>
+    <p className="mt-4 text-[17px] leading-relaxed text-[var(--color-fg-muted)]">{children}</p>
   );
 }
 
@@ -58,25 +71,49 @@ export function Ol({ children }: { children: ReactNode }) {
   );
 }
 
+type CalloutVariant = "info" | "warn" | "success" | "tip";
+
+const CALLOUT_STYLES: Record<CalloutVariant, { tint: string; icon: typeof Info; iconColor: string }> = {
+  info: {
+    tint: "border-[var(--color-brand)]/30 bg-[var(--color-brand-soft)]",
+    icon: Info,
+    iconColor: "text-[var(--color-brand)]",
+  },
+  tip: {
+    tint: "border-[var(--color-brand)]/30 bg-[var(--color-brand-soft)]",
+    icon: Lightbulb,
+    iconColor: "text-[var(--color-brand)]",
+  },
+  warn: {
+    tint: "border-amber-500/30 bg-amber-500/[0.06]",
+    icon: AlertTriangle,
+    iconColor: "text-amber-400",
+  },
+  success: {
+    tint: "border-emerald-500/30 bg-emerald-500/[0.06]",
+    icon: CheckCircle2,
+    iconColor: "text-emerald-400",
+  },
+};
+
 export function Callout({
   variant = "info",
   title,
   children,
 }: {
-  variant?: "info" | "warn" | "success";
+  variant?: CalloutVariant;
   title?: string;
   children: ReactNode;
 }) {
-  const tint =
-    variant === "warn"
-      ? "border-amber-500/30 bg-amber-500/5"
-      : variant === "success"
-        ? "border-emerald-500/30 bg-emerald-500/5"
-        : "border-[var(--color-brand)]/30 bg-[var(--color-brand-soft)]";
+  const style = CALLOUT_STYLES[variant];
+  const Icon = style.icon;
   return (
-    <div className={cn("mt-6 rounded-lg border px-4 py-3 text-sm", tint)}>
-      {title && <div className="mb-1 font-semibold text-[var(--color-fg)]">{title}</div>}
-      <div className="leading-6 text-[var(--color-fg-muted)]">{children}</div>
+    <div className={cn("mt-6 flex gap-3 rounded-lg border px-4 py-3.5 text-sm", style.tint)}>
+      <Icon className={cn("mt-0.5 h-4 w-4 shrink-0", style.iconColor)} />
+      <div className="min-w-0">
+        {title && <div className="mb-1 font-semibold text-[var(--color-fg)]">{title}</div>}
+        <div className="leading-6 text-[var(--color-fg-muted)]">{children}</div>
+      </div>
     </div>
   );
 }
@@ -89,10 +126,4 @@ export function Code({ children }: { children: ReactNode }) {
   );
 }
 
-export function Pre({ children }: { children: ReactNode }) {
-  return (
-    <pre className="mt-4 overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 font-mono text-sm leading-6 text-[var(--color-fg)]">
-      {children}
-    </pre>
-  );
-}
+export { CodeBlock as Pre } from "./copy-button";
