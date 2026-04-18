@@ -6,7 +6,7 @@ import { H1, H2, Lead, P, Ul } from "@/components/docs/prose";
 
 export const metadata = {
   title: "Changelog — CxOPack",
-  description: "Version history and release notes for CxOPack.",
+  description: "Release notes — what's new in each version of CxOPack.",
 };
 
 type Release = {
@@ -18,68 +18,66 @@ type Release = {
 
 const RELEASES: Release[] = [
   {
-    version: "v0.3.0 — Edition II",
+    version: "Edition I · v0.3",
     date: "2026-04-19",
     status: "latest",
     highlights: [
-      "Repricing: Solo Kit €49 lifetime · All-Access Pass €149/yr · Launch 100 €99/yr forever (first 100).",
-      "All-Access Pass replaces the Full Pack — you get every current and future kit while subscribed (the catalog flywheel).",
-      "Sam: the Chief of Staff now has a name, a persona, and a signature line on every brief.",
-      "New landing section: 'A week in the life' — visual timeline of the daily/weekly rituals.",
-      "Autopilot teaser: agents-with-budgets product previewed for Q4 2026; waitlist live.",
-      "BOARD repo (v0.2.0) updated to reference Sam everywhere.",
+      "The Board now ships with every All-Access Pass — Chief of Staff (Sam) plus five persona agents that coordinate through a shared workspace.",
+      "Sam, the Chief of Staff, signs every synthesized brief with a clear next-step prompt (Decide today / Read this twice / Sleep on it).",
+      "New documentation section — “A week in the life” — illustrates the Monday-to-Friday rhythm of running a startup with the kits.",
+      "Autopilot early-access waitlist is open. Subscribers will be invited to the closed beta first.",
+      "Per-kit social cards: every documentation page generates a tailored preview when shared on X, LinkedIn, or in messaging tools.",
     ],
   },
   {
-    version: "v0.2.0",
+    version: "Edition I · v0.2",
     date: "2026-04-19",
     status: "stable",
     highlights: [
-      "16 missing skill files written — 30 standalone skills total, matching the marketed 6-per-kit count.",
-      "30 namespaced commands: /ceo:* /cto:* /cfo:* /sales:* /cmo:*",
-      "The Board orchestration kit shipped: chief-of-staff + 5 persona subagents + /founder + /board:weekly /decision /brief /handoff",
-      "Shared founder-log/ memory schema across all agents.",
-      "Per-kit dynamic OG images for /docs/kits/<slug>.",
-      "Detailed installation page at /docs/installation (per platform).",
-      "CxOPack installed into Prezto for dogfooding.",
+      "Thirty named workflows across the five kits — every advertised skill now ships as a standalone, documented file.",
+      "Namespaced slash commands across every kit — /ceo:weekly, /cto:adr, /cfo:cash-flow, /sales:icp, /cmo:positioning, and twenty-five more.",
+      "The Board orchestration layer introduced: a Chief of Staff that routes any request to the right executive(s) and synthesizes one coherent brief.",
+      "Shared founder-log/ memory schema — every agent reads and writes to one workspace (priorities, metrics, decisions, weekly briefs, handoffs).",
+      "New documentation pages: deep installation guide per platform, per-kit walkthroughs covering review, MCPs, cadence, and every skill.",
+      "Per-kit dynamic Open Graph images — every documentation page gets a tailored social preview.",
     ],
   },
   {
-    version: "v0.1.0",
+    version: "Edition I · v0.1",
     date: "2026-04-18",
     status: "stable",
     highlights: [
-      "Initial release: CEO, CTO, CFO, Sales, CMO kits published.",
-      "13 standalone Claude skills, 2 subagents, 1 slash command, 5 ChatGPT Custom GPT configs, 5 Cursor rule files.",
-      "Landing page, full docs site, Stripe Checkout live, post-payment webhook (DB + GitHub invite + email).",
-      "Brand Kit Edition I applied: Ink/Gold/Ivory palette, Inter + JetBrains Mono, 4-bar logo, 5 kit icons.",
+      "Initial release of five executive kits: CEO, CTO, CFO, Sales, and CMO.",
+      "Every kit ships in four formats: Claude (skills, subagents, slash commands), ChatGPT (Custom GPT configs), Cursor / Windsurf (rules), and platform-agnostic master prompts for any LLM.",
+      "Full documentation site, customer-ready Stripe Checkout, automated GitHub repository invitations on purchase, and welcome emails.",
+      "Edition I brand system applied across the product: Ink and Gold palette, Inter and JetBrains Mono typography, custom kit iconography.",
     ],
   },
 ];
 
 const PLANNED: Release = {
-  version: "v0.4.0",
+  version: "v0.4 · upcoming",
   date: "targeting 2026-Q3",
   status: "upcoming",
   highlights: [
-    "5 new kits to grow All-Access value: DevOps, Cloud Architect, Financial Analyst, Product Manager, Customer Success.",
-    "Decision cards: shareable images exported from /board:decision outputs (LinkedIn-ready).",
-    "Subscription lifecycle webhook handling (renewal, cancellation, refund) for All-Access.",
-    "Public 'How I shipped Prezto with CxOPack' case study + weekly behind-the-scenes posts.",
-    "Interactive /founder demo widget on the landing — try the routing without installing.",
-    "Hexagon All-Access crest + email header banner from the Brand Kit.",
+    "Five additional kits to broaden the catalog: DevOps, Cloud Architect, Financial Analyst, Product Manager, and Customer Success.",
+    "Decision cards — shareable, LinkedIn-ready exports from /board:decision outputs.",
+    "Refinements to subscription lifecycle handling (renewals, cancellations, pauses).",
+    "Public case studies and behind-the-scenes content showing the kits in real-world use.",
+    "Interactive /founder demo on the landing page so visitors can try the routing without installing.",
+    "Additional Brand Kit assets, including the Edition crest and email header banner.",
   ],
 };
 
 const AUTOPILOT: Release = {
-  version: "v1.0 — Autopilot",
-  date: "targeting 2026-Q4",
+  version: "Autopilot · Q4 2026",
+  date: "early access via waitlist",
   status: "upcoming",
   highlights: [
-    "Agents with real budgets connected to MCPs (Stripe, Gmail, HubSpot, Apollo, Vercel, Sentry).",
-    "Each agent gets a virtual card with category + cap controls. CFO agent watches everyone's spend.",
-    "Weekly autonomy audit to the founder — every action logged, anomalies flagged, kill switch always available.",
-    "Pricing: €499/mo base + agent-spend credits + usage. The first 'agent-operated company' product tier.",
+    "Agents move from assistants to operators — connected to MCPs (Stripe, Gmail, HubSpot, Apollo, Vercel, Sentry) with category- and cap-controlled spending authority.",
+    "The CFO agent monitors all activity and flags anomalies; every action is logged and reviewable.",
+    "Weekly autonomy audit delivered to the founder; a kill switch is always one click away.",
+    "The first product tier in the agent-operated company category. Early-access details available to waitlist members.",
   ],
 };
 
@@ -93,8 +91,8 @@ export default async function Changelog({ params }: { params: Promise<{ locale: 
       <div className="eyebrow-plain mb-4">Resources</div>
       <H1>Changelog</H1>
       <Lead>
-        Every release. What shipped, when, why. Kits auto-update when you re-pull the repos — no
-        re-purchase needed.
+        Every release of CxOPack — what&apos;s new, what changed, and what&apos;s coming. Customers
+        receive updates automatically by re-pulling their kit repositories.
       </Lead>
 
       <div className="mt-10 space-y-12">
@@ -103,8 +101,8 @@ export default async function Changelog({ params }: { params: Promise<{ locale: 
         ))}
       </div>
 
-      <H2 id="upcoming">Upcoming</H2>
-      <P>Roadmap, not a promise. Pulled into live releases as workflows stabilize.</P>
+      <H2 id="upcoming">Roadmap</H2>
+      <P>Directional, not committed. Items move into a release as they stabilize.</P>
       <div className="mt-6 space-y-12">
         <ReleaseCard release={PLANNED} />
         <ReleaseCard release={AUTOPILOT} />

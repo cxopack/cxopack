@@ -64,7 +64,7 @@ export default async function Installation({ params }: { params: Promise<{ local
         <li><Code>cxopack/cxopack-cfo</Code> — CFO Kit</li>
         <li><Code>cxopack/cxopack-sales</Code> — Sales Kit</li>
         <li><Code>cxopack/cxopack-cmo</Code> — CMO Kit</li>
-        <li><Code>cxopack/cxopack-board</Code> — The Board (Full Pack only)</li>
+        <li><Code>cxopack/cxopack-board</Code> — The Board (included with All-Access Pass)</li>
       </Ul>
       <Callout title="Clone only what you bought">
         If you bought a single kit, only that repo is available to you. The install below works
@@ -85,7 +85,7 @@ git clone git@github.com:cxopack/cxopack-cto.git .cxopack-cto
 git clone git@github.com:cxopack/cxopack-cfo.git .cxopack-cfo
 git clone git@github.com:cxopack/cxopack-sales.git .cxopack-sales
 git clone git@github.com:cxopack/cxopack-cmo.git .cxopack-cmo
-git clone git@github.com:cxopack/cxopack-board.git .cxopack-board  # Full Pack only`}</Pre>
+git clone git@github.com:cxopack/cxopack-board.git .cxopack-board  # All-Access Pass`}</Pre>
 
       <H3 id="claude-install">2. Wire into your project&apos;s .claude/</H3>
       <Pre language="bash">{`# From your project root:
@@ -99,7 +99,7 @@ for slug in ceo cto cfo sales cmo; do
   cp -r .cxopack-$slug/claude/commands/$slug/* .claude/commands/$slug/ 2>/dev/null
 done
 
-# The Board (Full Pack only)
+# The Board (included with All-Access Pass)
 cp -r .cxopack-board/claude/agents/*              .claude/agents/                2>/dev/null
 cp    .cxopack-board/claude/commands/founder.md   .claude/commands/              2>/dev/null
 mkdir -p .claude/commands/board

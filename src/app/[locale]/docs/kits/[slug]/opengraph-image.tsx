@@ -202,8 +202,8 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         >
           <span>
             {isBoard
-              ? "Full Pack · Orchestration · Shared Memory"
-              : "Full Pack · Five Kits · One Install"}
+              ? "Board · Orchestration · Shared Memory"
+              : "Five Kits · One Install · Edition I"}
           </span>
           <span style={{ color: GOLD }}>cxopack.com/docs</span>
         </div>

@@ -20,8 +20,8 @@ export default async function Support({ params }: { params: Promise<{ locale: st
       <div className="eyebrow-plain mb-4">Resources</div>
       <H1>Support</H1>
       <Lead>
-        CxOPack is maintained by a solo founder. Support is real, personal, and fast — but honest
-        about response times. Here&apos;s how to get help and what to expect.
+        How to get help, what to expect from response times, and the policies that apply to your
+        purchase. Customer support is direct and fast.
       </Lead>
 
       <H2 id="contact">Contact</H2>
@@ -77,33 +77,31 @@ export default async function Support({ params }: { params: Promise<{ locale: st
           <div>
             <div className="font-semibold text-[var(--color-fg)]">Community</div>
             <div className="mt-1 text-sm text-[var(--color-fg-muted)]">
-              Private Slack for Founder&apos;s Club members. Invite in your welcome email.
+              Private community for All-Access subscribers. Invite included in the welcome email.
             </div>
           </div>
         </div>
       </div>
 
       <H2 id="response-time">Response time</H2>
-      <P>
-        You&apos;re talking to the founder, not a ticket queue. Response-time targets:
-      </P>
+      <P>Service-level targets for each channel:</P>
       <Ul>
-        <li><strong>Email (hello@cxopack.com)</strong> — first reply within 24 hours on business days, 48 hours weekends.</li>
+        <li><strong>Email (hello@cxopack.com)</strong> — first reply within 24 hours on business days, 48 hours on weekends.</li>
         <li><strong>GitHub issues</strong> — triage within 48 hours.</li>
         <li><strong>Security email</strong> — first reply within 24 hours, always.</li>
-        <li><strong>Founder&apos;s Club Slack</strong> — founder replies daily, community responds faster.</li>
+        <li><strong>Subscriber community</strong> — daily replies; peer responses are typically faster.</li>
       </Ul>
 
       <H2 id="refunds">Refunds</H2>
       <Callout variant="success" title="14-day, no-questions-asked">
-        Not what you expected? Email hello@cxopack.com within 14 days of purchase with your order
-        email. Full refund, no forms, no survey, no negotiation. GitHub access is revoked on
-        refund.
+        If a purchase isn&apos;t the right fit, email hello@cxopack.com within 14 days of purchase
+        with your order email. Full refund, no forms, no survey, no negotiation. Repository access
+        is revoked at the time of refund.
       </Callout>
       <P>
-        After 14 days, refunds are case-by-case — typically granted if a workflow you paid for is
-        broken and we can&apos;t fix it. Founder&apos;s Club subscriptions are cancellable anytime; you keep
-        access through the end of your billing period.
+        After 14 days, refund requests are reviewed case-by-case — typically granted when a
+        documented workflow is unavailable and cannot be restored. Subscriptions are cancellable
+        at any time; access continues through the end of the current billing period.
       </P>
 
       <H2 id="faq">Frequently asked</H2>
@@ -115,34 +113,34 @@ export default async function Support({ params }: { params: Promise<{ locale: st
         email us with your GitHub username and order email — we re-send manually.
       </P>
 
-      <H3 id="faq-upgrade">I bought one kit. Can I upgrade to the Full Pack?</H3>
+      <H3 id="faq-upgrade">I bought one kit. Can I add more later?</H3>
       <P>
-        Yes. Email hello@cxopack.com. What you paid for the single kit is credited in full toward
-        the Full Pack price.
+        Yes. Email hello@cxopack.com to upgrade your plan. Anything previously paid is credited
+        toward the new tier.
       </P>
 
-      <H3 id="faq-team">Can my team use my license?</H3>
+      <H3 id="faq-team">Can my team share a license?</H3>
       <P>
-        Current licenses are single-seat. Team seats (3+) land with the Founder&apos;s Club tier — email
-        us if you need team access today; we set it up manually in the meantime.
+        Licenses are single-seat by default. Multi-seat plans for teams of three or more are
+        available — email hello@cxopack.com to arrange one.
       </P>
 
-      <H3 id="faq-platforms">A workflow doesn&apos;t behave well in my AI tool. Is that a bug?</H3>
+      <H3 id="faq-platforms">A workflow behaves differently in my AI tool. Is that a bug?</H3>
       <P>
-        It might be. Skills are designed primarily against Claude Code (most rigorous) and ChatGPT
-        (most users). Cursor and other tools may interpret instructions with slight variance —
-        please email us the tool, the skill, and what you saw, and we&apos;ll tune the prompt.
+        Possibly. Workflows are validated primarily against Claude Code and ChatGPT. Cursor and
+        other tools may interpret instructions with slight variance. Please email the tool, the
+        workflow name, and what you observed; the prompt will be tuned in the next release.
       </P>
 
-      <H2 id="sla">Status & uptime</H2>
+      <H2 id="sla">Status &amp; uptime</H2>
       <P>
-        The landing + checkout is hosted on Vercel (99.99% target). Kit content lives in GitHub
-        repos (GitHub&apos;s own SLA). The AI tools themselves (Claude, ChatGPT, etc.) are separately
-        maintained by Anthropic / OpenAI — we don&apos;t control their uptime.
+        The landing page and checkout run on Vercel (target uptime 99.99%). Kit content is hosted
+        on GitHub. The underlying AI providers (Anthropic, OpenAI, etc.) maintain their own uptime
+        independently.
       </P>
       <p className="mono mt-4 flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] text-[var(--color-fg-dim)]">
         <Clock className="h-3 w-3" />
-        Last reviewed: Edition I launch
+        Last reviewed: Edition I
       </p>
 
       <div className="mt-12 flex justify-end">
