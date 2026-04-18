@@ -46,11 +46,11 @@ export function BoardSection() {
             <div className="col-span-4 flex flex-col items-center justify-center">
               <div className="w-full rounded-xl border border-[var(--color-brand)] bg-[var(--color-bg)] p-6 text-center shadow-[0_0_0_1px_var(--color-brand)]">
                 <div className="mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-brand)]">
-                  Chief of Staff
+                  Sam · Chief of Staff
                 </div>
                 <div className="mt-2 text-lg font-semibold">Routes · Synthesizes · Closes loops</div>
                 <div className="mt-3 text-xs leading-6 text-[var(--color-fg-muted)]">
-                  <span className="mono">/founder &lt;anything&gt;</span> → picks who handles it,
+                  <span className="mono">/founder &lt;anything&gt;</span> → Sam picks who handles it,
                   <br />
                   combines their outputs into one brief.
                 </div>
@@ -97,10 +97,10 @@ export function BoardSection() {
           ))}
         </div>
 
-        {/* Full Pack callout */}
+        {/* All-Access callout */}
         <div className="mt-10 flex flex-col items-center">
           <p className="mono text-[11px] uppercase tracking-[0.2em] text-[var(--color-brand)]">
-            Included in the Full Pack — not sold separately
+            Included in All-Access — not sold separately
           </p>
           <Link
             href="/docs/kits/board"

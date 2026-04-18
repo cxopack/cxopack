@@ -18,7 +18,7 @@
     "titleHighlight": "executives",
     "title2": ". Pay €299.",
     "subtitle": "CEO · CTO · CFO · Head of Sales · CMO — production-grade AI executive kits that work in Claude, ChatGPT, Cursor, any tool.",
-    "ctaPrimary": "Get the Full Pack — €299",
+    "ctaPrimary": "Get All-Access — €149/yr",
     "ctaSecondary": "See what's inside",
     "socialProof": "Built by a solo founder shipping their own startup with exactly these kits.",
     "stats": {
@@ -43,6 +43,11 @@
       "cursor": { "title": "Cursor / Windsurf", "desc": "Rules files and prompts — drop into .cursor/rules." },
       "agnostic": { "title": "Anywhere else", "desc": "Plain-markdown prompts. Paste into any LLM, any tool." }
     }
+  },
+  "week": {
+    "eyebrow": "A week in the life",
+    "title": "One founder. Five executives. One ritual.",
+    "subtitle": "This is what running a startup with CxOPack actually looks like — five touchpoints across the week, one shared workspace that compounds."
   },
   "board": {
     "eyebrow": "The Board",
@@ -122,65 +127,60 @@
   },
   "pricing": {
     "eyebrow": "Pricing",
-    "title": "Less than one hour of a consultant. For life.",
-    "subtitle": "Lifetime access. Updates forever. 14-day money-back.",
-    "perKit": {
-      "badge": "Start small",
-      "title": "One kit",
-      "price": "€99",
-      "priceSuffix": "one-time",
-      "desc": "Pick any of the 5 roles. Upgrade to the Full Pack anytime — we credit what you paid.",
+    "title": "One CEO costs €500k. This costs €149.",
+    "subtitle": "Three plans. Pick what you need today; grow into the rest. 14-day money-back, no questions.",
+    "solo": {
+      "badge": "Try it",
+      "title": "Solo Kit",
+      "price": "€49",
+      "priceSuffix": "lifetime",
+      "desc": "Pick any one of the 5 kits. Lifetime access to that role's skills. Upgrade to All-Access anytime — we credit what you paid.",
       "cta": "Pick a kit",
       "features": [
-        "One executive role",
+        "One executive role of your choice",
         "All 4 platform formats",
-        "Lifetime updates",
+        "Lifetime updates to that kit",
         "Private GitHub repo access"
       ]
     },
-    "fullPack": {
-      "badge": "Most popular — save €196",
-      "title": "Full Pack",
-      "price": "€299",
-      "priceSuffix": "one-time",
-      "strike": "€495",
-      "desc": "All 5 kits. The whole C-suite. Your startup-in-a-box.",
-      "cta": "Get the Full Pack",
+    "allAccess": {
+      "badge": "Most popular — saves €96 today, more tomorrow",
+      "title": "All-Access Pass",
+      "price": "€149",
+      "priceSuffix": "/year",
+      "strike": "€245",
+      "desc": "Every current and future kit. The Board orchestration layer. Monthly new skill drops. Private community. The flywheel — value compounds every release.",
+      "cta": "Get All-Access",
       "features": [
-        "All 5 kits — CEO, CTO, CFO, Sales, CMO",
-        "The Board — Chief of Staff + 5 persona agents (orchestration layer)",
-        "/founder + /board:weekly + /board:decision + /board:handoff commands",
-        "Shared founder-log/ memory across all agents",
-        "Lifetime updates for all kits + the Board"
-      ]
-    },
-    "founding": {
-      "badge": "Only 100 spots",
-      "title": "Founding 100",
-      "price": "€249",
-      "priceSuffix": "one-time",
-      "desc": "First 100 Full Pack customers lock in €50 off in exchange for a public testimonial. Founder-customer status forever.",
-      "cta": "Claim a spot",
-      "remainingLabel": "spots left"
-    },
-    "club": {
-      "badge": "Stay ahead",
-      "title": "Founder's Club",
-      "priceMonthly": "€49",
-      "priceYearly": "€399",
-      "priceSuffixMonthly": "/month",
-      "priceSuffixYearly": "/year",
-      "yearlyBadge": "Save 32%",
-      "desc": "The Full Pack plus a new workflow every month, a private community of solo founders, and a monthly live Board Meeting call to solve your real problems.",
-      "cta": "Join the Club",
-      "features": [
-        "Everything in Full Pack",
-        "New skill / workflow every month",
-        "Private community (solo founders only)",
-        "Monthly live Board Meeting call",
-        "Early access to new kits",
+        "Every current kit (CEO, CTO, CFO, Sales, CMO) — and every future kit free",
+        "The Board — Chief of Staff (Sam) + 5 persona agents",
+        "/founder + /board:weekly + /board:decision + /board:handoff",
+        "Monthly new skill drops included",
+        "Private community of solo founders",
         "Cancel anytime"
       ]
+    },
+    "launch100": {
+      "badge": "First 100 only · locked for life",
+      "title": "Launch 100",
+      "price": "€99",
+      "priceSuffix": "/year forever",
+      "desc": "The same All-Access Pass — but the first 100 buyers lock in €99/year for as long as they stay subscribed. Price never goes up. Quietly the best deal we'll ever offer.",
+      "cta": "Claim a Launch 100 spot",
+      "remainingLabel": "spots left",
+      "features": [
+        "Everything in All-Access Pass",
+        "Price locked at €99/year forever",
+        "Founding-customer status",
+        "Direct line to the founder for product feedback"
+      ]
+    },
+    "autopilotTeaser": {
+      "badge": "Coming Q4 2026",
+      "title": "Autopilot",
+      "price": "Waitlist",
+      "desc": "Your agents stop being assistants and become operators. Real budgets. Real MCPs. They run outbound, deploy code, write content, watch metrics — autonomously, with weekly audits to you. The first agent-operated company tier.",
+      "cta": "Join the waitlist"
     }
   },
   "how": {
@@ -230,7 +230,7 @@
   "cta": {
     "title": "Your AI board is waiting.",
     "subtitle": "Stop doing every job yourself. Stop hiring too early. Install your C-suite in the next 5 minutes.",
-    "primary": "Get the Full Pack — €299"
+    "primary": "Get All-Access — €149/yr"
   },
   "footer": {
     "tagline": "Your AI C-suite. Any AI tool. Built for solo founders.",

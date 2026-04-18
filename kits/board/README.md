@@ -2,15 +2,15 @@
 
 > **The orchestration layer that makes 5 kits feel like a team.**
 
-The Board is what turns CxOPack from "5 useful kits" into "an executive team with a Chief of Staff." It's included in the **Full Pack** only — not sold standalone.
+The Board is what turns CxOPack from "5 useful kits" into "an executive team with a Chief of Staff." It's included in the **All-Access Pass** only — not sold standalone.
 
 ## What ships
 
 | Type | Name | What it does |
 |---|---|---|
-| Subagent | `chief-of-staff` | Routes any founder request to the right executive(s), synthesizes one answer |
+| Subagent | `chief-of-staff` (Sam) | Routes any founder request to the right executive(s), synthesizes one answer |
 | Subagent | `ceo`, `cto`, `cfo`, `sales-director`, `cmo` | Persona agents — each uses its kit's skills under a consistent voice |
-| Slash cmd | `/founder` | Top-level entry: describe anything, Chief of Staff routes |
+| Slash cmd | `/founder` | Top-level entry: describe anything, Sam routes it |
 | Slash cmd | `/board:weekly` | Monday ritual — all 5 personas give a read, synthesized into one brief |
 | Slash cmd | `/board:decision` | Big decisions — each relevant exec weighs in, synthesis recommends |
 | Slash cmd | `/board:brief` | Exploratory — "brief me on X from the board's perspective" |

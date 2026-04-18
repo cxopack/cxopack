@@ -18,31 +18,68 @@ type Release = {
 
 const RELEASES: Release[] = [
   {
-    version: "v0.1.0",
-    date: "2026-04-18",
+    version: "v0.3.0 — Edition II",
+    date: "2026-04-19",
     status: "latest",
     highlights: [
-      "Initial Edition I release: CEO, CTO, CFO, Sales, CMO kits published.",
-      "13 standalone Claude skills, 2 subagents, 1 slash command, 5 ChatGPT Custom GPT configs, 5 Cursor rule files, 5 platform-agnostic master prompts.",
-      "Landing page, full docs site (overview, quickstart, 5 kit walkthroughs, support).",
-      "Stripe Checkout live (1 kit / Full Pack / Founding 100 / Founder's Club monthly + yearly).",
-      "Post-payment webhook: Supabase order row, GitHub auto-invite, Resend welcome email.",
+      "Repricing: Solo Kit €49 lifetime · All-Access Pass €149/yr · Launch 100 €99/yr forever (first 100).",
+      "All-Access Pass replaces the Full Pack — you get every current and future kit while subscribed (the catalog flywheel).",
+      "Sam: the Chief of Staff now has a name, a persona, and a signature line on every brief.",
+      "New landing section: 'A week in the life' — visual timeline of the daily/weekly rituals.",
+      "Autopilot teaser: agents-with-budgets product previewed for Q4 2026; waitlist live.",
+      "BOARD repo (v0.2.0) updated to reference Sam everywhere.",
+    ],
+  },
+  {
+    version: "v0.2.0",
+    date: "2026-04-19",
+    status: "stable",
+    highlights: [
+      "16 missing skill files written — 30 standalone skills total, matching the marketed 6-per-kit count.",
+      "30 namespaced commands: /ceo:* /cto:* /cfo:* /sales:* /cmo:*",
+      "The Board orchestration kit shipped: chief-of-staff + 5 persona subagents + /founder + /board:weekly /decision /brief /handoff",
+      "Shared founder-log/ memory schema across all agents.",
+      "Per-kit dynamic OG images for /docs/kits/<slug>.",
+      "Detailed installation page at /docs/installation (per platform).",
+      "CxOPack installed into Prezto for dogfooding.",
+    ],
+  },
+  {
+    version: "v0.1.0",
+    date: "2026-04-18",
+    status: "stable",
+    highlights: [
+      "Initial release: CEO, CTO, CFO, Sales, CMO kits published.",
+      "13 standalone Claude skills, 2 subagents, 1 slash command, 5 ChatGPT Custom GPT configs, 5 Cursor rule files.",
+      "Landing page, full docs site, Stripe Checkout live, post-payment webhook (DB + GitHub invite + email).",
       "Brand Kit Edition I applied: Ink/Gold/Ivory palette, Inter + JetBrains Mono, 4-bar logo, 5 kit icons.",
     ],
   },
 ];
 
 const PLANNED: Release = {
-  version: "v0.2.0",
-  date: "targeting 2026-05",
+  version: "v0.4.0",
+  date: "targeting 2026-Q3",
   status: "upcoming",
   highlights: [
-    "Weekly Board Meeting meta-workflow (runs all 5 kits in sequence for Monday review).",
-    "Founder Mode slash command (auto-routes to the right C-suite agent based on task intent).",
-    "17 additional standalone skills to reach 6 per kit (parity with landing-page claims).",
-    "Startup-stage templates: pre-seed SaaS, agency, marketplace variants.",
-    "Subscription lifecycle webhook handling (renewal, cancellation, refund).",
-    "Hexagon Full Pack crest + email header banner from the Brand Kit.",
+    "5 new kits to grow All-Access value: DevOps, Cloud Architect, Financial Analyst, Product Manager, Customer Success.",
+    "Decision cards: shareable images exported from /board:decision outputs (LinkedIn-ready).",
+    "Subscription lifecycle webhook handling (renewal, cancellation, refund) for All-Access.",
+    "Public 'How I shipped Prezto with CxOPack' case study + weekly behind-the-scenes posts.",
+    "Interactive /founder demo widget on the landing — try the routing without installing.",
+    "Hexagon All-Access crest + email header banner from the Brand Kit.",
+  ],
+};
+
+const AUTOPILOT: Release = {
+  version: "v1.0 — Autopilot",
+  date: "targeting 2026-Q4",
+  status: "upcoming",
+  highlights: [
+    "Agents with real budgets connected to MCPs (Stripe, Gmail, HubSpot, Apollo, Vercel, Sentry).",
+    "Each agent gets a virtual card with category + cap controls. CFO agent watches everyone's spend.",
+    "Weekly autonomy audit to the founder — every action logged, anomalies flagged, kill switch always available.",
+    "Pricing: €499/mo base + agent-spend credits + usage. The first 'agent-operated company' product tier.",
   ],
 };
 
@@ -68,8 +105,9 @@ export default async function Changelog({ params }: { params: Promise<{ locale: 
 
       <H2 id="upcoming">Upcoming</H2>
       <P>Roadmap, not a promise. Pulled into live releases as workflows stabilize.</P>
-      <div className="mt-6">
+      <div className="mt-6 space-y-12">
         <ReleaseCard release={PLANNED} />
+        <ReleaseCard release={AUTOPILOT} />
       </div>
 
       <div className="mt-12 flex justify-end">

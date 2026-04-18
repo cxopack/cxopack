@@ -7,9 +7,8 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const schema = z.object({
-  plan: z.enum(["kit", "full-pack", "founding-100", "club"]),
+  plan: z.enum(["kit", "all-access", "launch-100"]),
   kit: z.enum(["ceo", "cto", "cfo", "sales", "cmo"]).optional(),
-  period: z.enum(["monthly", "yearly"]).optional(),
   email: z.string().email().optional(),
   githubUsername: z.string().min(1).max(39).optional(),
 });
@@ -20,7 +19,7 @@ export async function POST(req: NextRequest) {
   if (!parsed.success) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
-  const { plan, kit, period, email: bodyEmail, githubUsername } = parsed.data;
+  const { plan, kit, email: bodyEmail, githubUsername } = parsed.data;
 
   let planArg: Plan;
   switch (plan) {
@@ -28,14 +27,11 @@ export async function POST(req: NextRequest) {
       if (!kit) return NextResponse.json({ error: "Missing kit" }, { status: 400 });
       planArg = { kind: "kit", kitSlug: kit };
       break;
-    case "full-pack":
-      planArg = { kind: "full-pack" };
+    case "all-access":
+      planArg = { kind: "all-access" };
       break;
-    case "founding-100":
-      planArg = { kind: "founding-100" };
-      break;
-    case "club":
-      planArg = { kind: "club", period: period ?? "yearly" };
+    case "launch-100":
+      planArg = { kind: "launch-100" };
       break;
   }
 
@@ -49,10 +45,8 @@ export async function POST(req: NextRequest) {
 
   const site = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
-  const kitSlugs =
-    plan === "kit" ? [kit!] : plan === "full-pack" || plan === "founding-100" || plan === "club"
-      ? ALL_KIT_SLUGS
-      : [];
+  // For kit purchase: just that kit. For all-access / launch-100: every kit.
+  const kitSlugs = plan === "kit" ? [kit!] : ALL_KIT_SLUGS;
 
   const session = await stripe.checkout.sessions.create({
     mode,

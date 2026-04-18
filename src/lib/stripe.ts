@@ -7,9 +7,8 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
 
 export type Plan =
   | { kind: "kit"; kitSlug: "ceo" | "cto" | "cfo" | "sales" | "cmo" }
-  | { kind: "full-pack" }
-  | { kind: "founding-100" }
-  | { kind: "club"; period: "monthly" | "yearly" };
+  | { kind: "all-access" }
+  | { kind: "launch-100" };
 
 export function resolvePrice(plan: Plan): { priceId: string; mode: "payment" | "subscription" } {
   const map: Record<string, string | undefined> = {
@@ -18,10 +17,8 @@ export function resolvePrice(plan: Plan): { priceId: string; mode: "payment" | "
     "kit:cfo": process.env.STRIPE_PRICE_KIT_CFO,
     "kit:sales": process.env.STRIPE_PRICE_KIT_SALES,
     "kit:cmo": process.env.STRIPE_PRICE_KIT_CMO,
-    "full-pack": process.env.STRIPE_PRICE_FULL_PACK,
-    "founding-100": process.env.STRIPE_PRICE_FOUNDING_100,
-    "club:monthly": process.env.STRIPE_PRICE_CLUB_MONTHLY,
-    "club:yearly": process.env.STRIPE_PRICE_CLUB_YEARLY,
+    "all-access": process.env.STRIPE_PRICE_ALL_ACCESS_YEARLY,
+    "launch-100": process.env.STRIPE_PRICE_LAUNCH_100_YEARLY,
   };
 
   let key: string;
@@ -30,14 +27,12 @@ export function resolvePrice(plan: Plan): { priceId: string; mode: "payment" | "
     case "kit":
       key = `kit:${plan.kitSlug}`;
       break;
-    case "full-pack":
-      key = "full-pack";
+    case "all-access":
+      key = "all-access";
+      mode = "subscription";
       break;
-    case "founding-100":
-      key = "founding-100";
-      break;
-    case "club":
-      key = `club:${plan.period}`;
+    case "launch-100":
+      key = "launch-100";
       mode = "subscription";
       break;
   }

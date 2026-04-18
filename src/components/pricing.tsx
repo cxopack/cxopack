@@ -3,11 +3,9 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Check, ArrowRight } from "lucide-react";
-import { KITS } from "@/config/kits";
 
 export function Pricing() {
   const t = useTranslations("pricing");
-  const [yearly, setYearly] = useState(true);
 
   return (
     <section id="pricing" className="py-24">
@@ -20,93 +18,44 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 lg:grid-cols-3">
           <PricingCard
-            badge={t("perKit.badge")}
-            title={t("perKit.title")}
-            price={t("perKit.price")}
-            priceSuffix={t("perKit.priceSuffix")}
-            desc={t("perKit.desc")}
-            cta={t("perKit.cta")}
-            features={t.raw("perKit.features") as string[]}
-            ctaHref={`/checkout?plan=kit&kit=${KITS[0].slug}`}
+            badge={t("solo.badge")}
+            title={t("solo.title")}
+            price={t("solo.price")}
+            priceSuffix={t("solo.priceSuffix")}
+            desc={t("solo.desc")}
+            cta={t("solo.cta")}
+            features={t.raw("solo.features") as string[]}
+            ctaHref="/checkout?plan=kit&kit=ceo"
           />
           <PricingCard
-            badge={t("fullPack.badge")}
-            title={t("fullPack.title")}
-            price={t("fullPack.price")}
-            priceSuffix={t("fullPack.priceSuffix")}
-            strike={t("fullPack.strike")}
-            desc={t("fullPack.desc")}
-            cta={t("fullPack.cta")}
-            features={t.raw("fullPack.features") as string[]}
+            badge={t("allAccess.badge")}
+            title={t("allAccess.title")}
+            price={t("allAccess.price")}
+            priceSuffix={t("allAccess.priceSuffix")}
+            strike={t("allAccess.strike")}
+            desc={t("allAccess.desc")}
+            cta={t("allAccess.cta")}
+            features={t.raw("allAccess.features") as string[]}
             highlight
-            ctaHref="/checkout?plan=full-pack"
+            ctaHref="/checkout?plan=all-access"
           />
           <PricingCard
-            badge={t("founding.badge")}
-            title={t("founding.title")}
-            price={t("founding.price")}
-            priceSuffix={t("founding.priceSuffix")}
-            desc={t("founding.desc")}
-            cta={t("founding.cta")}
-            ctaHref="/checkout?plan=founding-100"
+            badge={t("launch100.badge")}
+            title={t("launch100.title")}
+            price={t("launch100.price")}
+            priceSuffix={t("launch100.priceSuffix")}
+            desc={t("launch100.desc")}
+            cta={t("launch100.cta")}
+            features={t.raw("launch100.features") as string[]}
+            accent="gold"
+            ctaHref="/checkout?plan=launch-100"
           />
-          <div className="card flex flex-col p-6">
-            <div className="flex items-start justify-between">
-              <span className="inline-block rounded-full border border-[var(--color-border-strong)] px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-[var(--color-fg-muted)]">
-                {t("club.badge")}
-              </span>
-              <div className="flex rounded-full border border-[var(--color-border-strong)] p-0.5 text-[11px]">
-                <button
-                  onClick={() => setYearly(false)}
-                  className={`rounded-full px-2 py-0.5 ${
-                    !yearly ? "bg-[var(--color-brand)] text-[#0a0a0b]" : "text-[var(--color-fg-muted)]"
-                  }`}
-                >
-                  M
-                </button>
-                <button
-                  onClick={() => setYearly(true)}
-                  className={`rounded-full px-2 py-0.5 ${
-                    yearly ? "bg-[var(--color-brand)] text-[#0a0a0b]" : "text-[var(--color-fg-muted)]"
-                  }`}
-                >
-                  Y
-                </button>
-              </div>
-            </div>
-            <h3 className="mt-4 text-lg font-semibold">{t("club.title")}</h3>
-            <div className="mt-4 flex items-baseline gap-1.5">
-              <span className="text-3xl font-bold">
-                {yearly ? t("club.priceYearly") : t("club.priceMonthly")}
-              </span>
-              <span className="text-sm text-[var(--color-fg-muted)]">
-                {yearly ? t("club.priceSuffixYearly") : t("club.priceSuffixMonthly")}
-              </span>
-              {yearly && (
-                <span className="ml-2 rounded-full bg-[var(--color-brand-soft)] px-2 py-0.5 text-[10px] font-medium text-[var(--color-brand)]">
-                  {t("club.yearlyBadge")}
-                </span>
-              )}
-            </div>
-            <p className="mt-3 text-sm text-[var(--color-fg-muted)]">{t("club.desc")}</p>
-            <ul className="mt-5 flex-1 space-y-2 text-sm">
-              {(t.raw("club.features") as string[]).map((f, i) => (
-                <li key={i} className="flex items-start gap-2 text-[var(--color-fg-muted)]">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-brand)]" />
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-            <a
-              href={`/checkout?plan=club&period=${yearly ? "yearly" : "monthly"}`}
-              className="btn-ghost mt-6 w-full"
-            >
-              {t("club.cta")} <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
         </div>
+
+        {/* Autopilot teaser strip */}
+        <AutopilotTeaser />
       </div>
     </section>
   );
@@ -122,6 +71,7 @@ type CardProps = {
   cta: string;
   features?: string[];
   highlight?: boolean;
+  accent?: "gold";
   ctaHref: string;
 };
 
@@ -135,19 +85,24 @@ function PricingCard({
   cta,
   features,
   highlight,
+  accent,
   ctaHref,
 }: CardProps) {
+  const ringClass = highlight
+    ? "border-[var(--color-brand)] shadow-[0_0_0_1px_var(--color-brand)]"
+    : accent === "gold"
+      ? "border-[var(--color-gold-700)]/60"
+      : "";
+
   return (
-    <div
-      className={`card flex flex-col p-6 ${
-        highlight ? "border-[var(--color-brand)] shadow-[0_0_0_1px_var(--color-brand)]" : ""
-      }`}
-    >
+    <div className={`card flex flex-col p-6 ${ringClass}`}>
       <span
         className={`inline-block w-fit rounded-full px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider ${
           highlight
             ? "bg-[var(--color-brand)] text-[#0a0a0b]"
-            : "border border-[var(--color-border-strong)] text-[var(--color-fg-muted)]"
+            : accent === "gold"
+              ? "bg-[var(--color-brand-soft)] text-[var(--color-brand)]"
+              : "border border-[var(--color-border-strong)] text-[var(--color-fg-muted)]"
         }`}
       >
         {badge}
@@ -177,6 +132,29 @@ function PricingCard({
       >
         {cta} <ArrowRight className="h-4 w-4" />
       </a>
+    </div>
+  );
+}
+
+function AutopilotTeaser() {
+  const t = useTranslations("pricing.autopilotTeaser");
+  return (
+    <div className="mt-10 overflow-hidden rounded-xl border border-[var(--color-border)] bg-gradient-to-br from-[var(--color-bg-elevated)] via-[var(--color-bg)] to-[var(--color-bg-elevated)] p-6">
+      <div className="flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">
+        <div className="flex-1">
+          <div className="mono inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-[var(--color-brand)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand)] shadow-[0_0_8px_var(--color-brand)]" />
+            {t("badge")}
+          </div>
+          <h3 className="mt-2 text-xl font-semibold">{t("title")}</h3>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--color-fg-muted)]">
+            {t("desc")}
+          </p>
+        </div>
+        <a href="#waitlist" className="btn-primary text-sm shrink-0">
+          {t("cta")} <ArrowRight className="h-4 w-4" />
+        </a>
+      </div>
     </div>
   );
 }
