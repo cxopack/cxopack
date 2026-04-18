@@ -8,10 +8,11 @@ export function Footer() {
     {
       heading: t("product"),
       links: [
-        [t("links.kits"), "#kits"],
-        [t("links.pricing"), "#pricing"],
-        [t("links.club"), "#pricing"],
-        [t("links.how"), "#how"],
+        [t("links.kits"), "/#kits"],
+        [t("links.pricing"), "/#pricing"],
+        [t("links.club"), "/#pricing"],
+        ["Docs", "/docs"],
+        [t("links.how"), "/#how"],
       ],
     },
     {

@@ -15,10 +15,10 @@ export function Nav() {
         </Link>
 
         <nav className="hidden gap-6 text-sm text-[var(--color-fg-muted)] md:flex">
-          <a href="#kits" className="hover:text-[var(--color-fg)]">{t("kits")}</a>
-          <a href="#pricing" className="hover:text-[var(--color-fg)]">{t("pricing")}</a>
-          <a href="#how" className="hover:text-[var(--color-fg)]">{t("how")}</a>
-          <a href="#faq" className="hover:text-[var(--color-fg)]">{t("faq")}</a>
+          <a href="/#kits" className="hover:text-[var(--color-fg)]">{t("kits")}</a>
+          <a href="/#pricing" className="hover:text-[var(--color-fg)]">{t("pricing")}</a>
+          <Link href="/docs" className="hover:text-[var(--color-fg)]">Docs</Link>
+          <a href="/#faq" className="hover:text-[var(--color-fg)]">{t("faq")}</a>
         </nav>
 
         <a href="#pricing" className="btn-primary text-sm">
