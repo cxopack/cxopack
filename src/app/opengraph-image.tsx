@@ -167,7 +167,7 @@ export default async function Image() {
             zIndex: 1,
           }}
         >
-          <span>Full Pack · Five Kits · One Install</span>
+          <span>Five Kits · One Install · Edition I</span>
           <span style={{ color: GOLD }}>cxopack.com</span>
         </div>
       </div>

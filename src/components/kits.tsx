@@ -62,7 +62,7 @@ export function Kits() {
         </div>
 
         <p className="mono mt-10 text-center text-[11px] uppercase tracking-[0.2em] text-[var(--color-fg-dim)]">
-          Full Pack · Five Kits · One Install
+          Five Kits · One Install · Edition I
         </p>
       </div>
     </section>
