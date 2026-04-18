@@ -136,6 +136,90 @@ export const cfoDoc: KitDoc = {
         "CAC without founder time = vanity. Include a shadow rate for your own hours.",
       ],
     },
+    {
+      name: "investor-update",
+      type: "skill",
+      trigger: '"prep the numbers for the investor update"',
+      when: "First business day of each month, or before any investor interaction.",
+      steps: [
+        "Pull metrics from founder-log/metrics/ (run saas-metrics first if stale).",
+        "KPI table with MoM delta: cash, burn, runway, MRR, net-new MRR, ToFu, churn, NRR.",
+        "1-paragraph interpretation (≤4 sentences).",
+        "Auto-flag red conditions (runway −2mo, churn >5%, NRR <90%, concentration >20%).",
+      ],
+      example: {
+        input: 'Stripe export + last month update',
+        output:
+          "9-metric table with sources and deltas. 'MRR +18% from PH launch cohort; NRR dipped to 94% on 2 SMB downgrades; runway −1.5mo from hiring ramp.'",
+      },
+      pitfalls: [
+        "'Steady growth' as interpretation — flat = concerning.",
+        "Hiding bad months.",
+      ],
+    },
+    {
+      name: "data-room",
+      type: "skill",
+      trigger: '"prep for fundraising" / "build the data room"',
+      when: "90 days before a planned raise.",
+      steps: [
+        "Generate 8-section folder tree under data-room/ (company, financials, product, customers, market, team, legal, pitch).",
+        "Write data-room/00-readme.md with index + contact + latest metrics.",
+        "Checklist tagged Must-have / Nice-to-have / Skip per round.",
+      ],
+      example: {
+        input: '"pre-seed round"',
+        output:
+          "Tree populated. Readme with MRR, runway, churn. ❌ 3 Must-have missing (cap table, metrics snapshot, customer list).",
+      },
+      pitfalls: [
+        "Sharing a messy Google Drive = 2 weeks of back-and-forth.",
+        "Stale numbers that don't match the last update.",
+      ],
+    },
+    {
+      name: "pricing-experiments",
+      type: "skill",
+      trigger: '"should I raise prices" / any pricing change',
+      when: "Any pricing change — never silent.",
+      steps: [
+        "Baseline: current conversion, ARPU, monthly new customers, churn.",
+        "Hypothesis: expected conversion, ARPU, revenue-per-visitor.",
+        "One primary metric, specific guardrails, rollback plan within 24h.",
+        "30-day notice for existing customers if increase.",
+      ],
+      example: {
+        input: '"Anchor $29 → $49"',
+        output:
+          "Hypothesis: conv −10-15%, ARPU +69%, RPV +45%. Guardrail: rollback if conv −25% for 2 weeks. Notice template attached. Review: 60 days.",
+      },
+      pitfalls: [
+        '"Let\'s just try it" — no baseline = can\'t read.',
+        "Running 3 experiments at once.",
+      ],
+    },
+    {
+      name: "runway-scenarios",
+      type: "skill",
+      trigger: '"model my runway" / "what if X happens"',
+      when: "Monthly, or after any significant event (hire, churn, price change).",
+      steps: [
+        "Read 3 months of actuals.",
+        "Build Base (trailing ×0.9), Bull (×1.5 + hires), Bear (flat or −20%, no hires).",
+        "Per scenario: 12-month table + specific trigger to switch + pre-planned actions.",
+        "Key dates: plausible fundraise, required fundraise, zero runway.",
+        "Flag if Base ≤9 months.",
+      ],
+      example: {
+        input: '€180k cash, €15k burn, 3 actuals',
+        output:
+          "Base 12mo, Bull 18mo, Bear 7.5mo. Fundraise required by 2026-11. Switch-to-Bear trigger: 2 flat months OR top-3 churn.",
+      },
+      pitfalls: [
+        "Budgeting like Base regardless of signal.",
+        "Ignoring fundraise lead time (3-6 months).",
+      ],
+    },
   ],
   firstWin:
     "Run saas-metrics on your Stripe export today. Either you learn your NRR for the first time, or you confirm what you thought — both are valuable.",

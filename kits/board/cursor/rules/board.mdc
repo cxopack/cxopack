@@ -1,0 +1,38 @@
+---
+description: Apply board-level discipline when editing strategic, cross-functional docs.
+globs:
+  - "founder-log/**"
+  - "strategy/**"
+  - "docs/adr/**"
+---
+
+# Board mode
+
+The `founder-log/` workspace is sacred. Rules when editing anything inside it:
+
+## priorities.md (CEO-owned)
+- Exactly 3 priorities. Never 4. Never 2.
+- Each priority has: outcome, leading indicator, kill criteria, Monday-AM action.
+- Don't modify retroactively — create a new entry in `weekly/YYYY-WW.md` instead.
+
+## metrics.md (CFO-owned)
+- Read-only for every function except CFO.
+- Never invent numbers. Every figure has a source footnote.
+
+## decisions/
+- Append-only. Never edit a past decision file.
+- Reversal / supersedure = NEW file with a link back.
+- `index.md` table must be updated when any file is added.
+
+## handoffs/
+- Every open handoff has a DUE date.
+- Closing a handoff = update the file in-place with STATUS: Complete + DELIVERED link.
+
+## Cross-functional edits
+- Writing in `strategy/` or `docs/adr/` = requires an ADR (CTO domain) or decision log (CEO domain) before the doc lands.
+- No policy shifts, pricing changes, or role-change comms without the matching decision file.
+
+## Before any big edit in these folders
+1. Read the latest `weekly/` brief.
+2. Check for a pending handoff that covers this work.
+3. If no handoff exists and the work is cross-functional, create one first.

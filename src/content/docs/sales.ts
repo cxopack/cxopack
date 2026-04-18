@@ -144,6 +144,70 @@ export const salesDoc: KitDoc = {
         "If the prospect asks for a demo in the first 10 min, push back: 'Let me understand the pain first.'",
       ],
     },
+    {
+      name: "objections",
+      type: "skill",
+      trigger: '"how do I handle [objection]" / prepping a close call',
+      when: "Before or during any deal with an objection.",
+      steps: [
+        "Identify which of 20 canonical patterns.",
+        "Surface the real question underneath (often not what they said).",
+        "Peer-tone response in the founder's voice.",
+        "Qualifying follow-up that forces commit or disqualify.",
+      ],
+      example: {
+        input: '"\'It\'s too expensive\'"',
+        output:
+          "Real question: 'Will this justify to budget owner?' Response: 'Compared to what? Right now you're paying in dollars or paying in <cost>.' Follow-up: 'If price weren't the issue, would you move forward?'",
+      },
+      pitfalls: [
+        "Responding to the literal objection, not the real question.",
+        "Discounting as first concession.",
+      ],
+    },
+    {
+      name: "proposal",
+      type: "skill",
+      trigger: '"write the proposal" / after a discovery call',
+      when: "Within 48h of a promising discovery call.",
+      steps: [
+        "Require discovery notes.",
+        "'Why we're here' using customer's language + direct quote.",
+        "Map outcomes to deliverables. Timeline table. Who-does-what table.",
+        "Measurable success criteria. One price. One next step with date.",
+      ],
+      example: {
+        input: 'Acme discovery notes',
+        output:
+          "2-page proposal with customer's own pain words, 3 outcomes → 3 deliverables, 4-week timeline, success: 'X% by day 60 or extension free,' €12k fee, signed by Friday → kickoff Monday.",
+      },
+      pitfalls: [
+        "'About us' section.",
+        "Template language that'd fit any customer.",
+        "No follow-up cadence planned.",
+      ],
+    },
+    {
+      name: "pipeline-review",
+      type: "skill",
+      trigger: '"review my pipeline" / Friday cadence',
+      when: "Every Friday, 15 min, no mercy.",
+      steps: [
+        "Per deal (60s): stage change with evidence? next step + date? blocker?",
+        "Kill list: no next step + date, OR >45d no movement.",
+        "Next week focus: 3 deals max.",
+        "Count leading indicators.",
+      ],
+      example: {
+        input: "(runs against CRM MCP)",
+        output:
+          "12 active → 9 post-kill. 3 focus. Leading: 42 emails, 6 discoveries, 3 proposals, 1 won. Weighted pipeline €48k.",
+      },
+      pitfalls: [
+        "'Let's see if they come back' → they won't.",
+        "Moving stages on good vibes.",
+      ],
+    },
   ],
   firstWin: "Run the ICP workshop today. Write the 1-pager. Disqualify 3 deals in your current pipeline that don't fit. Your close rate goes up next week.",
 };

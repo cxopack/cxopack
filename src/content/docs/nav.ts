@@ -1,4 +1,5 @@
 import { KIT_DOCS_LIST } from "./index";
+import boardDoc from "./board";
 
 export type DocNavItem = { label: string; href: string; description?: string };
 export type DocNavSection = { title: string; items: DocNavItem[] };
@@ -18,6 +19,16 @@ export const DOCS_NAV: DocNavSection[] = [
       href: `/docs/kits/${k.slug}`,
       description: k.tagline,
     })),
+  },
+  {
+    title: "The Board",
+    items: [
+      {
+        label: boardDoc.title,
+        href: `/docs/kits/board`,
+        description: boardDoc.tagline,
+      },
+    ],
   },
   {
     title: "Resources",

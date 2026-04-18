@@ -181,27 +181,91 @@ export const ceoDoc: KitDoc = {
       ],
     },
     {
-      name: "/ceo-weekly",
+      name: "/ceo:weekly",
       type: "command",
-      trigger: "Type /ceo-weekly in Claude Code.",
+      trigger: "Type /ceo:weekly in Claude Code.",
       when: "Monday morning ritual. Non-negotiable.",
       steps: [
-        "Reads last week's entry from founder-log/.",
-        "Asks for 60-second brain dump of what's on your mind now.",
-        "Applies the weekly-priorities skill to dump + last-week context.",
-        "Writes founder-log/YYYY-WW.md with the 3 priorities locked.",
-        "Ends with one provocative question to answer before tomorrow.",
+        "Reads last week's entry from founder-log/weekly/.",
+        "Asks for 60-second brain dump.",
+        "Applies the weekly-priorities skill.",
+        "Writes founder-log/weekly/YYYY-WW.md with 3 priorities locked.",
+        "Ends with one provocative question.",
       ],
       example: {
-        input: "(Just type the command. It'll ask you everything.)",
+        input: "(Just type /ceo:weekly.)",
         output:
-          "A file founder-log/2026-16.md with priorities, kill criteria, and the Friday retro questions pre-filled.",
+          "A file founder-log/weekly/2026-16.md with priorities, kill criteria, and Friday retro pre-filled.",
       },
       pitfalls: [
-        "Don't skip the brain dump question. That's where the shadow backlog gets surfaced.",
-        "Cap the whole ritual at 15 minutes. If you're still going at 30, something else is wrong.",
+        "Don't skip the brain dump — that's where shadow backlog surfaces.",
+        "Cap at 15 minutes.",
+      ],
+    },
+    {
+      name: "decision-log",
+      type: "skill",
+      trigger: '"log this decision" / "I\'m deciding X"',
+      when: "Decisions >€500, >1 week, cross-function, or hard to reverse.",
+      steps: [
+        "Required fields: title, question, decision (imperative), ≥2 alternatives, one negative consequence (forced), observable 'I was wrong if' trigger, review date.",
+        "Save to founder-log/decisions/YYYY-MM-DD-<slug>.md and append to index.",
+        "Quarterly review checks 'wrong-if' signals.",
+      ],
+      example: {
+        input: '"Switching to monthly + annual pricing"',
+        output:
+          "decisions/2026-04-19-add-annual-plan.md with decision, 2 rejected alternatives, negative (cash-flow cliff if >40% take annual), wrong-if: annual <10% of new at 30d.",
+      },
+      pitfalls: [
+        "Vague reasons → force concrete.",
+        "Non-observable revisit triggers → force numbers or dates.",
+      ],
+    },
+    {
+      name: "founder-journal",
+      type: "skill",
+      trigger: '"Friday reflection" / "retro the week"',
+      when: "Every Friday, 10 min, non-negotiable.",
+      steps: [
+        "3 specific wins (push back on 1 or 5).",
+        "1 named failure (no euphemism).",
+        "1 testable lesson.",
+        "1 Monday recalibration.",
+        "3-line energy check.",
+        "Appends to founder-log/weekly/YYYY-WW.md.",
+      ],
+      example: {
+        input: "(Friday prompt)",
+        output:
+          "Wins (20 users, Stripe webhook fixed, investor intro). Failure (candidate ghosted). Lesson (require 20-min intro before any contract). Monday action (new hiring loop).",
+      },
+      pitfalls: [
+        "'No wins' → dig harder or that's the failure.",
+        "Skipping Friday entirely — 3 min > 0 min.",
+      ],
+    },
+    {
+      name: "pitch-deck",
+      type: "skill",
+      trigger: '"write my pitch" / "deck for [investor]"',
+      when: "Fundraise prep, specific investor, or update in deck form.",
+      steps: [
+        "Pick variant: cold / warm / update.",
+        "Strict 10 slides: title, why-now, problem, solution, how, traction, model, market, team, ask.",
+        "One idea per slide. One metric on slides 2-6.",
+      ],
+      example: {
+        input: '"cold deck, generic seed"',
+        output:
+          "10 slides with raise target in title, why-now with data point, problem + customer quote, product shot, traction MoM, bottom-up market, founder-market fit, specific raise + 3 milestones.",
+      },
+      pitfalls: [
+        "Team slide before traction → demote.",
+        "TAM=SAM=SOM chart → delete.",
+        "Competitive matrix → show wedge instead.",
       ],
     },
   ],
-  firstWin: "Run /ceo-weekly next Monday. If your 3 priorities don't feel tighter than last week's, ask for a refund.",
+  firstWin: "Run /ceo:weekly next Monday. If your 3 priorities don't feel tighter than last week's, ask for a refund.",
 };

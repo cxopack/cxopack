@@ -1,7 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { KIT_DOCS, KIT_DOCS_LIST } from "@/content/docs";
+import { KIT_DOCS, KIT_DOCS_LIST, ALL_DOCS } from "@/content/docs";
 import type { KitDoc } from "@/content/docs";
 import { H1, H2, H3, Lead, P, Ul, Ol, Pre, Callout } from "@/components/docs/prose";
 import { Breadcrumbs } from "@/components/docs/breadcrumbs";
@@ -11,7 +11,7 @@ import { KitIcon } from "@/components/brand/kit-icon";
 import { ExternalLink, Dot } from "lucide-react";
 
 export async function generateStaticParams() {
-  return KIT_DOCS_LIST.map((k) => ({ slug: k.slug }));
+  return ALL_DOCS.map((k) => ({ slug: k.slug }));
 }
 
 export async function generateMetadata({
@@ -39,6 +39,7 @@ export default async function KitDocPage({
   const kit = KIT_DOCS[slug];
   if (!kit) notFound();
 
+  const isBoard = (kit.slug as string) === "board";
   const kitIndex = KIT_DOCS_LIST.findIndex((k) => k.slug === kit.slug) + 1;
 
   return (
@@ -46,11 +47,17 @@ export default async function KitDocPage({
       <Breadcrumbs />
       <div className="mb-6 flex items-center gap-4">
         <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)]">
-          <KitIcon slug={kit.slug} className="h-8 w-8" />
+          {isBoard ? (
+            <span className="mono text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-brand)]">
+              Board
+            </span>
+          ) : (
+            <KitIcon slug={kit.slug} className="h-8 w-8" />
+          )}
         </div>
         <div>
           <div className="mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-fg-dim)]">
-            KIT · 0{kitIndex} / 05
+            {isBoard ? "Orchestration layer" : `KIT · 0${kitIndex} / 05`}
           </div>
           <H1>{kit.title}</H1>
         </div>

@@ -157,6 +157,71 @@ export const cmoDoc: KitDoc = {
         "Never 'if this resonated, like and share.' It doesn't resonate — you just said it did.",
       ],
     },
+    {
+      name: "landing-copy",
+      type: "skill",
+      trigger: '"write landing copy" / landing isn\'t converting',
+      when: "Any time claims ≥ proof, or conversion is weak.",
+      steps: [
+        "Require positioning + ICP + 3 proofs + 3 disqualifiers.",
+        "Audit banned words + unprovable claims.",
+        "Hero first: outcome headline, one counter-intuitive element.",
+        "Structure: hero · problem (quote) · product shot · 3 benefits w/ proof · social proof · pricing · FAQ · final CTA + 'not for'.",
+        "Output 2 hero variants for A/B.",
+      ],
+      example: {
+        input: "current landing + positioning",
+        output:
+          "Hero A: 'Replace €500k of payroll with €299 of AI agents.' Hero B: 'The AI C-suite your startup can actually afford.' 3 benefits with proof each. Not-for: funded teams with in-house execs.",
+      },
+      pitfalls: [
+        "'AI-powered' as value prop in 2026.",
+        "3-paragraph hero with gradient (design hiding weak copy).",
+      ],
+    },
+    {
+      name: "launch-comms",
+      type: "skill",
+      trigger: '"I\'m launching X" / release prep',
+      when: "2 weeks before any launch.",
+      steps: [
+        "Define: 1-sentence launch, core insight, one proof point.",
+        "5 formats same insight different frames: X thread · LinkedIn · newsletter · PR pitch · PH/HN first comment.",
+        "Write hooks first — regenerate if same-y.",
+        "Plan T+2, T+4, T+7 follow-up content.",
+      ],
+      example: {
+        input: 'launching CxOPack Edition I',
+        output:
+          "X: personal-origin. LinkedIn: outcome. Newsletter: insider. PR: industry-trend. PH: direct-product. All share the €299/5-kit proof.",
+      },
+      pitfalls: [
+        "Same text cross-posted.",
+        "'Thrilled to announce' — delete.",
+        "No follow-up = 1-day window instead of 7.",
+      ],
+    },
+    {
+      name: "brand-voice",
+      type: "skill",
+      trigger: '"build my brand voice" / copy feels inconsistent',
+      when: "Once early. Then every 6 months or after a pivot.",
+      steps: [
+        "Collect 5 proud + 2 off-brand artifacts.",
+        "Analyze patterns: sentence length, humor, formality, self-reference, signature phrases.",
+        "5 rules + 5 anti-rules.",
+        "10 before/after examples across contexts.",
+      ],
+      example: {
+        input: "5 past tweets + landing + 2 contractor drafts",
+        output:
+          "Voice: 'The senior peer.' Rules: short sentences, one number per post, dry humor, 2nd person, no exclamations.",
+      },
+      pitfalls: [
+        "'Authentic and confident' — not specific enough.",
+        "30 rules contractors won't read.",
+      ],
+    },
   ],
   firstWin: "Run positioning today. Write the disqualifiers on your landing page. Watch your close rate improve when bad-fit leads self-disqualify.",
 };

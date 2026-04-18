@@ -156,6 +156,67 @@ export const ctoDoc: KitDoc = {
         "For very large diffs (>500 lines), split into logical chunks. Otherwise signal-to-noise collapses.",
       ],
     },
+    {
+      name: "stack-advisor",
+      type: "skill",
+      trigger: '"what should I build this with" / new project',
+      when: "Starting a new project, rewriting a component, evaluating a migration.",
+      steps: [
+        "5-question intake: strongest lang/framework, product shape, deadline, ops capacity, acceptable lock-ins.",
+        "Default boring and proven — novelty requires justification.",
+        "Output: stack table, 'Why NOT <the tempting option>', setup checklist, kill criteria.",
+      ],
+      example: {
+        input: '"New SaaS, TS bg, 4 weeks, solo, no infra chops"',
+        output:
+          "Next.js + Supabase + Drizzle + Stripe + Resend + Vercel + Sentry. Reject: AWS primitives, microservices, rolled-own auth. Setup checklist (6 steps, first hour).",
+      },
+      pitfalls: [
+        "'Best-in-class' of everything — integration tax wipes gains.",
+        "Cloud-primitives lock-in on day 1 for 1-person team.",
+      ],
+    },
+    {
+      name: "build-vs-buy",
+      type: "skill",
+      trigger: '"should I build X" / "<SaaS tool> or ship myself"',
+      when: "Any non-trivial capability where build is an option.",
+      steps: [
+        "Score 0-5 on Differentiation / Speed-to-value / Ops burden / Switching cost.",
+        "Rule: Diff ≥4 & ops ≤2 → BUILD · Switching ≥4 & Diff ≤2 → BUILD · Diff ≤2 & speed ≥3 → BUY · else BUY.",
+        "Common capabilities default to BUY: auth, email, payments, analytics, storage, search, queues, flags.",
+      ],
+      example: {
+        input: '"Build auth with Lucia?"',
+        output:
+          "Diff 1 / speed 4 (Clerk 2h) / ops 5 (security forever) / switching 3. Verdict: BUY Clerk.",
+      },
+      pitfalls: [
+        '"But we can do it better" — at what cost.',
+        "Building for imagined future scale.",
+      ],
+    },
+    {
+      name: "tech-debt-triage",
+      type: "skill",
+      trigger: '"what should I fix" / Friday cadence',
+      when: "Every Friday afternoon, 20 min.",
+      steps: [
+        "Inventory: TODOs, Sentry errors, avoided files.",
+        "Score: (pain × frequency) / fix-cost. Max 10 candidates.",
+        "Pick 1 to ship next week.",
+        "Save to founder-log/tech-debt/YYYY-WW.md.",
+      ],
+      example: {
+        input: "(runs on Friday)",
+        output:
+          "Top: 'Stripe webhook retries flaky' — 4×5/3h = 6.7. Ship next week. Deferred 2. Killed 1 that wasn't really debt.",
+      },
+      pitfalls: [
+        "Big refactor weeks are a trap.",
+        "Score inflation (everything at pain 5).",
+      ],
+    },
   ],
   firstWin: "Run the code-review subagent on your next PR. If it flags something you would've missed, the kit has paid for itself.",
 };
