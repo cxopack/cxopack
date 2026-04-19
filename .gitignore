@@ -11,3 +11,7 @@ dist/
 next-env.d.ts
 .turbo
 .env.stripe
+
+# Internal draft — not yet public
+kits/devops/
+src/content/docs/devops.ts

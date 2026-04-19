@@ -62,7 +62,7 @@
   "kits": {
     "eyebrow": "The 5 kits",
     "title": "Five executive roles. Five agents. One pack.",
-    "subtitle": "Each kit is a private GitHub repo with skills, subagents, Custom GPTs, Cursor rules, and raw prompts. Installed in 30 seconds.",
+    "subtitle": "Each kit is a private GitHub repo with skills, subagents, Custom GPTs, Cursor rules, and raw prompts. Installed in 30 seconds. All-Access subscribers get every new kit automatically.",
     "badge": "What's inside",
     "ceo": {
       "title": "CEO Kit",

@@ -4,6 +4,7 @@ import { cfoDoc } from "./cfo";
 import { salesDoc } from "./sales";
 import { cmoDoc } from "./cmo";
 import boardDoc from "./board";
+// NOTE: devopsDoc exists as an internal draft — intentionally NOT imported into the public docs.
 import type { KitDoc } from "./types";
 
 export const KIT_DOCS: Record<string, KitDoc> = {

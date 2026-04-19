@@ -5,6 +5,7 @@ import { Problem } from "@/components/problem";
 import { Multiplatform } from "@/components/multiplatform";
 import { Kits } from "@/components/kits";
 import { BoardSection } from "@/components/board-section";
+import { FounderDemo } from "@/components/founder-demo";
 import { WeekInLife } from "@/components/week-in-life";
 import { Pricing } from "@/components/pricing";
 import { WaitlistSection } from "@/components/waitlist";
@@ -30,6 +31,7 @@ export default async function HomePage({
         <Multiplatform />
         <Kits />
         <BoardSection />
+        <FounderDemo />
         <WeekInLife />
         <Pricing />
         <WaitlistSection />
