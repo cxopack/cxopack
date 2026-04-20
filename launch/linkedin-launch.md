@@ -22,7 +22,7 @@ Launched today. The first 100 subscribers get founder pricing locked for life.
 
 Try the live demo on the landing page — type a real question, watch Sam route it. No signup.
 
-→ cxopack.vercel.app
+→ cxopack.com
 
 (Comments on what to ship next are open. What executive role do you wish you had?)
 
@@ -42,7 +42,7 @@ CxOPack: five AI executive kits + a Chief of Staff who routes your questions to 
 
 Live demo on the landing, no signup. First 100 lock founder pricing.
 
-→ cxopack.vercel.app
+→ cxopack.com
 
 ### Founder-story variant (for the day-2 follow-up)
 

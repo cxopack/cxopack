@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
           subject: "You're on the CxOPack Autopilot waitlist",
           html: `<p>Thanks — you're on the list for <b>Autopilot</b>, the agent-operated company tier of CxOPack (targeting Q4 2026).</p>
 <p>You'll get an early-access invite before public launch and a Launch-100 founders' price ahead of public pricing.</p>
-<p>While you wait, you can already get the Solo Kit (€49 lifetime) or All-Access Pass (€149/yr) at <a href="https://cxopack.vercel.app">cxopack.vercel.app</a> — they're the foundation Autopilot is built on.</p>
+<p>While you wait, you can already get the Solo Kit (€49 lifetime) or All-Access Pass (€149/yr) at <a href="https://cxopack.com">cxopack.com</a> — they're the foundation Autopilot is built on.</p>
 <p>— Djalil, CxOPack</p>`,
         }),
       ]);

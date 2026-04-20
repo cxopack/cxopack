@@ -21,7 +21,7 @@ Welcome. You're one of the first 100 — your price is locked at €99/yr foreve
 
 1. Accept the GitHub invites in your inbox (one per kit, from notifications@github.com).
 2. Pick ONE kit. Not all five. The one that maps to your biggest pain this quarter.
-3. Run the installation guide for your AI tool: https://cxopack.vercel.app/docs/installation
+3. Run the installation guide for your AI tool: https://cxopack.com/docs/installation
 4. Run the first workflow: `/ceo:weekly` if you picked CEO, `/cto:adr` for CTO, `/cfo:cash-flow` for CFO, `/sales:icp` for Sales, `/cmo:positioning` for CMO.
 
 **The favor:** in 30 days, I'll ask for one line of feedback — what's working, what's confusing, what's missing. Your Launch-100 price is a discount on that feedback, not on the product. Say no now if that's not a trade you want to make; I'll refund you immediately. Otherwise, see you in 30 days.
@@ -68,7 +68,7 @@ One week in. What's shipped since you subscribed:
 - 1 bug fix in the Board orchestration (handoffs weren't surfacing overdue items)
 - Docs polish on the /docs/installation page
 
-All of it ships automatically when you re-pull the repos — no re-download needed. Instructions: https://cxopack.vercel.app/docs/installation#updates
+All of it ships automatically when you re-pull the repos — no re-download needed. Instructions: https://cxopack.com/docs/installation#updates
 
 **Bonus for Launch 100 only:** I just opened a private community. Invite link is below. Not a community for generic AI chat — it's for specific "I ran /ceo:build-buy-kill this morning and here's what I decided" conversations. Small, dense, high signal.
 

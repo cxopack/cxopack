@@ -38,7 +38,7 @@ The thesis: as the catalog grows, subscription becomes the only rational choice.
 
 **Tech stack** for fellow builders: Next.js 15 + Tailwind v4 + Supabase Auth/Postgres + Drizzle + Stripe Checkout + Resend + Vercel. Kits live in private GitHub repos, buyers get invited on purchase. ~2 months of nights + weekends.
 
-**The live demo is on the landing**: cxopack.vercel.app
+**The live demo is on the landing**: cxopack.com
 
 Drop questions on pricing, the stack, the subagent design, or anything else. Especially curious what other solo founders think about the Autopilot direction — agents with real budgets, executing work autonomously, is a bet I want to pressure-test.
 

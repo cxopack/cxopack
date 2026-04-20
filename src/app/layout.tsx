@@ -15,7 +15,7 @@ const jbMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://cxopack.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://cxopack.com"),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

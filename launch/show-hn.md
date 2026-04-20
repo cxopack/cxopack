@@ -26,7 +26,7 @@ Sam (the Chief of Staff) is a subagent that does three things:
 2. Routes to the relevant personas in parallel.
 3. Synthesizes one brief with a single recommendation, signed "Decide today" / "Read this twice" / "Sleep on it."
 
-There's a live demo on the landing — you type a question, watch the routing. No signup. cxopack.vercel.app
+There's a live demo on the landing — you type a question, watch the routing. No signup. cxopack.com
 
 Pricing: single kit €49 lifetime, All-Access €149/yr, first 100 lock €99/yr forever.
 

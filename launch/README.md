@@ -15,7 +15,7 @@ All copy-paste-ready assets for the public launch of CxOPack Edition I.
 ## Principles across every asset
 
 - **Specific beats inspirational.** Numbers, times, verbs.
-- **One CTA per asset.** Usually the same: `cxopack.vercel.app` (or `cxopack.com` once purchased).
+- **One CTA per asset.** Usually the same: `cxopack.com`.
 - **Dogfood angle is earned, not claimed.** Show what the product did, don't tell them it's "founder-built."
 - **Hooks do 80% of the work.** Spend 80% of the time on the first line.
 - **Follow up is mandatory.** Day 2, 4, 7 follow-up content converts the skim-past crowd on their second pass.

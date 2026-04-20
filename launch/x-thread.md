@@ -46,7 +46,7 @@ Works in Claude, ChatGPT, Cursor — one tool is enough. Pick the one you alread
 ### Tweet 7/9 — Try it live
 The landing has a live demo. Type any question. Watch Sam route it across the executives. No install. No signup.
 
-→ cxopack.vercel.app
+→ cxopack.com
 
 ### Tweet 8/9 — The offer
 Launch 100: first 100 subscribers lock founder pricing for life. Once it's gone, it's gone.
@@ -66,7 +66,7 @@ Questions in the replies. I'll answer all day.
 
 ### Day +2 — "Launch day by the numbers" (1 tweet)
 Launch day results, 24h:
-- N unique visitors to cxopack.vercel.app
+- N unique visitors to cxopack.com
 - N Launch 100 spots claimed
 - N /founder demos run on the landing
 - 1 engineer hire decision I was avoiding — Sam made it in 3 minutes.
