@@ -16,7 +16,6 @@ function CheckoutInner() {
   const params = useSearchParams();
   const plan = params.get("plan");
   const kit = params.get("kit");
-  const period = params.get("period");
 
   const [email, setEmail] = useState("");
   const [githubUsername, setGithubUsername] = useState("");
@@ -36,10 +35,15 @@ function CheckoutInner() {
     setError(null);
     setLoading(true);
     try {
+      // Only send fields with values — zod's .optional() allows undefined but rejects null.
+      const payload: Record<string, string> = { email, githubUsername };
+      if (plan) payload.plan = plan;
+      if (kit) payload.kit = kit;
+
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan, kit, period, email, githubUsername }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (data.url) {
