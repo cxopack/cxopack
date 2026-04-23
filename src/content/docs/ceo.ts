@@ -267,5 +267,66 @@ export const ceoDoc: KitDoc = {
       ],
     },
   ],
+  playbook: [
+    {
+      title: "Plan your week",
+      when: "Monday morning, before email.",
+      asset: "/ceo:weekly",
+      assetType: "command",
+      input: "/ceo:weekly",
+      output:
+        "A file in founder-log/weekly/ with exactly 3 locked priorities — each with outcome, leading indicator, and kill criteria.",
+      time: "15 min · weekly",
+    },
+    {
+      title: "Retro on Friday",
+      when: "Friday before you shut down.",
+      asset: "founder-journal",
+      assetType: "skill",
+      input: '"Friday reflection"',
+      output: "3 wins, 1 named failure, 1 lesson, 1 Monday recalibration — appended to this week's log.",
+      time: "10 min · weekly",
+    },
+    {
+      title: "Send the monthly investor update",
+      when: "First week of the month, or day before a call.",
+      asset: "board-update",
+      assetType: "skill",
+      input: '"draft my monthly board update"',
+      output:
+        "A 400-word email: KPIs, 3 wins, 2 challenges, 1 specific ask, next-month plan. Ready to paste into Gmail.",
+      time: "30 min · monthly",
+    },
+    {
+      title: "Decide before you build",
+      when: "Any idea that costs >€500 or >2 weeks.",
+      asset: "build-buy-kill",
+      assetType: "skill",
+      input: '"Should I build an affiliate program?"',
+      output:
+        "A 0–20 score across Momentum / Market / Moat / Me → verdict BUILD, BUY, DEFER, or KILL — with the first concrete action.",
+      time: "20 min · ad-hoc",
+    },
+    {
+      title: "Pressure-test big decisions",
+      when: "You've already decided. You want it attacked.",
+      asset: "strategic-advisor",
+      assetType: "subagent",
+      input: '"call the strategic-advisor: I\'m raising €500k at a €3M cap"',
+      output:
+        "Steelman of your plan, then 2–3 specific counter-arguments, ending in: proceed with mitigations, modify, or pause and test.",
+      time: "10 min · ad-hoc",
+    },
+    {
+      title: "Log decisions you'll forget in 90 days",
+      when: "Anything hard to reverse.",
+      asset: "decision-log",
+      assetType: "skill",
+      input: '"log this: switching to monthly + annual pricing"',
+      output:
+        "A decision file with alternatives, negative consequence, a wrong-if trigger you can observe, and a review date.",
+      time: "5 min · ad-hoc",
+    },
+  ],
   firstWin: "Run /ceo:weekly next Monday. If your 3 priorities don't feel tighter than last week's, ask for a refund.",
 };
