@@ -12,7 +12,8 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "release:kit": "tsx scripts/release-kit.ts",
-    "setup:stripe": "tsx scripts/setup-stripe.ts"
+    "setup:stripe": "tsx scripts/setup-stripe.ts",
+    "setup:stripe:live": "tsx scripts/setup-stripe-live.ts"
   },
   "dependencies": {
     "@octokit/rest": "^21.0.2",
