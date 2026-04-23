@@ -23,14 +23,36 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: message }, { status: 400 });
   }
 
-  if (event.type === "checkout.session.completed") {
-    const session = event.data.object as Stripe.Checkout.Session;
-    await handleCheckoutCompleted(session);
+  try {
+    switch (event.type) {
+      case "checkout.session.completed":
+        await handleCheckoutCompleted(event.data.object as Stripe.Checkout.Session);
+        break;
+      case "invoice.payment_failed":
+        await handlePaymentFailed(event.data.object as Stripe.Invoice);
+        break;
+      case "invoice.upcoming":
+        await handleInvoiceUpcoming(event.data.object as Stripe.Invoice);
+        break;
+      case "customer.subscription.deleted":
+        await handleSubscriptionDeleted(event.data.object as Stripe.Subscription);
+        break;
+      default:
+        // Ignore unhandled event types — still acknowledge the delivery.
+        break;
+    }
+  } catch (err) {
+    console.error(`webhook handler failed for ${event.type}:`, err instanceof Error ? err.message : err);
+    // Returning 500 lets Stripe retry automatically.
+    return NextResponse.json({ error: "handler failed" }, { status: 500 });
   }
 
   return NextResponse.json({ received: true });
 }
 
+// ---------------------------------------------------------------------------
+// checkout.session.completed — new paid customer
+// ---------------------------------------------------------------------------
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   const [{ db, schema }, { eq, sql }, { inviteToKitRepos }, { sendWelcomeEmail }] =
     await Promise.all([
@@ -44,20 +66,12 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   const email = session.customer_details?.email ?? session.customer_email ?? meta.email;
   if (!email) return;
 
-  const plan = (meta.plan ?? "full-pack") as
+  const plan = (meta.plan ?? "all-access") as
     | "kit"
-    | "full-pack"
-    | "founding-100"
-    | "club";
+    | "all-access"
+    | "launch-100";
   const kitSlugs = (meta.kitSlugs ?? "").split(",").filter(Boolean) as KitSlug[];
   const githubUsername = meta.githubUsername ?? "";
-
-  const planDbValue =
-    plan === "club"
-      ? session.mode === "subscription"
-        ? "club-yearly"
-        : "club-monthly"
-      : plan;
 
   const amountCents = session.amount_total ?? 0;
 
@@ -65,7 +79,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     .insert(schema.orders)
     .values({
       email,
-      plan: planDbValue as typeof schema.orders.$inferInsert.plan,
+      plan: plan as typeof schema.orders.$inferInsert.plan,
       kitSlug: plan === "kit" ? (kitSlugs[0] ?? null) : null,
       amountCents,
       currency: (session.currency ?? "eur").toUpperCase(),
@@ -78,9 +92,11 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       paidAt: new Date(),
       metadata: meta,
     })
+    .onConflictDoNothing({ target: schema.orders.stripeSessionId })
     .returning();
 
-  if (plan === "founding-100") {
+  // Founding 100 legacy counter (if still used).
+  if (plan === "launch-100") {
     await db
       .insert(schema.foundingCounter)
       .values({ id: 1, sold: 1, limit: 100 })
@@ -93,7 +109,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   if (githubUsername && kitSlugs.length > 0) {
     const results = await inviteToKitRepos(githubUsername, kitSlugs);
     const allOk = results.every((r) => r.ok);
-    if (allOk) {
+    if (order && allOk) {
       await db
         .update(schema.orders)
         .set({ githubInviteSent: true })
@@ -105,5 +121,74 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     to: email,
     kitSlugs: kitSlugs.length ? kitSlugs : ["ceo", "cto", "cfo", "sales", "cmo"],
     githubUsername: githubUsername || "your-github",
+  });
+}
+
+// ---------------------------------------------------------------------------
+// invoice.payment_failed — card charge didn't go through on renewal
+// ---------------------------------------------------------------------------
+async function handlePaymentFailed(invoice: Stripe.Invoice) {
+  const { sendPaymentFailedEmail } = await import("@/lib/email");
+  const to = invoice.customer_email;
+  if (!to) return;
+  await sendPaymentFailedEmail({
+    to,
+    amountCents: invoice.amount_due ?? 0,
+    currency: invoice.currency ?? "eur",
+    hostedInvoiceUrl: invoice.hosted_invoice_url,
+    attemptCount: invoice.attempt_count ?? 1,
+    nextAttemptDate: invoice.next_payment_attempt
+      ? new Date(invoice.next_payment_attempt * 1000)
+      : null,
+  });
+}
+
+// ---------------------------------------------------------------------------
+// invoice.upcoming — Stripe sends ~3–14 days before the next charge
+// ---------------------------------------------------------------------------
+async function handleInvoiceUpcoming(invoice: Stripe.Invoice) {
+  const { sendRenewalUpcomingEmail } = await import("@/lib/email");
+  const to = invoice.customer_email;
+  if (!to) return;
+  const renewalTs = invoice.next_payment_attempt ?? invoice.period_end;
+  await sendRenewalUpcomingEmail({
+    to,
+    amountCents: invoice.amount_due ?? 0,
+    currency: invoice.currency ?? "eur",
+    renewalDate: new Date(renewalTs * 1000),
+    manageSubscriptionUrl: invoice.hosted_invoice_url,
+  });
+}
+
+// ---------------------------------------------------------------------------
+// customer.subscription.deleted — subscription cancelled
+// ---------------------------------------------------------------------------
+async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
+  const { sendCancellationEmail } = await import("@/lib/email");
+  const { stripe } = await import("@/lib/stripe");
+  const { db, schema } = await import("@/db");
+  const { eq } = await import("drizzle-orm");
+
+  // Mark any matching order as refunded/cancelled for our records.
+  await db
+    .update(schema.orders)
+    .set({ status: "refunded" })
+    .where(eq(schema.orders.stripeSubscriptionId, subscription.id));
+
+  const customer =
+    typeof subscription.customer === "string"
+      ? await stripe.customers.retrieve(subscription.customer)
+      : subscription.customer;
+
+  const to = customer && "email" in customer && customer.email ? customer.email : null;
+  if (!to) return;
+
+  const endsAt = subscription.current_period_end
+    ? new Date(subscription.current_period_end * 1000)
+    : null;
+
+  await sendCancellationEmail({
+    to,
+    accessEndsDate: endsAt,
   });
 }
