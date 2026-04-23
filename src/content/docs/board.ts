@@ -195,6 +195,68 @@ export const boardDoc = {
       ],
     },
   ],
+  playbook: [
+    {
+      title: "Ask anything, route automatically",
+      when: "Any time you don't know which kit to pick.",
+      asset: "/founder",
+      assetType: "command",
+      input: "/founder Should I raise prices from $29 to $49?",
+      output:
+        "Chief of Staff decides which of the 5 personas to call, invokes them, and synthesises one brief with recommendation and proposed handoffs.",
+      time: "2 min · ad-hoc",
+    },
+    {
+      title: "Run the weekly board ritual",
+      when: "Monday 9am. The cornerstone.",
+      asset: "/board:weekly",
+      assetType: "command",
+      input: "/board:weekly",
+      output:
+        "A weekly brief with each function's read, cross-functional pattern spotted, 3 locked priorities, open handoffs, and one provocative question.",
+      time: "20 min · weekly",
+    },
+    {
+      title: "Make a multi-function decision",
+      when: "Anything spanning >1 function or >€500.",
+      asset: "/board:decision",
+      assetType: "command",
+      input: "/board:decision launch a referral program?",
+      output:
+        "Named options (including 'don't do it'), each persona's 4-question take, surfaced disagreements, one recommendation with kill criteria.",
+      time: "20 min · ad-hoc",
+    },
+    {
+      title: "Brief yourself on a cross-cutting topic",
+      when: "Before any big push in an unfamiliar area.",
+      asset: "/board:brief",
+      assetType: "command",
+      input: "/board:brief fundraising readiness",
+      output:
+        "1–3 relevant personas each give you 'the question you haven't asked yet' plus the one piece of data you'd regret missing.",
+      time: "10 min · ad-hoc",
+    },
+    {
+      title: "Hand off work between personas",
+      when: "Any time one exec needs to pass to another.",
+      asset: "/board:handoff",
+      assetType: "command",
+      input: "/board:handoff CEO CTO scope the MVP for the referral feature by Friday",
+      output:
+        "A structured handoff file with task, context, deliverable, due date, kill criteria — plus the receiving persona's ack and missing-context asks.",
+      time: "3 min · per handoff",
+    },
+    {
+      title: "Call a specific executive",
+      when: "When you know exactly whose voice you want.",
+      asset: "ceo / cto / cfo / sales / cmo",
+      assetType: "subagent",
+      input: '"Ask the CFO if we can afford to hire a designer in Q3"',
+      output:
+        "The persona reads founder-log/, uses their kit's skills under the hood, and replies in their voice — with a proposed handoff if the work crosses functions.",
+      time: "5 min · ad-hoc",
+    },
+  ],
   firstWin:
     "Next Monday at 9am, run /board:weekly. If the synthesized brief changes one decision you were about to make, the Board has paid for itself.",
 } as const;

@@ -221,6 +221,68 @@ export const cfoDoc: KitDoc = {
       ],
     },
   ],
+  playbook: [
+    {
+      title: "Roll the 13-week cash flow forward",
+      when: "Every Friday, non-negotiable.",
+      asset: "cash-flow-13w",
+      assetType: "skill",
+      input: '"update the cash flow"',
+      output:
+        "A 13-week cash table, closing cash, runway, and a variance paragraph that flags any inflow that didn't materialise.",
+      time: "10 min · weekly",
+    },
+    {
+      title: "Compute the numbers you have to defend",
+      when: "First business day of the month.",
+      asset: "saas-metrics",
+      assetType: "skill",
+      input: '"compute my MRR, churn, NRR from Stripe"',
+      output:
+        "MRR, ARR, logo + revenue churn, NRR, CAC, LTV, LTV/CAC, payback — with concentration-risk flags if one customer is >20% of MRR.",
+      time: "15 min · monthly",
+    },
+    {
+      title: "Prep numbers for the investor update",
+      when: "Day before you write the update.",
+      asset: "investor-update",
+      assetType: "skill",
+      input: '"prep the numbers block for this month"',
+      output:
+        "A 9-metric table with MoM deltas, a 4-sentence interpretation, and automatic red flags on runway, churn, and concentration.",
+      time: "20 min · monthly",
+    },
+    {
+      title: "Model runway scenarios",
+      when: "After a hire, churn event, or pricing change.",
+      asset: "runway-scenarios",
+      assetType: "skill",
+      input: '"model base / bull / bear"',
+      output:
+        "3 scenarios with 12-month tables, the specific signal that flips you from Base to Bear, and pre-planned actions per scenario.",
+      time: "30 min · ad-hoc",
+    },
+    {
+      title: "Run a pricing change safely",
+      when: "Any price increase or repackage.",
+      asset: "pricing-experiments",
+      assetType: "skill",
+      input: '"test Anchor $29 → $49"',
+      output:
+        "Baseline numbers, hypothesis with guardrails, rollback plan within 24h, and the 30-day notice template for existing customers.",
+      time: "60 min · per experiment",
+    },
+    {
+      title: "Open the data room before you need it",
+      when: "90 days before a planned raise.",
+      asset: "data-room",
+      assetType: "skill",
+      input: '"build the data room for pre-seed"',
+      output:
+        "An 8-section folder tree, a readme with live metrics, and a Must-have / Nice-to-have / Skip checklist for your round.",
+      time: "Half-day · one-off",
+    },
+  ],
   firstWin:
     "Run saas-metrics on your Stripe export today. Either you learn your NRR for the first time, or you confirm what you thought — both are valuable.",
 };

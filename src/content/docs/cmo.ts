@@ -223,5 +223,67 @@ export const cmoDoc: KitDoc = {
       ],
     },
   ],
+  playbook: [
+    {
+      title: "Sharpen your positioning",
+      when: "Day 1. Then any time your landing isn't converting.",
+      asset: "positioning",
+      assetType: "skill",
+      input: '"fix my positioning — alternatives and disqualifiers I\'ll share"',
+      output:
+        "A Dunford-style positioning statement, proof points (facts, not claims), and the 'stop saying' list of banned words to drop.",
+      time: "60 min · ad-hoc",
+    },
+    {
+      title: "Find your brand voice",
+      when: "Once, after positioning.",
+      asset: "brand-voice",
+      assetType: "skill",
+      input: '"build my brand voice from 5 proud artifacts"',
+      output:
+        "A voice archetype with 5 rules + 5 anti-rules and 10 before/after examples across tweet, landing, and email contexts.",
+      time: "60 min · one-off",
+    },
+    {
+      title: "Batch a week of LinkedIn posts",
+      when: "Every Monday morning.",
+      asset: "linkedin-batch",
+      assetType: "skill",
+      input: '"7 posts on why we raised prices and kept conversion"',
+      output:
+        "7 posts across 7 formats (hot take, case study, how-to, anti-pattern, BTS, data, question) — queued Mon→Sun.",
+      time: "45 min · weekly",
+    },
+    {
+      title: "Publish one SEO page that ranks",
+      when: "Every Wednesday.",
+      asset: "seo-page",
+      assetType: "skill",
+      input: '"write SEO page for \'AI tools for solo founders\'"',
+      output:
+        "A page matched to search intent, H1/H2 structure, internal links, and a FAQ targeting real People-Also-Ask questions.",
+      time: "60 min · weekly",
+    },
+    {
+      title: "Rewrite the landing",
+      when: "Any time claims are louder than your proof.",
+      asset: "landing-copy",
+      assetType: "skill",
+      input: '"rewrite the hero — kill banned words, add proof"',
+      output:
+        "Two hero variants for A/B, a problem-quote section, 3 benefits each with a proof point, and a Not-For block.",
+      time: "60 min · ad-hoc",
+    },
+    {
+      title: "Prep a real launch",
+      when: "2 weeks before any launch.",
+      asset: "launch-comms",
+      assetType: "skill",
+      input: '"launch CxOPack Edition I"',
+      output:
+        "5 on-message but format-specific pieces (X, LinkedIn, newsletter, PR, PH first comment) and a T+2 / T+4 / T+7 follow-up plan.",
+      time: "2h · per launch",
+    },
+  ],
   firstWin: "Run positioning today. Write the disqualifiers on your landing page. Watch your close rate improve when bad-fit leads self-disqualify.",
 };

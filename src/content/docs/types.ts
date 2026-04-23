@@ -31,6 +31,16 @@ export type SkillDoc = {
   pitfalls: string[];
 };
 
+export type PlaybookStep = {
+  title: string;
+  when: string;
+  asset: string;
+  assetType: "skill" | "subagent" | "command";
+  input: string;
+  output: string;
+  time: string;
+};
+
 export type KitDoc = {
   slug: KitSlug;
   title: string;
@@ -44,5 +54,6 @@ export type KitDoc = {
   mcps: McpServer[];
   cadence: Cadence;
   skills: SkillDoc[];
+  playbook: PlaybookStep[];
   firstWin: string;
 };

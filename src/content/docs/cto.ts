@@ -218,5 +218,67 @@ export const ctoDoc: KitDoc = {
       ],
     },
   ],
+  playbook: [
+    {
+      title: "Scope the next 2-week build",
+      when: "Start of any new feature bigger than a hotfix.",
+      asset: "mvp-scope",
+      assetType: "skill",
+      input: '"scope the referral MVP — target ship by Friday week 2"',
+      output:
+        "A spec with one user story, the smallest shippable surface, a NOT-in-MVP list, and a kill criterion if scope creeps >20%.",
+      time: "20 min · per feature",
+    },
+    {
+      title: "Decide before you code",
+      when: "Any architectural call you'll regret in 6 months.",
+      asset: "adr",
+      assetType: "skill",
+      input: '"adr: Postgres vs. DynamoDB as primary store"',
+      output:
+        "A numbered ADR with context, decision, rejected alternatives, one forced negative consequence, and a revisit trigger — written to docs/adr/.",
+      time: "10 min · ad-hoc",
+    },
+    {
+      title: "Review a diff before merge",
+      when: "Every PR touching money, auth, or external APIs.",
+      asset: "code-review",
+      assetType: "subagent",
+      input: '"review this diff against our security + correctness standards"',
+      output:
+        "A structured review: Must-fix, Should-consider, Nit, and What's good — reading the diff directly from GitHub.",
+      time: "5 min · per PR",
+    },
+    {
+      title: "Pick a stack or a library",
+      when: "Starting a project, or swapping a dependency.",
+      asset: "stack-advisor",
+      assetType: "skill",
+      input: '"new SaaS, solo, 4 weeks, TS background"',
+      output:
+        "A concrete stack table, a 'why NOT the tempting option' section, a first-hour checklist, and kill criteria.",
+      time: "15 min · ad-hoc",
+    },
+    {
+      title: "Build it or buy it",
+      when: "Any capability someone has already shipped as a product.",
+      asset: "build-vs-buy",
+      assetType: "skill",
+      input: '"build auth from scratch or use Clerk?"',
+      output:
+        "A 4-axis score (diff / speed / ops / switching cost) with a BUY or BUILD verdict in two lines.",
+      time: "10 min · ad-hoc",
+    },
+    {
+      title: "Stop tech debt from eating the roadmap",
+      when: "Every Friday afternoon.",
+      asset: "tech-debt-triage",
+      assetType: "skill",
+      input: "/cto:tech-debt",
+      output:
+        "Top-10 debt items scored by (pain × frequency) / fix-cost, the one to ship next week, and the ones you can close guilt-free.",
+      time: "20 min · weekly",
+    },
+  ],
   firstWin: "Run the code-review subagent on your next PR. If it flags something you would've missed, the kit has paid for itself.",
 };

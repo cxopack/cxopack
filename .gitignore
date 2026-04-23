@@ -3,8 +3,6 @@ node_modules/
 out/
 dist/
 *.log
-.env
-.env.local
 .env*.local
 .vercel
 .DS_Store
@@ -16,3 +14,4 @@ next-env.d.ts
 # Internal draft — not yet public
 kits/devops/
 src/content/docs/devops.ts
+config.bat

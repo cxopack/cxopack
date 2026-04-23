@@ -209,5 +209,67 @@ export const salesDoc: KitDoc = {
       ],
     },
   ],
+  playbook: [
+    {
+      title: "Lock your ICP before you send anything",
+      when: "Day 1. Then every quarter.",
+      asset: "icp-workshop",
+      assetType: "skill",
+      input: '"define my ICP — 3 best customers, their common trigger"',
+      output:
+        "A 1-page ICP doc with hard disqualifiers, willingness-to-pay anchor, and the top 3 channels to find them.",
+      time: "45 min · quarterly",
+    },
+    {
+      title: "Send 5 cold emails that actually reply",
+      when: "Every weekday morning.",
+      asset: "cold-outbound",
+      assetType: "skill",
+      input: '"write 5 outbound emails for today\'s prospect list"',
+      output:
+        "A 4-touch sequence per prospect — each ≤60 words with 3 specifics and one yes/no ask, ready in your Gmail drafts.",
+      time: "30 min · daily",
+    },
+    {
+      title: "Prep a discovery call so you listen 70%",
+      when: "15 min before every call.",
+      asset: "discovery-script",
+      assetType: "skill",
+      input: '"prep my call with VP Sales at 40-person SaaS"',
+      output:
+        "A 45-min script with one opening question, listening targets (quantified pain, urgency, buying process), and a next-step prompt.",
+      time: "15 min · per call",
+    },
+    {
+      title: "Handle the objection underneath the objection",
+      when: "Before or during any close call.",
+      asset: "objections",
+      assetType: "skill",
+      input: '"they said it\'s too expensive"',
+      output:
+        "The real question underneath, a peer-tone response in your voice, and a qualifying follow-up that forces commit or disqualify.",
+      time: "5 min · per objection",
+    },
+    {
+      title: "Send the proposal within 48h",
+      when: "Any promising discovery call.",
+      asset: "proposal",
+      assetType: "skill",
+      input: '"write the proposal from my Acme call notes"',
+      output:
+        "A 2-page proposal in the customer's own pain language, 3 outcomes → 3 deliverables, timeline, and one clear next step with a date.",
+      time: "30 min · per deal",
+    },
+    {
+      title: "Kill stale deals every Friday",
+      when: "Friday afternoon, 15 minutes.",
+      asset: "pipeline-review",
+      assetType: "skill",
+      input: '"review my pipeline"',
+      output:
+        "A cleaned pipeline with deals >45d with no movement killed, 3 focus deals for next week, and counted leading indicators.",
+      time: "15 min · weekly",
+    },
+  ],
   firstWin: "Run the ICP workshop today. Write the 1-pager. Disqualify 3 deals in your current pipeline that don't fit. Your close rate goes up next week.",
 };
