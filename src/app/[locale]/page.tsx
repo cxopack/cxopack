@@ -3,6 +3,7 @@ import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { Problem } from "@/components/problem";
 import { Multiplatform } from "@/components/multiplatform";
+import { OhMyClaudePair } from "@/components/oh-my-claude-pair";
 import { Kits } from "@/components/kits";
 import { BoardSection } from "@/components/board-section";
 import { FounderDemo } from "@/components/founder-demo";
@@ -13,6 +14,8 @@ import { HowItWorks } from "@/components/how";
 import { Faq } from "@/components/faq";
 import { FinalCta } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
+
+export const revalidate = 60;
 
 export default async function HomePage({
   params,
@@ -29,6 +32,7 @@ export default async function HomePage({
         <Hero />
         <Problem />
         <Multiplatform />
+        <OhMyClaudePair />
         <Kits />
         <BoardSection />
         <FounderDemo />
