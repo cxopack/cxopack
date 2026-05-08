@@ -95,7 +95,6 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     .onConflictDoNothing({ target: schema.orders.stripeSessionId })
     .returning();
 
-  // Founding 100 legacy counter (if still used).
   if (plan === "launch-100") {
     await db
       .insert(schema.foundingCounter)
@@ -104,6 +103,15 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
         target: schema.foundingCounter.id,
         set: { sold: sql`${schema.foundingCounter.sold} + 1` },
       });
+    // Bust the home page cache so the counter reflects this purchase
+    // sooner than the 60s ISR window.
+    try {
+      const { revalidatePath } = await import("next/cache");
+      revalidatePath("/", "page");
+      revalidatePath("/[locale]", "page");
+    } catch {
+      // revalidatePath is unavailable in some test contexts — non-fatal.
+    }
   }
 
   if (githubUsername && kitSlugs.length > 0) {
