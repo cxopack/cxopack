@@ -2,13 +2,13 @@
 
 > **Your AI C-suite. Any AI tool. Built for solo founders.**
 
-Storefront + landing + GitHub-invite delivery for the CxOPack kits (CEO, CTO, CFO, Sales, CMO).
+Storefront + landing + GitHub-invite delivery for the CxOPack kits — **Harvey** (CEO), **Elliot** (CTO), **Axe** (CFO), **Ari** (Head of Sales), **Don** (CMO), and **Donna** (Chief of Staff).
 
 ## Stack
 
 - **Next.js 15 (App Router)** + TypeScript + Tailwind v4 + shadcn-style primitives
 - **next-intl** — currently English-only; can be re-extended to other locales without refactor
-- **Stripe Checkout** — one-time (kits, Full Pack, Founding 100) + subscription (Founder's Club monthly/yearly)
+- **Stripe Checkout** — one-time (single kits) + subscription (All-Access Pass, Launch 100)
 - **Supabase** — auth + Postgres
 - **Drizzle ORM** — schema in `src/db/schema.ts`
 - **Octokit** — invites buyers to private kit repos on successful payment
@@ -76,15 +76,13 @@ Create **EUR** products in your Stripe Dashboard (or run `pnpm tsx scripts/setup
 
 | Product | Price | Mode | Env var |
 |---|---|---|---|
-| CEO Kit | €99 | one-time | `STRIPE_PRICE_KIT_CEO` |
-| CTO Kit | €99 | one-time | `STRIPE_PRICE_KIT_CTO` |
-| CFO Kit | €99 | one-time | `STRIPE_PRICE_KIT_CFO` |
-| Sales Kit | €99 | one-time | `STRIPE_PRICE_KIT_SALES` |
-| CMO Kit | €99 | one-time | `STRIPE_PRICE_KIT_CMO` |
-| Full Pack | €299 | one-time | `STRIPE_PRICE_FULL_PACK` |
-| Founding 100 | €249 | one-time | `STRIPE_PRICE_FOUNDING_100` |
-| Founder's Club monthly | €49/mo | recurring | `STRIPE_PRICE_CLUB_MONTHLY` |
-| Founder's Club yearly | €399/yr | recurring | `STRIPE_PRICE_CLUB_YEARLY` |
+| Harvey · CEO Kit | €49 | one-time | `STRIPE_PRICE_KIT_CEO` |
+| Elliot · CTO Kit | €49 | one-time | `STRIPE_PRICE_KIT_CTO` |
+| Axe · CFO Kit | €49 | one-time | `STRIPE_PRICE_KIT_CFO` |
+| Ari · Head of Sales Kit | €49 | one-time | `STRIPE_PRICE_KIT_SALES` |
+| Don · CMO Kit | €49 | one-time | `STRIPE_PRICE_KIT_CMO` |
+| All-Access Pass | €149/yr | recurring | `STRIPE_PRICE_ALL_ACCESS_YEARLY` |
+| Launch 100 (first 100 only) | €99/yr | recurring | `STRIPE_PRICE_LAUNCH_100_YEARLY` |
 
 - [ ] Create a webhook pointing at `https://cxopack.com/api/stripe/webhook`, events: `checkout.session.completed`. Copy signing secret → `STRIPE_WEBHOOK_SECRET`.
 - [ ] Enable **Automatic Tax** (covers EU VAT and US sales tax).

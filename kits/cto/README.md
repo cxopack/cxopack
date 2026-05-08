@@ -1,8 +1,8 @@
-# CxOPack — CTO Kit
+# CxOPack — Elliot · CTO Kit
 
-> **Your technical co-founder. Boring choices, sharp reviews, MVP discipline.**
+> **Meet Elliot. Your technical co-founder. Boring choices, sharp reviews, MVP discipline.**
 
-The CTO Kit is six production workflows plus a code-review subagent. It enforces the discipline a senior staff engineer brings to a small team — default to the boring choice, write the ADR, cut the MVP, pay down the right debt.
+Elliot is your CTO. Anti-bullshit, sees through systems, asks what the smallest thing that ships looks like. Six production workflows plus a code-review subagent that enforces the discipline a senior staff engineer brings to a small team — default to the boring choice, write the ADR, cut the MVP, pay down the right debt.
 
 ---
 

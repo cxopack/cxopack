@@ -1,16 +1,25 @@
-# CxOPack — Board
+# CxOPack — The Board
 
-> **The orchestration layer that makes 5 kits feel like a team.**
+> **Donna and the executives. The orchestration layer that makes 5 kits feel like a team.**
 
 The Board is what turns CxOPack from "5 useful kits" into "an executive team with a Chief of Staff." It's included in the **All-Access Pass** only — not sold standalone.
+
+## The cast
+
+- **Donna** — Chief of Staff. Routes /founder, runs /board:weekly, owns the shared memory.
+- **Harvey** — CEO. Closer mentality, forces a decision in every output.
+- **Elliot** — CTO. Anti-bullshit, asks what the smallest thing that ships looks like.
+- **Axe** — CFO. Hedge-fund paranoia about runway, bear-case is the default case.
+- **Ari** — Head of Sales. Loud, relentless, charming. Pushes for the meeting in 48h.
+- **Don** — CMO. Story over features, identity over specs.
 
 ## What ships
 
 | Type | Name | What it does |
 |---|---|---|
-| Subagent | `chief-of-staff` (Sam) | Routes any founder request to the right executive(s), synthesizes one answer |
-| Subagent | `ceo`, `cto`, `cfo`, `sales-director`, `cmo` | Persona agents — each uses its kit's skills under a consistent voice |
-| Slash cmd | `/founder` | Top-level entry: describe anything, Sam routes it |
+| Subagent | `chief-of-staff` (Donna) | Routes any founder request to the right executive(s), synthesizes one answer |
+| Subagent | `ceo` (Harvey), `cto` (Elliot), `cfo` (Axe), `sales-director` (Ari), `cmo` (Don) | Persona agents — each uses its kit's skills under a consistent voice |
+| Slash cmd | `/founder` | Top-level entry: describe anything, Donna routes it |
 | Slash cmd | `/board:weekly` | Monday ritual — all 5 personas give a read, synthesized into one brief |
 | Slash cmd | `/board:decision` | Big decisions — each relevant exec weighs in, synthesis recommends |
 | Slash cmd | `/board:brief` | Exploratory — "brief me on X from the board's perspective" |

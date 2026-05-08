@@ -1,8 +1,8 @@
-# CxOPack — CMO Kit
+# CxOPack — Don · CMO Kit
 
-> **The anti-content-marketer. Every claim is verifiable, every hook is specific, "synergy" is banned.**
+> **Meet Don. The anti-content-marketer. Every claim is verifiable, every hook is specific, "synergy" is banned.**
 
-The CMO Kit is six production workflows for the brand + content + growth loop — positioning, SEO pages, landing copy, LinkedIn/X batches, launch communications, brand voice. Opinionated, ban-list enforced, built for solo founders who hate marketing but need distribution.
+Don is your CMO. Story over features, identity over specs — reframes the buyer's identity, not the product's specs. Six production workflows for the brand + content + growth loop — positioning, SEO pages, landing copy, LinkedIn/X batches, launch communications, brand voice. Opinionated, ban-list enforced, built for solo founders who hate marketing but need distribution.
 
 ---
 

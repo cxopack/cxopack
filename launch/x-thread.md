@@ -22,14 +22,14 @@ Every decision hits 3+ functions:
 You get one of those executives. Yourself. The rest is guesswork.
 
 ### Tweet 3/9 — The build
-So I built CxOPack: five AI executive kits (CEO, CTO, CFO, Sales, CMO) + a Chief of Staff called Sam who routes and synthesizes.
+So I built CxOPack: five AI executive kits (CEO, CTO, CFO, Sales, CMO) + a Chief of Staff called Donna who routes and synthesizes.
 
 They run inside Claude, ChatGPT, or Cursor. Not chatbots — structured workflows with memory across sessions.
 
 ### Tweet 4/9 — The real moment
-This morning I asked Sam: "Should I raise prices?"
+This morning I asked Donna: "Should I raise prices?"
 
-Sam read my founder-log, routed to 4 executives in parallel, came back in 30s with one paragraph and a rollback criterion.
+Donna read my founder-log, routed to 4 executives in parallel, came back in 30s with one paragraph and a rollback criterion.
 
 Signed it: "Decide today."
 
@@ -44,7 +44,7 @@ Five kits, 30+ workflows, a Chief of Staff, Weekly Board Meeting ritual, structu
 Works in Claude, ChatGPT, Cursor — one tool is enough. Pick the one you already pay for.
 
 ### Tweet 7/9 — Try it live
-The landing has a live demo. Type any question. Watch Sam route it across the executives. No install. No signup.
+The landing has a live demo. Type any question. Watch Donna route it across the executives. No install. No signup.
 
 → cxopack.com
 
@@ -69,7 +69,7 @@ Launch day results, 24h:
 - N unique visitors to cxopack.com
 - N Launch 100 spots claimed
 - N /founder demos run on the landing
-- 1 engineer hire decision I was avoiding — Sam made it in 3 minutes.
+- 1 engineer hire decision I was avoiding — Donna made it in 3 minutes.
 
 Thread with what I got wrong coming tomorrow.
 

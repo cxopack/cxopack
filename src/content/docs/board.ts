@@ -9,7 +9,7 @@ export const boardDoc = {
   title: "The Board",
   tagline: "Your 5 kits stop being 5 kits. They become a team.",
   heroSentence:
-    "The Board is the orchestration layer included with the All-Access Pass. A Chief of Staff subagent (Sam) routes any request to the right executive persona; a /board:weekly ritual runs all 5 in sequence; a shared founder-log/ workspace gives them collective memory. Without the Board, you have 5 kits. With it, you have an AI executive team that remembers, hands off, and disagrees — like a real one.",
+    "The Board is the orchestration layer included with the All-Access Pass. Donna — your Chief of Staff — routes any request to the right executive persona; a /board:weekly ritual runs all 5 in sequence; a shared founder-log/ workspace gives them collective memory. Without the Board, you have 5 kits. With it, you have an AI executive team that remembers, hands off, and disagrees — like a real one.",
   review: {
     intro:
       "The Board is included with the All-Access Pass — but it only works if the kits beneath it are installed first. Before you install Board, install at least one kit and run it once end-to-end. The routing is only as smart as the personas it routes to.",
@@ -20,7 +20,7 @@ export const boardDoc = {
       "How often do you find yourself saying 'I don't know who to ask about this'? That's the frequency with which you'll run /founder.",
     ],
     brainstormPrompts: [
-      "If you had a real Chief of Staff sitting next to you, what's the first meeting you'd have them set up?",
+      "If you had a real Chief of Staff like Donna sitting next to you, what's the first meeting you'd have her set up?",
       "Which of your last 10 decisions were made without input from the function that mattered most? (Those are the ones to re-run via /board:decision.)",
       "What's a decision you've quietly been deferring because it touches too many parts of the business? Run /board:brief on it first, then /board:decision.",
     ],
@@ -49,7 +49,7 @@ export const boardDoc = {
       {
         when: "Monday 09:00",
         duration: "20 min",
-        action: "The cornerstone ritual. All 5 personas give a read, Chief of Staff synthesizes into one weekly brief.",
+        action: "The cornerstone ritual. All 5 personas give a read, Donna synthesizes into one weekly brief.",
         skill: "/board:weekly",
       },
     ],
@@ -100,14 +100,14 @@ export const boardDoc = {
           "Brief with CEO (strategic framing), CFO (model of impact), Sales (how deals respond), CMO (narrative around change). Disagreements surfaced. Single recommendation: yes, with 30-day notice and a kill criterion. 2 handoffs queued: CFO → model, CMO → rewrite pricing page.",
       },
       pitfalls: [
-        "Asking the Chief of Staff to *execute* — it routes + synthesizes, not executes. That's the personas' job.",
+        "Asking Donna to *execute* — she routes + synthesizes, not executes. That's the personas' job.",
         "Skipping the `founder-log/` initialization — without it, personas operate without shared memory.",
       ],
     },
     {
       name: "ceo / cto / cfo / sales-director / cmo",
       type: "subagent",
-      trigger: "Called by the Chief of Staff, or directly: 'call the ceo agent for <X>'.",
+      trigger: "Called by Donna, or directly: 'call the ceo agent for <X>'.",
       when: "Each persona is the function's voice. Talk to them like a person, not a script.",
       steps: [
         "Each persona reads founder-log/ on invocation (priorities, metrics, recent decisions, last weekly).",
@@ -144,7 +144,7 @@ export const boardDoc = {
       },
       pitfalls: [
         "Skipping the 2-min raw dump — that's where the shadow backlog lives.",
-        "Letting one persona's section dominate — Chief of Staff should weight evenly.",
+        "Letting one persona's section dominate — Donna should weight evenly.",
         "Not re-reading the weekly brief mid-week — it's a living document.",
       ],
     },
@@ -203,7 +203,7 @@ export const boardDoc = {
       assetType: "command",
       input: "/founder Should I raise prices from $29 to $49?",
       output:
-        "Chief of Staff decides which of the 5 personas to call, invokes them, and synthesises one brief with recommendation and proposed handoffs.",
+        "Donna decides which of the 5 personas to call, invokes them, and synthesises one brief with recommendation and proposed handoffs.",
       time: "2 min · ad-hoc",
     },
     {

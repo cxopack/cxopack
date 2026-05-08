@@ -2,10 +2,10 @@ import type { KitDoc } from "./types";
 
 export const ctoDoc: KitDoc = {
   slug: "cto",
-  title: "CTO Kit",
+  title: "Elliot · CTO Kit",
   tagline: "Ship more, rewrite less. Decisions documented. Blast radius scoped.",
   heroSentence:
-    "The CTO Kit is a senior-staff-engineer co-founder that documents your decisions, scopes your MVP, reviews your PRs, and refuses to let you add auth, admin, or analytics before signal. Install once, then let it push back when you drift.",
+    "Elliot is your CTO Kit — a senior-staff-engineer co-founder that documents your decisions, scopes your MVP, reviews your PRs, and refuses to let you add auth, admin, or analytics before signal. Anti-bullshit. Install once, then let him push back when you drift.",
   review: {
     intro:
       "A CTO Kit is only useful if you can articulate what you're building, how, and where the cracks already are. Write these out first.",

@@ -27,11 +27,11 @@ type Spec =
 
 const SPECS: Spec[] = [
   // Single kits — €49 lifetime
-  { envKey: "STRIPE_PRICE_KIT_CEO",   name: "CxOPack CEO Kit",   description: "Strategic co-founder workflows.", amount: 4900 },
-  { envKey: "STRIPE_PRICE_KIT_CTO",   name: "CxOPack CTO Kit",   description: "Tech co-founder workflows.",       amount: 4900 },
-  { envKey: "STRIPE_PRICE_KIT_CFO",   name: "CxOPack CFO Kit",   description: "Finance co-founder workflows.",    amount: 4900 },
-  { envKey: "STRIPE_PRICE_KIT_SALES", name: "CxOPack Sales Kit", description: "Head of sales workflows.",         amount: 4900 },
-  { envKey: "STRIPE_PRICE_KIT_CMO",   name: "CxOPack CMO Kit",   description: "Head of marketing workflows.",     amount: 4900 },
+  { envKey: "STRIPE_PRICE_KIT_CEO",   name: "CxOPack — Harvey · CEO Kit",        description: "Strategic co-founder workflows. Closer mentality.", amount: 4900 },
+  { envKey: "STRIPE_PRICE_KIT_CTO",   name: "CxOPack — Elliot · CTO Kit",        description: "Tech co-founder workflows. Anti-bullshit.",         amount: 4900 },
+  { envKey: "STRIPE_PRICE_KIT_CFO",   name: "CxOPack — Axe · CFO Kit",           description: "Finance co-founder workflows. Bear-case default.",  amount: 4900 },
+  { envKey: "STRIPE_PRICE_KIT_SALES", name: "CxOPack — Ari · Head of Sales Kit", description: "Head of sales workflows. Pushes for the meeting.",  amount: 4900 },
+  { envKey: "STRIPE_PRICE_KIT_CMO",   name: "CxOPack — Don · CMO Kit",           description: "Head of marketing workflows. Story over features.", amount: 4900 },
 
   // All-Access Pass — every current + future kit, the Board, monthly drops, community
   { envKey: "STRIPE_PRICE_ALL_ACCESS_YEARLY", name: "CxOPack All-Access Pass", description: "Every current + future kit, The Board, monthly drops, community.", amount: 14900, recurring: "year" },

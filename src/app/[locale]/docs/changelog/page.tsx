@@ -22,8 +22,8 @@ const RELEASES: Release[] = [
     date: "2026-04-19",
     status: "latest",
     highlights: [
-      "The Board now ships with every All-Access Pass — Chief of Staff (Sam) plus five persona agents that coordinate through a shared workspace.",
-      "Sam, the Chief of Staff, signs every synthesized brief with a clear next-step prompt (Decide today / Read this twice / Sleep on it).",
+      "The Board now ships with every All-Access Pass — Donna (Chief of Staff) plus Harvey, Elliot, Axe, Ari, and Don coordinating through a shared workspace.",
+      "Donna signs every synthesized brief with a clear next-step prompt (Decide today / Read this twice / Sleep on it).",
       "New documentation section — “A week in the life” — illustrates the Monday-to-Friday rhythm of running a startup with the kits.",
       "Autopilot early-access waitlist is open. Subscribers will be invited to the closed beta first.",
       "Per-kit social cards: every documentation page generates a tailored preview when shared on X, LinkedIn, or in messaging tools.",
@@ -36,7 +36,7 @@ const RELEASES: Release[] = [
     highlights: [
       "Thirty named workflows across the five kits — every advertised skill now ships as a standalone, documented file.",
       "Namespaced slash commands across every kit — /ceo:weekly, /cto:adr, /cfo:cash-flow, /sales:icp, /cmo:positioning, and twenty-five more.",
-      "The Board orchestration layer introduced: a Chief of Staff that routes any request to the right executive(s) and synthesizes one coherent brief.",
+      "The Board orchestration layer introduced: Donna, the Chief of Staff, routes any request to the right executive(s) and synthesizes one coherent brief.",
       "Shared founder-log/ memory schema — every agent reads and writes to one workspace (priorities, metrics, decisions, weekly briefs, handoffs).",
       "New documentation pages: deep installation guide per platform, per-kit walkthroughs covering review, MCPs, cadence, and every skill.",
       "Per-kit dynamic Open Graph images — every documentation page gets a tailored social preview.",

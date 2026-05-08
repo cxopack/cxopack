@@ -1,8 +1,8 @@
-# CxOPack — Sales Kit
+# CxOPack — Ari · Head of Sales Kit
 
-> **Your head of sales — pipeline, outbound, closing.**
+> **Meet Ari. Your head of sales — pipeline, outbound, closing.**
 
-The Sales Kit is built on the assumption that 80% of solo-founder sales problems are ICP problems and 20% are execution problems. Six workflows that force you to name who you won't sell to, write outbound that gets replies, and run discovery calls where you listen more than you pitch.
+Ari is your head of sales. Loud, relentless, charming. Pushes for the meeting in 48 hours. Built on the assumption that 80% of solo-founder sales problems are ICP problems and 20% are execution problems. Six workflows that force you to name who you won't sell to, write outbound that gets replies, and run discovery calls where you listen more than you pitch.
 
 ---
 

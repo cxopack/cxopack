@@ -2,14 +2,12 @@ import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { KitIcon } from "@/components/brand/kit-icon";
 import { Link } from "@/i18n/routing";
+import { CHIEF_OF_STAFF, KITS } from "@/config/kits";
 
-const PERSONAS = [
-  { slug: "ceo" as const, label: "CEO" },
-  { slug: "cto" as const, label: "CTO" },
-  { slug: "cfo" as const, label: "CFO" },
-  { slug: "sales" as const, label: "Sales" },
-  { slug: "cmo" as const, label: "CMO" },
-];
+const PERSONAS = KITS.map((k) => ({
+  slug: k.slug,
+  label: `${k.agentName} · ${k.role}`,
+}));
 
 export function BoardSection() {
   const t = useTranslations("board");
@@ -46,11 +44,11 @@ export function BoardSection() {
             <div className="col-span-4 flex flex-col items-center justify-center">
               <div className="w-full rounded-xl border border-[var(--color-brand)] bg-[var(--color-bg)] p-6 text-center shadow-[0_0_0_1px_var(--color-brand)]">
                 <div className="mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-brand)]">
-                  Sam · Chief of Staff
+                  {CHIEF_OF_STAFF.agentName} · {CHIEF_OF_STAFF.role}
                 </div>
                 <div className="mt-2 text-lg font-semibold">Routes · Synthesizes · Closes loops</div>
                 <div className="mt-3 text-xs leading-6 text-[var(--color-fg-muted)]">
-                  <span className="mono">/founder &lt;anything&gt;</span> → Sam picks who handles it,
+                  <span className="mono">/founder &lt;anything&gt;</span> → {CHIEF_OF_STAFF.agentName} picks who handles it,
                   <br />
                   combines their outputs into one brief.
                 </div>
@@ -114,7 +112,13 @@ export function BoardSection() {
   );
 }
 
-function PersonaPill({ slug, label }: { slug: "ceo" | "cto" | "cfo" | "sales" | "cmo"; label: string }) {
+function PersonaPill({
+  slug,
+  label,
+}: {
+  slug: import("@/config/kits").KitSlug;
+  label: string;
+}) {
   return (
     <div className="flex flex-1 items-center gap-2 rounded-lg border border-[var(--color-border-strong)] bg-[var(--color-bg)] px-3 py-2">
       <KitIcon slug={slug} className="h-5 w-5 shrink-0" />

@@ -23,7 +23,7 @@ export default async function Installation({ params }: { params: Promise<{ local
       <H1>Installation</H1>
       <Lead>
         Four platforms, four install paths. Each kit ships in all four formats — one is enough.
-        If you want the full <strong>Board</strong> experience (Chief of Staff routing + 5 persona
+        If you want the full <strong>Board</strong> experience (Donna routing + 5 persona
         agents + shared memory), use Claude Code or ChatGPT.
       </Lead>
 
@@ -59,11 +59,11 @@ export default async function Installation({ params }: { params: Promise<{ local
         <Code>notifications@github.com</Code> per repo). Accept each. You&apos;ll end up with access to:
       </P>
       <Ul>
-        <li><Code>cxopack/cxopack-ceo</Code> — CEO Kit</li>
-        <li><Code>cxopack/cxopack-cto</Code> — CTO Kit</li>
-        <li><Code>cxopack/cxopack-cfo</Code> — CFO Kit</li>
-        <li><Code>cxopack/cxopack-sales</Code> — Sales Kit</li>
-        <li><Code>cxopack/cxopack-cmo</Code> — CMO Kit</li>
+        <li><Code>cxopack/cxopack-ceo</Code> — Harvey · CEO Kit</li>
+        <li><Code>cxopack/cxopack-cto</Code> — Elliot · CTO Kit</li>
+        <li><Code>cxopack/cxopack-cfo</Code> — Axe · CFO Kit</li>
+        <li><Code>cxopack/cxopack-sales</Code> — Ari · Head of Sales Kit</li>
+        <li><Code>cxopack/cxopack-cmo</Code> — Don · CMO Kit</li>
         <li><Code>cxopack/cxopack-board</Code> — The Board (included with All-Access Pass)</li>
       </Ul>
       <Callout title="Clone only what you bought">
@@ -121,7 +121,7 @@ cp .cxopack-board/shared-memory-schema.md founder-log/README.md`}</Pre>
       </Ul>
 
       <Callout variant="success" title="First thing to try">
-        Type <Code>/ceo:weekly</Code> — Monday planning ritual in 15 minutes. Or <Code>/founder I&apos;m thinking about hiring my first engineer</Code> to see the Chief of Staff route to CEO + CTO + CFO in parallel.
+        Type <Code>/ceo:weekly</Code> — Monday planning ritual with Harvey, in 15 minutes. Or <Code>/founder I&apos;m thinking about hiring my first engineer</Code> to see Donna route to Harvey + Elliot + Axe in parallel.
       </Callout>
 
       <H2 id="chatgpt">ChatGPT (Custom GPTs)</H2>
@@ -153,8 +153,8 @@ cp .cxopack-board/shared-memory-schema.md founder-log/README.md`}</Pre>
       <H3 id="chatgpt-board">3. The Board in ChatGPT</H3>
       <P>
         ChatGPT doesn&apos;t support subagent delegation as cleanly as Claude Code does — but the Board
-        kit ships a Chief-of-Staff Custom GPT that manages the 5 personas in one chat. Install the
-        Chief of Staff GPT last; it orchestrates the others via role-playing.
+        kit ships Donna as a Chief-of-Staff Custom GPT that manages the 5 personas in one chat.
+        Install Donna&apos;s GPT last; she orchestrates the others via role-playing.
       </P>
       <Callout variant="warn" title="ChatGPT trade-off">
         The Board in ChatGPT is slightly lossy compared to Claude Code: subagent invocation is

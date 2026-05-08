@@ -2,10 +2,10 @@ import type { KitDoc } from "./types";
 
 export const cmoDoc: KitDoc = {
   slug: "cmo",
-  title: "CMO Kit",
+  title: "Don · CMO Kit",
   tagline: "Positioning that disqualifies. Content with proof. Zero fluff words.",
   heroSentence:
-    "The CMO Kit is the anti-content-marketer: every claim is verifiable, every hook is specific, and 'synergy' is literally banned in the Cursor rules. Built for solo founders who hate marketing but need distribution — the kit batches a week of LinkedIn posts, writes SEO pages that match search intent, and sharpens your positioning until a subset of people self-disqualify.",
+    "Don is your CMO Kit — the anti-content-marketer. Every claim is verifiable, every hook is specific, and 'synergy' is literally banned in the Cursor rules. Story over features, identity over specs. Built for solo founders who hate marketing but need distribution — he batches a week of LinkedIn posts, writes SEO pages that match search intent, and sharpens your positioning until a subset of people self-disqualify.",
   review: {
     intro:
       "Marketing without real proof points is just noise. Audit what you actually have before installing — most founders discover they've been writing around their strongest differentiator.",

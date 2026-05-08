@@ -12,15 +12,15 @@ Every decision needs a CEO, a CTO, a CFO, a head of sales, and a head of marketi
 
 So I built the other four.
 
-CxOPack is five AI executive kits — CEO, CTO, CFO, Sales, CMO — plus a Chief of Staff named Sam who routes any question to the right ones and synthesizes one answer.
+CxOPack is five AI executive kits — CEO, CTO, CFO, Sales, CMO — plus a Chief of Staff named Donna who routes any question to the right ones and synthesizes one answer.
 
-This morning I asked it: "Should I raise prices?" Sam read my priorities, pulled my metrics, consulted all four relevant executives in parallel, and came back with a single recommendation in thirty seconds. One paragraph. Named rollback criteria. Signature: "Decide today."
+This morning I asked it: "Should I raise prices?" Donna read my priorities, pulled my metrics, consulted all four relevant executives in parallel, and came back with a single recommendation in thirty seconds. One paragraph. Named rollback criteria. Signature: "Decide today."
 
 It's not a chatbot. It's structured workflows that run inside Claude, ChatGPT, or Cursor — whichever you already pay for.
 
 Launched today. The first 100 subscribers get founder pricing locked for life.
 
-Try the live demo on the landing page — type a real question, watch Sam route it. No signup.
+Try the live demo on the landing page — type a real question, watch Donna route it. No signup.
 
 → cxopack.com
 
@@ -50,7 +50,7 @@ I used CxOPack to decide whether to launch CxOPack.
 
 Weird, right.
 
-I typed `/founder Should I launch or polish for 2 more weeks?` Sam routed it to CEO, CMO, and CTO. Three takes, one recommendation: ship this Tuesday, don't wait.
+I typed `/founder Should I launch or polish for 2 more weeks?` Donna routed it to CEO, CMO, and CTO. Three takes, one recommendation: ship this Tuesday, don't wait.
 
 The CEO take said "waiting doesn't compound — it decays." That was the line that pushed me.
 
