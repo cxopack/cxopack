@@ -54,7 +54,7 @@ export function Hero() {
             <div key={k.slug} className="flex items-center gap-2.5">
               <KitIcon slug={k.slug} className="h-6 w-6" />
               <span className="mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-fg-muted)]">
-                {k.slug === "sales" ? "Sales" : k.slug.toUpperCase()}
+                {k.agentName}
               </span>
             </div>
           ))}

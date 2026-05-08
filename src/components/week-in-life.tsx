@@ -11,7 +11,7 @@ type Day = {
 const DAYS: Day[] = [
   { day: "Mon", time: "09:00", command: "/board:weekly",      outcome: "3 priorities locked, handoffs queued" },
   { day: "Tue", time: "10:00", command: "/cto:adr",           outcome: "decisions/0014-postgres-as-primary.md" },
-  { day: "Wed", time: "14:00", command: "/founder \"hire?\"",   outcome: "Sam routes to CEO + CTO + CFO → one brief" },
+  { day: "Wed", time: "14:00", command: "/founder \"hire?\"",   outcome: "Donna routes to Harvey + Elliot + Axe → one brief" },
   { day: "Thu", time: "15:00", command: "/sales:discovery",   outcome: "pre-call brief for tomorrow's demo" },
   { day: "Fri", time: "17:00", command: "/ceo:journal",       outcome: "this week's retro + Monday recalibration" },
 ];
@@ -77,7 +77,7 @@ export function WeekInLife() {
         </div>
 
         <p className="mono mt-12 text-center text-[11px] uppercase tracking-[0.2em] text-[var(--color-fg-dim)]">
-          One founder · Five executives · One ritual
+          One founder · Six agents · One ritual
         </p>
       </div>
     </section>

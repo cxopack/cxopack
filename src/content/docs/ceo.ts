@@ -2,10 +2,10 @@ import type { KitDoc } from "./types";
 
 export const ceoDoc: KitDoc = {
   slug: "ceo",
-  title: "CEO Kit",
+  title: "Harvey · CEO Kit",
   tagline: "Strategy, decisions, leadership — in 15 minutes a week.",
   heroSentence:
-    "Your CEO Kit replaces what a real chief executive spends most of their time doing: setting priorities, making decisions, and communicating with investors. Use it as a weekly operating system, not as a chatbot.",
+    "Harvey is your CEO Kit. He replaces what a real chief executive spends most of their time doing: setting priorities, making decisions, and communicating with investors. Closer mentality — every output forces a decision. Use him as a weekly operating system, not as a chatbot.",
   review: {
     intro:
       "Before you install anything, write down answers to these — in Notion, a text file, anywhere. The kit is useful in direct proportion to how precisely you can answer these four questions.",

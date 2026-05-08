@@ -2,10 +2,10 @@ import type { KitDoc } from "./types";
 
 export const salesDoc: KitDoc = {
   slug: "sales",
-  title: "Sales Kit",
+  title: "Ari · Head of Sales Kit",
   tagline: "ICP that disqualifies. Outbound that replies. Discovery that closes.",
   heroSentence:
-    "The Sales Kit is built on the assumption that solo-founder sales problems are 80% ICP problems and 20% execution problems. It forces you to name who you won't sell to, writes outbound that passes the 3-second test, and runs your discovery calls so you listen 70% of the time. No fluff, no 'synergy,' no meetings by week 1.",
+    "Ari is your Head of Sales — built on the assumption that solo-founder sales problems are 80% ICP problems and 20% execution problems. He forces you to name who you won't sell to, writes outbound that passes the 3-second test, and runs your discovery calls so you listen 70% of the time. Pushes for the meeting. No fluff, no 'synergy,' no meetings by week 1.",
   review: {
     intro:
       "This is the most diagnostic kit of the five. Answer these before installing. If you can't, that's exactly what you need to fix first.",

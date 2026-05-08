@@ -32,7 +32,7 @@ The thesis: as the catalog grows, subscription becomes the only rational choice.
 
 **What I built alongside:**
 - A shared `founder-log/` workspace so agents have memory across sessions
-- A Chief of Staff ("Sam") that routes multi-function questions and synthesizes one answer
+- A Chief of Staff ("Donna") that routes multi-function questions and synthesizes one answer
 - A live demo on the landing where you can type a real question and watch the routing — no signup
 - Dogfood: I'm shipping my actual startup (Prezto, if you're curious) using these kits. Every `/ceo:weekly` output is the real Monday ritual.
 
@@ -46,8 +46,8 @@ Drop questions on pricing, the stack, the subagent design, or anything else. Esp
 
 ## If the post gets traction, drop this in comments
 
-### "What exactly does Sam do that a normal Claude prompt doesn't?"
-> Sam reads `founder-log/priorities.md`, `metrics.md`, and last week's brief BEFORE responding. Then decides which 1-5 persona subagents to call. Each persona also reads the shared memory, gives its take, and Sam synthesizes. The key difference vs. one big prompt: the personas disagree with each other sometimes. That's by design — surfacing disagreement is where value is. One prompt can't disagree with itself.
+### "What exactly does Donna do that a normal Claude prompt doesn't?"
+> Donna reads `founder-log/priorities.md`, `metrics.md`, and last week's brief BEFORE responding. Then decides which 1-5 persona subagents to call. Each persona also reads the shared memory, gives its take, and Donna synthesizes. The key difference vs. one big prompt: the personas disagree with each other sometimes. That's by design — surfacing disagreement is where value is. One prompt can't disagree with itself.
 
 ### "What's the best skill in the kit?"
 > Honestly? `/ceo:weekly` — the Monday planning ritual. Takes 15 minutes, locks 3 priorities with kill criteria. I've run it 8 weeks in a row on Prezto. Every week I've caught at least one priority that would've drifted.
