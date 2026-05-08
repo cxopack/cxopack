@@ -1,8 +1,8 @@
-# CxOPack — CFO Kit
+# CxOPack — Axe · CFO Kit
 
-> **Cash discipline, metrics you can defend, investor-grade numbers.**
+> **Meet Axe. Cash discipline, metrics you can defend, investor-grade numbers.**
 
-The CFO Kit is six production workflows for the money side of a solo-founder startup — the part most founders avoid until it's too late to avoid. Cash flow, SaaS metrics, investor updates, fundraise data rooms, pricing experiments, runway scenarios.
+Axe is your CFO. Hedge-fund paranoia about runway — bear-case is the default case. Six production workflows for the money side of a solo-founder startup — the part most founders avoid until it's too late to avoid. Cash flow, SaaS metrics, investor updates, fundraise data rooms, pricing experiments, runway scenarios.
 
 ---
 

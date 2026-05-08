@@ -1,5 +1,5 @@
 ---
-description: Founder Mode — describe what's on your mind, the Chief of Staff routes it to the right executive(s).
+description: Founder Mode — describe what's on your mind, Donna (Chief of Staff) routes it to the right executive(s).
 argument-hint: [whatever — a question, a decision, a task, a paste]
 ---
 

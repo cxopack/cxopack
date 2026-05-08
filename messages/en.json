@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "CxOPack — Your AI C-suite. Works everywhere.",
-    "description": "Build your startup solo with an AI executive team. CEO, CTO, CFO, Sales, CMO — as skills, subagents, and Custom GPTs. Works in Claude, ChatGPT, Cursor, Windsurf."
+    "title": "CxOPack — Harvey, Elliot, Axe, Ari, Don, Donna. Your AI C-suite.",
+    "description": "Six named AI executives — Harvey runs strategy, Elliot ships product, Axe protects runway, Ari closes deals, Don writes the brand, Donna runs the room. Works in Claude, ChatGPT, Cursor, anywhere."
   },
   "nav": {
     "kits": "Kits",
@@ -17,15 +17,15 @@
     "title1": "Hire five",
     "titleHighlight": "executives",
     "title2": ". €149/yr.",
-    "subtitle": "CEO · CTO · CFO · Head of Sales · CMO — production-grade AI executive kits that work in Claude, ChatGPT, Cursor, any tool.",
+    "subtitle": "Harvey on strategy. Elliot on product. Axe on runway. Ari on pipeline. Don on brand. Donna runs the room. Production-grade AI executive kits that work in Claude, ChatGPT, Cursor — any tool.",
     "ctaPrimary": "Get All-Access — €149/yr",
-    "ctaSecondary": "See what's inside",
+    "ctaSecondary": "Meet the cast",
     "socialProof": "Production-grade workflows. Tested in real startups. Updated continuously.",
     "stats": {
       "workflows": "production workflows",
       "skills": "AI skills & agents",
       "platforms": "platforms supported",
-      "kits": "executive roles"
+      "kits": "named executives"
     }
   },
   "problem": {
@@ -46,27 +46,27 @@
   },
   "week": {
     "eyebrow": "A week in the life",
-    "title": "One founder. Five executives. One ritual.",
+    "title": "One founder. Six agents. One ritual.",
     "subtitle": "This is what running a startup with CxOPack actually looks like — five touchpoints across the week, one shared workspace that compounds."
   },
   "board": {
     "eyebrow": "The Board",
     "title": "Five kits isn't the product. A team is.",
-    "subtitle": "CxOPack ships with a Chief of Staff that routes any request to the right executive, synthesizes one answer, and manages structured handoffs between them. Your 5 agents don't just coexist — they talk.",
+    "subtitle": "CxOPack ships with Donna, the Chief of Staff who routes any request to the right executive, synthesizes one answer, and manages structured handoffs between them. Harvey, Elliot, Axe, Ari, Don — they don't just coexist. They talk.",
     "points": [
-      { "title": "/founder routes anything", "desc": "Describe what's on your mind. Chief of Staff picks the executives that should weigh in, calls them in the right order, hands you one brief." },
-      { "title": "Weekly board meeting", "desc": "Monday ritual: all 5 personas give a read, Chief of Staff synthesizes, 3 priorities locked, handoffs queued, one provocative question." },
+      { "title": "/founder routes anything", "desc": "Describe what's on your mind. Donna picks the executives that should weigh in, calls them in the right order, hands you one brief." },
+      { "title": "Weekly board meeting", "desc": "Monday ritual: all 5 personas give a read, Donna synthesizes, 3 priorities locked, handoffs queued, one provocative question." },
       { "title": "Shared memory", "desc": "Every agent reads + writes to a single founder-log/ workspace — priorities, metrics, decisions, handoffs. Context lives in one place." }
     ]
   },
   "kits": {
-    "eyebrow": "The 5 kits",
-    "title": "Five executive roles. Five agents. One pack.",
+    "eyebrow": "The cast",
+    "title": "Meet the team. Five executives. One Chief of Staff.",
     "subtitle": "Each kit is a private GitHub repo with skills, subagents, Custom GPTs, Cursor rules, and raw prompts. Installed in 30 seconds. All-Access subscribers get every new kit automatically.",
     "badge": "What's inside",
     "ceo": {
-      "title": "CEO Kit",
-      "tagline": "Strategy, decisions, leadership",
+      "title": "Harvey · CEO Kit",
+      "tagline": "Strategy, decisions, leadership — closer mentality, no hedging",
       "items": [
         "Weekly priorities & OKR generator",
         "Board update drafter (investor-ready)",
@@ -77,8 +77,8 @@
       ]
     },
     "cto": {
-      "title": "CTO Kit",
-      "tagline": "Product, tech, shipping",
+      "title": "Elliot · CTO Kit",
+      "tagline": "Product, tech, shipping — anti-bullshit, smallest thing that ships",
       "items": [
         "Architecture Decision Record (ADR) generator",
         "MVP scoping & RICE prioritization",
@@ -89,8 +89,8 @@
       ]
     },
     "cfo": {
-      "title": "CFO Kit",
-      "tagline": "Cash, metrics, fundraising",
+      "title": "Axe · CFO Kit",
+      "tagline": "Cash, metrics, fundraising — bear-case is the default case",
       "items": [
         "13-week cash flow model",
         "SaaS metrics agent (MRR, ARR, CAC, LTV)",
@@ -101,8 +101,8 @@
       ]
     },
     "sales": {
-      "title": "Sales Kit",
-      "tagline": "Pipeline, outbound, closing",
+      "title": "Ari · Head of Sales Kit",
+      "tagline": "Pipeline, outbound, closing — pushes for the meeting in 48h",
       "items": [
         "ICP definition workshop",
         "Cold outbound sequences",
@@ -113,8 +113,8 @@
       ]
     },
     "cmo": {
-      "title": "CMO Kit",
-      "tagline": "Brand, content, growth",
+      "title": "Don · CMO Kit",
+      "tagline": "Brand, content, growth — story over features, identity over specs",
       "items": [
         "Positioning & messaging doc",
         "SEO page generator (programmatic)",
@@ -134,10 +134,10 @@
       "title": "Solo Kit",
       "price": "€49",
       "priceSuffix": "lifetime",
-      "desc": "Pick any one of the 5 kits. Lifetime access to that role's skills. Upgrade to All-Access anytime — we credit what you paid.",
+      "desc": "Pick any one of the 5 executives — Harvey, Elliot, Axe, Ari, or Don. Lifetime access to that role's skills. Upgrade to All-Access anytime — we credit what you paid.",
       "cta": "Pick a kit",
       "features": [
-        "One executive role of your choice",
+        "One executive of your choice",
         "All 4 platform formats",
         "Lifetime updates to that kit",
         "Private GitHub repo access"
@@ -149,11 +149,11 @@
       "price": "€149",
       "priceSuffix": "/year",
       "strike": "€245",
-      "desc": "Every current and future kit. The Board orchestration layer. Monthly new skill drops. Private community. The flywheel — value compounds every release.",
+      "desc": "Every current and future kit. Donna and the Board orchestration layer. Monthly new skill drops. Private community. The flywheel — value compounds every release.",
       "cta": "Get All-Access",
       "features": [
-        "Every current kit (CEO, CTO, CFO, Sales, CMO) — and every future kit free",
-        "The Board — Chief of Staff (Sam) + 5 persona agents",
+        "Harvey, Elliot, Axe, Ari, Don — and every future executive free",
+        "Donna, Chief of Staff + the full Board orchestration",
         "/founder + /board:weekly + /board:decision + /board:handoff",
         "Monthly new skill drops included",
         "Private community of solo founders",
@@ -190,7 +190,7 @@
       { "title": "Pick your plan", "desc": "Solo Kit (€49 lifetime), All-Access Pass (€149/yr), or Launch 100 (€99/yr forever). Pay with Stripe." },
       { "title": "Get an instant email", "desc": "GitHub invite to the private repos + a setup guide. Lands in 30 seconds." },
       { "title": "Install in your AI tool", "desc": "30 seconds for Claude, ChatGPT, Cursor, or Windsurf. Instructions per platform." },
-      { "title": "Run your first workflow", "desc": "Draft an investor update, board review, or outbound campaign — or type /founder to let Sam route it." }
+      { "title": "Run your first workflow", "desc": "Draft an investor update with Axe, a board review with Harvey, an outbound campaign with Ari — or type /founder to let Donna route it." }
     ]
   },
   "faq": {
@@ -228,11 +228,15 @@
       {
         "q": "Can my team use a single license?",
         "a": "Single-seat per buyer. Team seats (3+) coming with All-Access — email hello@cxopack.com if you need them today."
+      },
+      {
+        "q": "Why is the CEO called Harvey? Why are these names?",
+        "a": "Each agent has a first-name handle so you can address them directly — 'Harvey, draft my board update' beats 'CEO subagent, please draft a board update.' The names are inspirational, not impressions: we don't replicate any show's dialogue or claim affiliation. They give each agent a distinct voice so outputs don't all sound the same."
       }
     ]
   },
   "cta": {
-    "title": "Your AI board is waiting.",
+    "title": "Donna and the team are waiting.",
     "subtitle": "Stop doing every job yourself. Stop hiring too early. Install your C-suite in the next 5 minutes.",
     "primary": "Get All-Access — €149/yr"
   },

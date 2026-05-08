@@ -1,8 +1,8 @@
-# CxOPack — CEO Kit
+# CxOPack — Harvey · CEO Kit
 
-> **Your strategic co-founder. Installed in 30 seconds.**
+> **Meet Harvey. Your strategic co-founder. Installed in 30 seconds.**
 
-The CEO Kit is six production workflows plus a devil's-advocate subagent. It's the operating system for the "strategy + priorities + decisions + communications" loop — the work a founder always does and rarely does systematically.
+Harvey is your CEO. Closer mentality — every output forces a decision, won't let you hedge. The kit is six production workflows plus a devil's-advocate subagent: the operating system for the "strategy + priorities + decisions + communications" loop — the work a founder always does and rarely does systematically.
 
 ---
 
@@ -111,7 +111,7 @@ Copy-paste `prompts/main.md` as system prompt.
 
 ## The Board (orchestration)
 
-The CEO Kit is even more valuable when it sits alongside the full suite under **The Board** — a Chief of Staff (Sam) that routes cross-functional questions to the right executives and synthesizes one answer. The Board is included with the All-Access Pass.
+Harvey is even more valuable when he sits alongside the full suite under **The Board** — Donna (Chief of Staff) routes cross-functional questions to the right executives and synthesizes one answer. The Board is included with the All-Access Pass.
 
 → [cxopack.com/docs/kits/board](https://cxopack.com/docs/kits/board)
 
