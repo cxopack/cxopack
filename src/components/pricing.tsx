@@ -1,11 +1,16 @@
-"use client";
-
-import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Check, ArrowRight } from "lucide-react";
+import { getLaunch100Count } from "@/lib/launch-100";
 
-export function Pricing() {
-  const t = useTranslations("pricing");
+export async function Pricing() {
+  const t = await getTranslations("pricing");
+  const { sold, limit, remaining } = await getLaunch100Count();
+  const sellOut = remaining === 0;
+
+  const launch100Stat =
+    sellOut
+      ? "All 100 spots claimed"
+      : `${remaining} of ${limit} ${t("launch100.remainingLabel")}`;
 
   return (
     <section id="pricing" className="py-24">
@@ -47,14 +52,22 @@ export function Pricing() {
             price={t("launch100.price")}
             priceSuffix={t("launch100.priceSuffix")}
             desc={t("launch100.desc")}
-            cta={t("launch100.cta")}
+            cta={sellOut ? t("launch100.soldOutCta") : t("launch100.cta")}
             features={t.raw("launch100.features") as string[]}
             accent="gold"
-            ctaHref="/checkout?plan=launch-100"
+            ctaHref={sellOut ? "/checkout?plan=all-access" : "/checkout?plan=launch-100"}
+            stat={launch100Stat}
+            stripe={
+              <Launch100Stripe
+                sold={sold}
+                limit={limit}
+                remaining={remaining}
+              />
+            }
+            ctaDisabled={sellOut}
           />
         </div>
 
-        {/* Autopilot teaser strip */}
         <AutopilotTeaser />
       </div>
     </section>
@@ -73,6 +86,9 @@ type CardProps = {
   highlight?: boolean;
   accent?: "gold";
   ctaHref: string;
+  stat?: string;
+  stripe?: React.ReactNode;
+  ctaDisabled?: boolean;
 };
 
 function PricingCard({
@@ -87,6 +103,9 @@ function PricingCard({
   highlight,
   accent,
   ctaHref,
+  stat,
+  stripe,
+  ctaDisabled,
 }: CardProps) {
   const ringClass = highlight
     ? "border-[var(--color-brand)] shadow-[0_0_0_1px_var(--color-brand)]"
@@ -116,6 +135,12 @@ function PricingCard({
         )}
       </div>
       <p className="mt-3 text-sm text-[var(--color-fg-muted)]">{desc}</p>
+      {stat && (
+        <div className="mono mt-4 text-[11px] uppercase tracking-[0.16em] text-[var(--color-brand)]">
+          {stat}
+        </div>
+      )}
+      {stripe}
       {features && (
         <ul className="mt-5 flex-1 space-y-2 text-sm">
           {features.map((f, i) => (
@@ -126,18 +151,53 @@ function PricingCard({
           ))}
         </ul>
       )}
-      <a
-        href={ctaHref}
-        className={`${highlight ? "btn-primary" : "btn-ghost"} mt-6 w-full`}
-      >
-        {cta} <ArrowRight className="h-4 w-4" />
-      </a>
+      {ctaDisabled ? (
+        <a href={ctaHref} className="btn-ghost mt-6 w-full">
+          {cta} <ArrowRight className="h-4 w-4" />
+        </a>
+      ) : (
+        <a
+          href={ctaHref}
+          className={`${highlight ? "btn-primary" : "btn-ghost"} mt-6 w-full`}
+        >
+          {cta} <ArrowRight className="h-4 w-4" />
+        </a>
+      )}
     </div>
   );
 }
 
-function AutopilotTeaser() {
-  const t = useTranslations("pricing.autopilotTeaser");
+function Launch100Stripe({
+  sold,
+  limit,
+  remaining,
+}: {
+  sold: number;
+  limit: number;
+  remaining: number;
+}) {
+  const pct = Math.min(100, Math.round((sold / limit) * 100));
+  return (
+    <div className="mt-3">
+      <div
+        className="relative h-1.5 w-full overflow-hidden rounded-full bg-[var(--color-bg-elevated)]"
+        role="progressbar"
+        aria-valuemin={0}
+        aria-valuemax={limit}
+        aria-valuenow={sold}
+        aria-label={`${remaining} of ${limit} Launch 100 spots remaining`}
+      >
+        <div
+          className="h-full bg-[var(--color-brand)] transition-[width]"
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+    </div>
+  );
+}
+
+async function AutopilotTeaser() {
+  const t = await getTranslations("pricing.autopilotTeaser");
   return (
     <div className="mt-10 overflow-hidden rounded-xl border border-[var(--color-border)] bg-gradient-to-br from-[var(--color-bg-elevated)] via-[var(--color-bg)] to-[var(--color-bg-elevated)] p-6">
       <div className="flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">

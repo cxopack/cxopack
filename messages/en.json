@@ -44,6 +44,32 @@
       "agnostic": { "title": "Anywhere else", "desc": "Plain-markdown prompts. Paste into any LLM, any tool." }
     }
   },
+  "omcPair": {
+    "eyebrow": "Pair with Claude Code",
+    "title": "OMC ships your engineers. CxOPack ships your executives.",
+    "body": "oh-my-claudecode (31k+ stars) is the open-source agent layer for the engineering side of Claude Code — 32 specialists for architecture, debugging, code review, QA. CxOPack is the missing layer for the founder's other day: strategy, runway, pipeline, brand. They live in the same Claude Code session. Most solo founders need both.",
+    "omcColumn": {
+      "label": "oh-my-claudecode",
+      "tag": "Free · MIT · 31k+ ★",
+      "rows": [
+        { "k": "Job", "v": "Ship code 3-5× faster" },
+        { "k": "Cast", "v": "architect · debugger · executor · code-reviewer · qa-tester · …32 specialists" },
+        { "k": "Trigger", "v": "/autopilot build a REST API for managing tasks" },
+        { "k": "Output", "v": "Working code, tests, review notes" }
+      ]
+    },
+    "cxoColumn": {
+      "label": "CxOPack",
+      "tag": "€99–149/yr",
+      "rows": [
+        { "k": "Job", "v": "Make the calls a CEO/CFO/CMO would make" },
+        { "k": "Cast", "v": "Harvey · Elliot · Axe · Ari · Don · Donna" },
+        { "k": "Trigger", "v": "/founder Should I raise prices on my SaaS?" },
+        { "k": "Output", "v": "One brief, one recommendation, kill criteria" }
+      ]
+    },
+    "footnote": "Both run in the same .claude/ folder. Install OMC for the engineering team, install CxOPack for the executive team. They don't conflict."
+  },
   "week": {
     "eyebrow": "A week in the life",
     "title": "One founder. Six agents. One ritual.",
@@ -167,6 +193,7 @@
       "priceSuffix": "/year forever",
       "desc": "The same All-Access Pass — but the first 100 buyers lock in €99/year for as long as they stay subscribed. Price never goes up. Quietly the best deal we'll ever offer.",
       "cta": "Claim a Launch 100 spot",
+      "soldOutCta": "Sold out — get All-Access at €149/yr",
       "remainingLabel": "spots left",
       "features": [
         "Everything in All-Access Pass",
