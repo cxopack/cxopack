@@ -8,7 +8,7 @@
 
 ## Post body
 
-CxOPack is five AI executive kits — CEO, CTO, CFO, Sales, CMO — plus a Chief of Staff ("Sam") that routes any founder question to the right ones and synthesizes a single recommendation.
+CxOPack is five AI executive kits — CEO, CTO, CFO, Sales, CMO — plus a Chief of Staff ("Donna") that routes any founder question to the right ones and synthesizes a single recommendation.
 
 I built it because I kept hitting the same problem shipping my own startup solo: every decision touches 3+ functions, and I was spending hours spinning on things a real executive team would resolve in a meeting.
 
@@ -21,7 +21,7 @@ The kits are structured workflows, not chatbots. Each ships in four formats:
 
 They share a `founder-log/` workspace on disk — priorities, metrics, decisions, weekly briefs, handoffs — so every agent reads the same context before responding. That's the part that actually differentiates it from "just use Claude."
 
-Sam (the Chief of Staff) is a subagent that does three things:
+Donna (the Chief of Staff) is a subagent that does three things:
 1. Reads the request and the shared memory.
 2. Routes to the relevant personas in parallel.
 3. Synthesizes one brief with a single recommendation, signed "Decide today" / "Read this twice" / "Sleep on it."

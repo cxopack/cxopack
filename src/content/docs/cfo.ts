@@ -2,10 +2,10 @@ import type { KitDoc } from "./types";
 
 export const cfoDoc: KitDoc = {
   slug: "cfo",
-  title: "CFO Kit",
+  title: "Axe · CFO Kit",
   tagline: "Cash discipline, metrics you can defend, investor-grade numbers.",
   heroSentence:
-    "The CFO Kit turns your Stripe export into a defendable metric deck, keeps your 13-week cash flow up to date in 10 minutes a week, and flags concentration risk before an investor does. It won't replace your accountant — it makes you the founder who never shows up to a board call with bad math.",
+    "Axe is your CFO Kit. He turns your Stripe export into a defendable metric deck, keeps your 13-week cash flow up to date in 10 minutes a week, and flags concentration risk before an investor does. Bear-case is the default case. Won't replace your accountant — makes you the founder who never shows up to a board call with bad math.",
   review: {
     intro:
       "Before you install anything: find your financial raw data. If you don't know where your Stripe export lives, fix that first.",

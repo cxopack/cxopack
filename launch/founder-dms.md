@@ -31,7 +31,7 @@ X DM > LinkedIn DM > email. Use the channel where you've already had conversatio
 
 > Hey {{firstName}} — {{one sentence about something specific they shipped or said recently, e.g. "saw your thread on the pivot to B2B, loved the part about pricing."}}.
 >
-> I'm launching CxOPack on {{date}} — think of it as a pack of AI "C-suite" kits for solo founders: CEO / CTO / CFO / Sales / CMO workflows you run inside Claude Code, ChatGPT, or Cursor. The Board kit lets a Chief of Staff subagent ("Sam") route a single request to whichever exec it needs.
+> I'm launching CxOPack on {{date}} — think of it as a pack of AI "C-suite" kits for solo founders: CEO / CTO / CFO / Sales / CMO workflows you run inside Claude Code, ChatGPT, or Cursor. The Board kit lets a Chief of Staff subagent ("Donna") route a single request to whichever exec it needs.
 >
 > Two reasons I'm pinging you specifically:
 >
@@ -53,7 +53,7 @@ X DM > LinkedIn DM > email. Use the channel where you've already had conversatio
 
 **Non-technical founder** — replace with:
 
-> 1. You've said before that you wanted a way to "pressure-test decisions without booking a call." The Board kit is literally that — you ask Sam, he pulls in CEO + CFO + whoever else, you get a second opinion in 2 minutes.
+> 1. You've said before that you wanted a way to "pressure-test decisions without booking a call." The Board kit is literally that — you ask Donna, he pulls in CEO + CFO + whoever else, you get a second opinion in 2 minutes.
 > 2. I'd rather hear it from you than from strangers on HN.
 
 **Operator / advisor (no sale expected)** — replace the offer line with:

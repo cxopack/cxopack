@@ -1,14 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Check, Loader2, Sparkles, Terminal } from "lucide-react";
 import { KitIcon } from "@/components/brand/kit-icon";
-import type { KitSlug } from "@/config/kits";
-import { cn } from "@/lib/utils";
+import { CHIEF_OF_STAFF, KITS_BY_SLUG, type KitSlug } from "@/config/kits";
 
 type PersonaTake = {
   slug: KitSlug;
-  label: string;
   bullet: string;
 };
 
@@ -29,22 +27,18 @@ const SCENARIOS: Scenario[] = [
     takes: [
       {
         slug: "ceo",
-        label: "CEO",
         bullet: "Pricing is the highest-leverage change you can make. Do it — but with a guardrail and a rollback plan in a document. Don't go silent.",
       },
       {
         slug: "cfo",
-        label: "CFO",
         bullet: "Hypothesis: conversion drops 10–15%, ARPU rises 50%, revenue-per-visitor rises ~35%. Kill if conversion drops >25% for 2 weeks.",
       },
       {
         slug: "sales",
-        label: "Sales",
         bullet: "Most demos already treat your price as low. Raise it before next cohort. Grandfather existing customers; it protects retention.",
       },
       {
         slug: "cmo",
-        label: "CMO",
         bullet: "Pair the raise with one new positioning proof point. Silent price bumps read as greedy; bundled with a narrative they read as maturity.",
       },
     ],
@@ -59,17 +53,14 @@ const SCENARIOS: Scenario[] = [
     takes: [
       {
         slug: "ceo",
-        label: "CEO",
         bullet: "First hire defines the next 18 months of cadence. Only hire if a priority is breaking — not because hiring feels like progress.",
       },
       {
         slug: "cto",
-        label: "CTO",
         bullet: "Define the role by the 3 bottlenecks slowing shipping this quarter. Not 'generalist full-stack.' If you can't name 3, you don't need the hire.",
       },
       {
         slug: "cfo",
-        label: "CFO",
         bullet: "At €5k/mo fully loaded, Base-scenario runway drops from 14 → 9 months. Below the fundraise-prep threshold. Start investor conversations before offer.",
       },
     ],
@@ -84,22 +75,18 @@ const SCENARIOS: Scenario[] = [
     takes: [
       {
         slug: "ceo",
-        label: "CEO",
         bullet: "Define what 'launched' means in one sentence with a metric. Otherwise the launch stretches into a quarter. Set a kill date.",
       },
       {
         slug: "cmo",
-        label: "CMO",
         bullet: "2 weeks before launch: ship 7 LinkedIn posts + 1 SEO page building the narrative. Launch day is the peak, not the start.",
       },
       {
         slug: "sales",
-        label: "Sales",
         bullet: "Pre-commit 10 prospects with 'would you buy if launched Tuesday?' before writing a single line of launch copy.",
       },
       {
         slug: "cto",
-        label: "CTO",
         bullet: "Feature-freeze 10 days before launch. No new features, only polish + observability. Set up error alerts that page you.",
       },
     ],
@@ -111,13 +98,7 @@ const SCENARIOS: Scenario[] = [
 
 type Step = "idle" | "routing" | "takes" | "synthesis" | "done";
 
-const PERSONA_LABEL: Record<KitSlug, string> = {
-  ceo: "CEO",
-  cto: "CTO",
-  cfo: "CFO",
-  sales: "Sales",
-  cmo: "CMO",
-};
+const personaLabel = (slug: KitSlug) => KITS_BY_SLUG[slug].agentName;
 
 export function FounderDemo() {
   const [scenario, setScenario] = useState<Scenario | null>(null);
@@ -190,12 +171,13 @@ export function FounderDemo() {
             Try it live
           </div>
           <h2 className="headline-2 text-balance">
-            Type anything. Watch <span className="italic text-[var(--color-brand)]">Sam</span> route it.
+            Type anything. Watch{" "}
+            <span className="italic text-[var(--color-brand)]">{CHIEF_OF_STAFF.agentName}</span> route it.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[var(--color-fg-muted)] text-balance">
             This is what happens inside CxOPack when you type <span className="mono">/founder</span>.
-            Sam (the Chief of Staff) decides which executives should weigh in, calls them, and
-            synthesizes one answer.
+            {" "}{CHIEF_OF_STAFF.agentName} (the Chief of Staff) decides which executives should weigh in,
+            calls them, and synthesizes one answer.
           </p>
         </div>
 
@@ -261,14 +243,14 @@ function IdleView({
 }) {
   return (
     <div className="space-y-5">
-      {/* Sam prompt */}
+      {/* Chief of Staff prompt */}
       <div className="flex gap-3">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--color-brand)] bg-[var(--color-bg)] text-[var(--color-brand)]">
-          <span className="mono text-[11px] font-semibold">Sam</span>
+          <span className="mono text-[11px] font-semibold">{CHIEF_OF_STAFF.agentName}</span>
         </div>
         <div className="flex-1">
           <div className="mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-fg-dim)]">
-            Chief of Staff
+            {CHIEF_OF_STAFF.role}
           </div>
           <p className="mt-1 text-sm leading-6 text-[var(--color-fg)]">
             What's on your mind? I'll route it to whichever executives should weigh in.
@@ -349,10 +331,10 @@ function PlayingView({
         </div>
       </div>
 
-      {/* Sam routing */}
+      {/* Chief of Staff routing */}
       <div className="flex gap-3">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--color-brand)] bg-[var(--color-bg)] text-[var(--color-brand)]">
-          <span className="mono text-[11px] font-semibold">Sam</span>
+          <span className="mono text-[11px] font-semibold">{CHIEF_OF_STAFF.agentName}</span>
         </div>
         <div className="flex-1 space-y-3">
           <div className="flex items-center gap-2 text-sm text-[var(--color-fg-muted)]">
@@ -370,7 +352,7 @@ function PlayingView({
                     <>
                       {routing.map((r, i) => (
                         <span key={r}>
-                          <span className="text-[var(--color-fg)]">{PERSONA_LABEL[r]}</span>
+                          <span className="text-[var(--color-fg)]">{personaLabel(r)}</span>
                           {i < routing.length - 1 ? ", " : ""}
                         </span>
                       ))}
@@ -398,11 +380,11 @@ function PlayingView({
             <div className="mt-5 rounded-xl border border-[var(--color-brand)]/30 bg-[var(--color-brand-soft)] p-5">
               <div className="mono mb-2 flex items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-[var(--color-brand)]">
                 <Check className="h-3 w-3" />
-                Sam's recommendation
+                {CHIEF_OF_STAFF.agentName}'s recommendation
               </div>
               <p className="text-sm leading-6 text-[var(--color-fg)]">{scenario.synthesis}</p>
               <p className="mono mt-4 text-[11px] uppercase tracking-[0.14em] text-[var(--color-fg-dim)]">
-                — Sam · {scenario.signature}
+                — {CHIEF_OF_STAFF.agentName} · {scenario.signature}
               </p>
             </div>
           )}
@@ -440,6 +422,7 @@ function PlayingView({
 }
 
 function PersonaTakeCard({ take }: { take: PersonaTake }) {
+  const kit = KITS_BY_SLUG[take.slug];
   return (
     <div className="flex gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] p-3 duration-500 animate-in fade-in slide-in-from-bottom-2">
       <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)]">
@@ -447,7 +430,7 @@ function PersonaTakeCard({ take }: { take: PersonaTake }) {
       </div>
       <div className="flex-1">
         <div className="mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-brand)]">
-          {take.label}
+          {kit.agentName} · {kit.role}
         </div>
         <p className="mt-1 text-sm leading-6 text-[var(--color-fg-muted)]">{take.bullet}</p>
       </div>

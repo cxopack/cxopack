@@ -112,7 +112,7 @@ cp .cxopack-<slug>/cursor/rules/*.mdc .cursor/rules/`}</Pre>
         Each kit's full walkthrough covers the review prompts, every MCP, the daily/weekly/monthly
         cadence, and every skill with trigger / when / steps / example / pitfalls.{" "}
         <Link href="/docs/kits/ceo" className="text-[var(--color-brand)] underline">
-          Start with the CEO Kit →
+          Start with Harvey · CEO Kit →
         </Link>
       </P>
 
