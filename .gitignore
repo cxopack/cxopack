@@ -15,3 +15,4 @@ next-env.d.ts
 kits/devops/
 src/content/docs/devops.ts
 config.bat
+.env
