@@ -26,8 +26,8 @@ export function Hero() {
           <span className="eyebrow-plain hidden md:inline-block">{t("edition")}</span>
         </div>
 
-        {/* Two-column layout at lg+: copy left, cast poster right */}
-        <div className="mt-8 grid items-start gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-14">
+        {/* Two-column layout at lg+: copy left (more room), cast list right (compact) */}
+        <div className="mt-8 grid items-end gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-16">
           <div>
             <h1 className="headline text-balance">
               {t("title1")}{" "}
