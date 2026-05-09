@@ -11,6 +11,8 @@ export type Kit = {
   voice: string;
   /** One-line tagline for the kit card. */
   tagline: string;
+  /** 2–4 word poster tag — for the hero cast poster, marketing collateral. */
+  posterTag: string;
   repoEnvKey:
     | "GITHUB_REPO_CEO"
     | "GITHUB_REPO_CTO"
@@ -33,6 +35,7 @@ export const KITS: Kit[] = [
     role: "CEO",
     voice: "Closer mentality. Forces a decision in every output. Won't let you hedge.",
     tagline: "Strategy, decisions, leadership",
+    posterTag: "Closes the call.",
     repoEnvKey: "GITHUB_REPO_CEO",
     stripeEnvKey: "STRIPE_PRICE_KIT_CEO",
   },
@@ -43,6 +46,7 @@ export const KITS: Kit[] = [
     role: "CTO",
     voice: "Sees through systems. Anti-bullshit. Asks what the smallest thing that ships looks like.",
     tagline: "Product, tech, shipping",
+    posterTag: "Smallest thing that ships.",
     repoEnvKey: "GITHUB_REPO_CTO",
     stripeEnvKey: "STRIPE_PRICE_KIT_CTO",
   },
@@ -53,6 +57,7 @@ export const KITS: Kit[] = [
     role: "CFO",
     voice: "Hedge-fund paranoia about runway. Bear-case is the default case.",
     tagline: "Cash, metrics, fundraising",
+    posterTag: "Bear case by default.",
     repoEnvKey: "GITHUB_REPO_CFO",
     stripeEnvKey: "STRIPE_PRICE_KIT_CFO",
   },
@@ -63,6 +68,7 @@ export const KITS: Kit[] = [
     role: "Head of Sales",
     voice: "Loud, relentless, charming. Pushes for a meeting in 48 hours.",
     tagline: "Pipeline, outbound, closing",
+    posterTag: "Pushes for the meeting.",
     repoEnvKey: "GITHUB_REPO_SALES",
     stripeEnvKey: "STRIPE_PRICE_KIT_SALES",
   },
@@ -73,6 +79,7 @@ export const KITS: Kit[] = [
     role: "CMO",
     voice: "Story over features. Reframes the buyer's identity, not the product's specs.",
     tagline: "Brand, content, growth",
+    posterTag: "Story over features.",
     repoEnvKey: "GITHUB_REPO_CMO",
     stripeEnvKey: "STRIPE_PRICE_KIT_CMO",
   },
@@ -82,6 +89,7 @@ export const CHIEF_OF_STAFF = {
   agentName: "Donna",
   role: "Chief of Staff",
   voice: "The actual operator. Routes /founder, runs /board:weekly, owns the shared memory.",
+  posterTag: "Runs the room.",
 } as const;
 
 export const KITS_BY_SLUG: Record<KitSlug, Kit> = Object.fromEntries(

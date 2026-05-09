@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { KITS } from "@/config/kits";
 import { KitIcon } from "@/components/brand/kit-icon";
+import { HeroCast } from "@/components/hero-cast";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -25,28 +26,38 @@ export function Hero() {
           <span className="eyebrow-plain hidden md:inline-block">{t("edition")}</span>
         </div>
 
-        <h1 className="headline mt-8 max-w-4xl text-balance">
-          {t("title1")}{" "}
-          <span className="bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-300)] bg-clip-text italic text-transparent">
-            {t("titleHighlight")}
-          </span>
-          {t("title2")}
-        </h1>
+        {/* Two-column layout at lg+: copy left, cast poster right */}
+        <div className="mt-8 grid items-start gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-14">
+          <div>
+            <h1 className="headline text-balance">
+              {t("title1")}{" "}
+              <span className="bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-300)] bg-clip-text italic text-transparent">
+                {t("titleHighlight")}
+              </span>
+              {t("title2")}
+            </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-fg-muted)]">
-          {t("subtitle")}
-        </p>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-fg-muted)]">
+              {t("subtitle")}
+            </p>
 
-        <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
-          <a href="#pricing" className="btn-primary">
-            {t("ctaPrimary")} <ArrowRight className="h-4 w-4" />
-          </a>
-          <a href="#kits" className="btn-ghost">
-            {t("ctaSecondary")}
-          </a>
+            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
+              <a href="#pricing" className="btn-primary">
+                {t("ctaPrimary")} <ArrowRight className="h-4 w-4" />
+              </a>
+              <a href="#kits" className="btn-ghost">
+                {t("ctaSecondary")}
+              </a>
+            </div>
+
+            <p className="mt-6 text-xs text-[var(--color-fg-dim)]">{t("socialProof")}</p>
+          </div>
+
+          {/* Cast poster — editorial credit-roll style */}
+          <div className="lg:pt-2">
+            <HeroCast />
+          </div>
         </div>
-
-        <p className="mt-6 text-xs text-[var(--color-fg-dim)]">{t("socialProof")}</p>
 
         {/* 5 kit icons row — editorial footer */}
         <div className="mt-16 flex flex-wrap items-center gap-6 border-t border-[var(--color-border)] pt-8 md:gap-10">
